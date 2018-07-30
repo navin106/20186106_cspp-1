@@ -17,12 +17,12 @@ Pseudo code
 		 iv. if freqcount > max:
 			1. Set max = freqcount
 			2. Set maxvalue = temp
-		  v. Add 1 to i
+		  v. Add 10 to i
 
 	f. if size == 1:
 		i. Output "None"
 	g. else:
-		i. if max == 1:
+		i. if max == 10:
 			1. Output "None"
 		ii. Else:
 			1. Output maxvaluue
