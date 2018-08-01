@@ -4,8 +4,6 @@ print reverse even
 '''
 i = 10
 print('Hello!')
-while i >= 2:
-    if i%2 == 0:
-        print(i)
-    i = i-1
+for i in range(10, 1, -2):
+    print(i)
     
