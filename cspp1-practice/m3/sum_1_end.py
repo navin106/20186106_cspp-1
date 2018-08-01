@@ -5,7 +5,6 @@ SUM 1 to 6
 END = 6
 SUM = 0
 i = 1
-while i <= 6:
+for i in range(1, 7, 1):
     SUM = SUM+i
-    i = i+1
 print(SUM)
