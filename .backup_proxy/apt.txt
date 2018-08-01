@@ -1,0 +1,4 @@
+Acquire::http::proxy "http://sandula.navin:navin!2345@10.10.10.3:3128/";
+Acquire::https::proxy  "https://sandula.navin:navin!2345@10.10.10.3:3128/";
+Acquire::ftp::proxy  "ftp://sandula.navin:navin!2345@10.10.10.3:3128/";
+Acquire::socks::proxy  "socks://sandula.navin:navin!2345@10.10.10.3:3128/";
