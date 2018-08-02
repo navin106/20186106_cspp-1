@@ -29,17 +29,14 @@ def main():
 		elif (z_str[-1] <= char):
 			z_str = z_str+char
 		elif (z_str[-1] > char):
-			if(len(y_str) < len(c)):
-				y_str=c
+			if(len(y_str) < len(z_str)):
+				y_str=z_str
 				z_str=char
 			else:
 				z_str=char
 	if (len(c) > len(y_str)):
 		y_str=z_str
 	print(y_str)
-
-
-
 
 if __name__== "__main__":
 	main()
