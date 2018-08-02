@@ -20,23 +20,23 @@ def main():
 	# the input string is in s
 	# remove pass and start your code here
 	'''
-	s = input()
-	r = ''
-	c = ''
-	for char in s:
-		if(c == ''):
-			c = char
-		elif (c[-1] <= char):
-			c = c+char
-		elif (c[-1] > char):
-			if(len(r) < len(c)):
-				r=c
-				c=char
+	x_str = input()
+	y_str = ''
+	z_str = ''
+	for char in x_str:
+		if(z_str == ''):
+			z_str = char
+		elif (z_str[-1] <= char):
+			z_str = z_str+char
+		elif (z_str[-1] > char):
+			if(len(y_str) < len(c)):
+				y_str=c
+				z_str=char
 			else:
-				c=char
-	if (len(c) > len(r)):
-		r=c
-	print(r)
+				z_str=char
+	if (len(c) > len(y_str)):
+		y_str=z_str
+	print(y_str)
 
 
 
