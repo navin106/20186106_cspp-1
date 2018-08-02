@@ -34,7 +34,7 @@ def main():
 				z_str=char
 			else:
 				z_str=char
-	if (len(c) > len(y_str)):
+	if (len(z_str) > len(y_str)):
 		y_str=z_str
 	print(y_str)
 
