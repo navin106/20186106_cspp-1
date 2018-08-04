@@ -11,14 +11,17 @@ Read any number from the input, store it in variable int_input.
 int_input = int(input())
 pro =1
 rem =0
-if int_input<0:
-	int_input=abs(int_input)
-while int_input>0:
-    rem =int_input%10
+temp_int = int_input
+if temp_int<0:
+	temp_int=abs(temp_int)
+while temp_int>0:
+    rem =temp_int%10
     pro = pro*rem
-    int_input = int_input//10
-print(pro)
-
+    temp_int = temp_int//10
+if int_input<0:
+	print(-pro)
+else:
+	print (pro)
 
 if __name__ == "__main__":
     main()
