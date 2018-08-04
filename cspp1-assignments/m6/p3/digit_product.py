@@ -8,9 +8,11 @@ def main():
     '''
 Read any number from the input, store it in variable int_input.
 '''
-int_input = int(input())
+int_input = 709#int(input())
 pro =1
 rem =0
+if int_input<0:
+	int_input=abs(int_input)
 while int_input>0:
     rem =int_input%10
     pro = pro*rem
