@@ -9,13 +9,11 @@ def main():
     '''
     str_input = input()
     str_input1 =''
-    temp=0
     for char in str_input:
     	if char in '!@#$%^&*':
     		str_input1 = str_input1 + ' '
     	else:
     		str_input1 = str_input1 + char
-   	temp = temp + 1
     print(str_input1)
 if __name__ == "__main__":
     main()
