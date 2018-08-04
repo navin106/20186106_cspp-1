@@ -22,9 +22,9 @@ for i in range(K):
     if i**3 == S:
         FLAG = 1
 if FLAG == 1:
-    print(S ,'is a perfect cube')
+    print(S, 'is a perfect cube')
 else:
-    print(S ,'is not a perfect cube')
+    print(S, 'is not a perfect cube')
             
 if __name__ == "__main__":
     main()
