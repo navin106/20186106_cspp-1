@@ -16,7 +16,7 @@ def main():
 	s = int(input())
 	k= s//2 +1
 	for i in range(k):
-		if i**3 = s:
+		if i**3 == s:
 			print(s,'is a perfect cube')
 		else:
 			print(s, 'is not a perfect cube')
