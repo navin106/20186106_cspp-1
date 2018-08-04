@@ -10,16 +10,16 @@
 # output: 6.999999999999991
 
 def main():
-	guess = 0
-	epsilon =0.01
-	step =0.1
-	squrt = int(input())
-	while guess < squrt:
-		if abs(guess**2 - squrt) < epsilon:
-			break
-		else:
-			guess = guess + step
-	print(str(guess))
+    guess = 0
+    epsilon =0.01
+    step =0.1
+    squrt = int(input())
+    while guess <= squrt:
+        if abs(guess**2 - squrt) < epsilon:
+            break
+        else:
+            guess = guess + step
+    print(str(guess))
 
 if __name__== "__main__":
-	main()
+    main()
