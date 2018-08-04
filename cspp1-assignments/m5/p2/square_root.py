@@ -10,6 +10,10 @@
 # output: 6.999999999999991
 
 def main():
+    '''
+    function to find the \
+    square root in approximation method
+    '''
     guess = 0
     epsilon =0.01
     step =0.1
