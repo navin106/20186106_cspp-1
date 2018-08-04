@@ -19,7 +19,6 @@ def main():
 	for i in range(k):
 		if i**3 == s:
 			flag=1
-			print(i)
 	if flag ==1:
 		print(s,'is a perfect cube')
 	else:
