@@ -1,3 +1,6 @@
+'''
+@author = navin106
+
 # Write a python program to find the square root of the given number
 # using approximation method
 
@@ -8,7 +11,7 @@
 # testcase 2
 # input: 49
 # output: 6.999999999999991
-
+'''
 def main():
     '''
     function to find the \
