@@ -15,8 +15,8 @@ def main():
     square root in approximation method
     '''
     guess = 0
-    epsilon =0.01
-    step =0.1
+    epsilon = 0.01
+    step = 0.1
     squrt = int(input())
     while guess <= squrt:
         if abs(guess**2 - squrt) < epsilon:
@@ -25,5 +25,5 @@ def main():
             guess = guess + step
     print(str(guess))
 
-if __name__== "__main__":
+if __name__ == "__main__":
     main()
