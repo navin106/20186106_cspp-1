@@ -23,6 +23,5 @@ if FLAG == 1:
     print(S, 'is a perfect cube')
 else:
     print(S, 'is not a perfect cube')
-            
 if __name__ == "__main__":
     main()
