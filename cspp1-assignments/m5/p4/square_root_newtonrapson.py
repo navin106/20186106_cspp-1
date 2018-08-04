@@ -17,11 +17,11 @@ def main():
 	# don't change these values
 	'''
 	epsilon = 0.01
-	s = raw_input()
+	s = input()
 	guess = s/2.0
 	while abs(guess*guess-s)>=epsilon:
-		guess = guess-(((guess**2)-s)/(1*guess))
+		guess = guess-(((guess**2)-s)/(2*guess))
 	print(str(guess))
 
-if __name__== "__main__":
+if __name__ == "__main__":
 	main()
