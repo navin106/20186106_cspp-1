@@ -17,7 +17,7 @@ def main():
     epsilon = 0.01
     s = int(input())
     guess = s/2.0
-    while abs(guess*guess-s)>=epsilon:
+    while abs(guess*guess-s) >= epsilon:
         guess = guess-(((guess**2)-s)/(2*guess))
     print(str(guess))
 if __name__ == "__main__":
