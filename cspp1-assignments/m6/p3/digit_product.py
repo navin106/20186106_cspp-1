@@ -1,6 +1,6 @@
 '''
 Given a  number int_input, find the product of all the digits
-example: 
+example:
     input: 123
     output: 6
 '''
@@ -8,22 +8,22 @@ def main():
     '''
 Read any number from the input, store it in variable int_input.
 '''
-int_input = int(input())
-pro =1
-rem =0
-temp_int = int_input
-if int_input!=0:
-    if temp_int<0:
-        temp_int=abs(temp_int)
-    while temp_int>0:
-        rem =temp_int%10
-        pro = pro*rem
-        temp_int = temp_int//10
-    if int_input<0:
-        print(-pro)
+INT_INPUT = int(input())
+PRO = 1
+REM = 0
+TEMP_INT = INT_INPUT
+if INT_INPUT != 0:
+    if TEMP_INT < 0:
+        TEMP_INT = abs(TEMP_INT)
+    while TEMP_INT > 0:
+        REM = TEMP_INT%10
+        PRO = PRO*REM
+        TEMP_INT = TEMP_INT//10
+    if INT_INPUT < 0:
+        print(-PRO)
     else:
-        print (pro)
+        print(PRO)
 else:
-    print(int_input)
+    print(INT_INPUT)
 if __name__ == "__main__":
     main()
