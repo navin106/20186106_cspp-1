@@ -19,12 +19,12 @@ def main():
 	lower = 0.0
 	high = s
 	mid = (low+high)/2.0
-	while abs(mid**2-num) >= epsilon:
-		if mid**2 < num:
-			low = mid
+	while abs(mid**2-num) > epsilon:
+		if mid**2 < s:
+			lower = mid
 		else:
 			high = mid
-		mid = (low+high)/2.0
+		mid = (lower+high)/2.0
 	print(mid)	
 if __name__== "__main__":
 	main()
