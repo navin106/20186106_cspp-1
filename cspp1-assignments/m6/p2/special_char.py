@@ -10,10 +10,10 @@ def main():
     str_input = input()
     str_input1 =''
     for char in str_input:
-    	if char in '!@#$%^&*':
-    		str_input1 = str_input1 + ' '
-    	else:
-    		str_input1 = str_input1 + char
+        if char in '!@#$%^&*':
+            str_input1 = str_input1 + ' '
+        else:
+            str_input1 = str_input1 + char
     print(str_input1)
 if __name__ == "__main__":
     main()
