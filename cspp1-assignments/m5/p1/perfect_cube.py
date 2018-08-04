@@ -15,10 +15,14 @@ def main():
 	# your code starts here
 	s = int(input())
 	k= s//2 +1
+	flag=0
 	for i in range(k):
 		if i**3 == s:
-			print(s,'is a perfect cube')
-		else:
-			print(s, 'is not a perfect cube')
+			flag=1
+	if flag =1:
+		print(s,'is a perfect cube')
+	else:
+		print(s, 'is not a perfect cube')
+			
 if __name__ == "__main__":
 	main()
