@@ -8,7 +8,7 @@ def main():
     '''
 Read any number from the input, store it in variable int_input.
 '''
-int_input = 709#int(input())
+int_input = int(input())
 pro =1
 rem =0
 if int_input<0:
