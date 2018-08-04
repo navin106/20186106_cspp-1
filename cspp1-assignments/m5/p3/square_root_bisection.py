@@ -19,7 +19,7 @@ def main():
 	lower = 0.0
 	high = s
 	mid = (lower+high)/2.0
-	while abs(mid**2-num) > epsilon:
+	while abs(mid**2-s) > epsilon:
 		if mid**2 < s:
 			lower = mid
 		else:
