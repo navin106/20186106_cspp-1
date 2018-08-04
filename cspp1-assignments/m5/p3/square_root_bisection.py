@@ -10,21 +10,21 @@
 # output: 6.999999999999991
 
 def main():
-	'''
-	# epsilon and step are initialized
-	# don't change these values
-	'''
-	s = int(input())
-	epsilon = 0.01
-	lower = 0.0
-	high = s
-	mid = (lower+high)/2.0
-	while abs(mid**2-s) > epsilon:
-		if mid**2 < s:
-			lower = mid
-		else:
-			high = mid
-		mid = (lower+high)/2.0
-	print(mid)	
+    '''
+    # epsilon and step are initialized
+    # don't change these values
+    '''
+    s = int(input())
+    epsilon = 0.01
+    lower = 0.0
+    high = s
+    mid = (lower+high)/2.0
+    while abs(mid**2-s) > epsilon:
+        if mid**2 < s:
+            lower = mid
+        else:
+            high = mid
+        mid = (lower+high)/2.0
+    print(mid)  
 if __name__== "__main__":
-	main()
+    main()
