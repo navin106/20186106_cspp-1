@@ -17,7 +17,7 @@ def main():
 	# don't change these values
 	'''
 	epsilon = 0.01
-	s = input()
+	s = int(input())
 	guess = s/2.0
 	while abs(guess*guess-s)>=epsilon:
 		guess = guess-(((guess**2)-s)/(2*guess))
