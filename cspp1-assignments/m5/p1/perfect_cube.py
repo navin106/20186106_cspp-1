@@ -8,11 +8,11 @@
 # Output: 21950 is not a perfect cube
 '''
 def main():
-   '''
+    '''
     # input is captured in s
     # watch out for the data type of value stored in s
     # your code starts here
-  '''
+    '''
 S = int(input())
 K = S//2 +1
 FLAG = 0
