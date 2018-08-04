@@ -14,7 +14,7 @@ def main():
 	# epsilon and step are initialized
 	# don't change these values
 	'''
-	s = input()
+	s = int(input())
 	epsilon = 0.01
 	lower = 0.0
 	high = s
