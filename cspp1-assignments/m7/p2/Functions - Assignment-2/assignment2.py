@@ -37,7 +37,7 @@ def payingDebtOffInAYear(bal_ance, annual_interestrate):
 		if new_balance <= 0.5:
 			break
 		lowest_paid = lowest_paid +10
-	retrun lowest_paid
+	return lowest_paid
 def main():
 	data = input()
 	data = data.split(' ')
