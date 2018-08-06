@@ -38,7 +38,7 @@ def main():
 		i = payingDebtOffInAYear(data[0],data[1],data[2])
 		data[0] = payingDebtOffInAYear(data[0],data[1],data[2])
 
-	print('Remaining balance: ',i)
+	print('Remaining balance:',i)
 
 
 if __name__ == "__main__":
