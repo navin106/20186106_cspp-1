@@ -24,13 +24,13 @@ the remaining balance at the end of the year in the format:
 # Updated balance each month =\
  (Monthly unpaid balance) + (Monthly interest rate x Monthly unpaid balance)
 '''
-def paying_debtOffinaYear(previous_balance, annual_interestrate, monthly_paymentRate):
+def paying_debtOffinayear(previous_balance, annual_interestrate, monthly_paymentrate):
     '''
     function to find final balance
     '''
     i = 0
     for i in range(12):
-        unpaid_balance = previous_balance - monthly_paymentRate*previous_balance
+        unpaid_balance = previous_balance - monthly_paymentrate*previous_balance
         new_balance = unpaid_balance + (annual_interestrate/12.0)*unpaid_balance
         i = new_balance
         previous_balance = i
@@ -42,6 +42,6 @@ def main():
     data = input()
     data = data.split(' ')
     data = list(map(float, data))
-    print('Remaining balance:', paying_debtOffinaYear(data[0], data[1], data[2]))
+    print('Remaining balance:', paying_debtOffinayear(data[0], data[1], data[2]))
 if __name__ == "__main__":
     main()
