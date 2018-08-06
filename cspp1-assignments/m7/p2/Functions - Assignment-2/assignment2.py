@@ -23,7 +23,7 @@ that will pay off all debt in under 1 year, for example:
 # Updated balance each month = (Monthly unpaid balance) + \
 (Monthly interest rate x Monthly unpaid balance)
 '''
-def payingDebtOffInAYear(bal_ance, annual_interestrate):
+def paying_debtoffinayear(bal_ance, annual_interestrate):
     '''
     function to find lowest fixed payment
     '''
@@ -31,12 +31,12 @@ def payingDebtOffInAYear(bal_ance, annual_interestrate):
         return 0
     lowest_paid = 10
     while True:
-        ti_ =0
+        ti_ = 0
         new_balance = bal_ance
         while ti_ != 12:
             unpaid = new_balance - (lowest_paid)
             new_balance = unpaid +(unpaid * annual_interestrate/12)
-            ti_ =ti_+1
+            ti_ = ti_+1
         if new_balance <= 0.5:
             break
         lowest_paid = lowest_paid + 10
@@ -48,6 +48,6 @@ def main():
     data = input()
     data = data.split(' ')
     data = list(map(float, data))
-    print('Lowest Payment:', payingDebtOffInAYear(data[0],data[1]))
+    print('Lowest Payment:', paying_debtoffinayear(data[0],data[1]))
 if __name__ == "__main__":
     main()
