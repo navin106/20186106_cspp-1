@@ -26,11 +26,7 @@
 
 
 def payingDebtOffInAYear(balance, annualInterestRate, monthlyPaymentRate):
-	unpaid_balance = balance - monthlyPaymentRate*balance
-	new_balance = unpaid_balance + (annualInterestRate/12.0)*unpaid_balance
-	for i in range(12):
-		i = payingDebtOffInAYear(new_balance,data[1],data[2])
-	return round(i,2)
+	
 
 def main():
 	data = input()
@@ -38,6 +34,6 @@ def main():
 	data = list(map(float, data))
 	print(payingDebtOffInAYear(data[0],data[1],data[2]))
 
-if __name__ == "__main__":
+if __name__== "__main__":
 	main()
 
