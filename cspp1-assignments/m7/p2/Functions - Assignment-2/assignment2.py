@@ -27,19 +27,19 @@ def payingDebtOffInAYear(bal_ance, annual_interestrate):
     '''
     function to find lowest fixed payment
     '''
-    if bal_ance<0:
+    if bal_ance < 0:
         return 0
     lowest_paid = 10
     while True:
         ti_ =0
         new_balance = bal_ance
         while ti_ != 12:
-            unpaid =new_balance - (lowest_paid)
+            unpaid = new_balance - (lowest_paid)
             new_balance = unpaid +(unpaid * annual_interestrate/12)
             ti_ =ti_+1
         if new_balance <= 0.5:
             break
-        lowest_paid = lowest_paid +10
+        lowest_paid = lowest_paid + 10
     return lowest_paid
 def main():
     '''
