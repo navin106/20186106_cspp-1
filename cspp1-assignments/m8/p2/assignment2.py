@@ -17,7 +17,7 @@ def sumofdigits(n):
 
 
 def main():
-    a = '234'#input()
+    a = input()
     print(sumofdigits(int(a)))  
 
 if __name__== "__main__":
