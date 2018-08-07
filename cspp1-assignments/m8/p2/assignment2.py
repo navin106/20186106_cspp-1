@@ -16,9 +16,9 @@ def sumofdigits(int_num):
     	return int_num%10 + sumofdigits(int_num//10)
     return 0
 def main():
-	'''
-	calling function
-	'''
+'''
+calling function
+'''
     numb_a = input()
     print(sumofdigits(int(numb_a)))  
 
