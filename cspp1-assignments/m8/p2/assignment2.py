@@ -10,15 +10,14 @@ def sumofdigits(n):
 
     returns: a positive integer, the sum of digits of n.
     '''
-    r = 0
-    if n>0:
-    	r = n%10
-    return r + sumofdigits(n//10) 
-
+    if n > 0:
+    	return n%10 + sumofdigits(n//10)
+    else:
+    	return 0
 
 
 def main():
-    a = input()
+    a = '234'#input()
     print(sumofdigits(int(a)))  
 
 if __name__== "__main__":
