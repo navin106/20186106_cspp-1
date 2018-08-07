@@ -10,12 +10,9 @@ def factorial(fac_number):
     fac_number is positive Integer
     returns: a_input positive integer, the factorial of fac_number.
     '''
-    if fac_number == 0:
+    if fac_number == 0 or 1:
         return 1
-    elif fac_number == 1:
-        return 1
-    else:
-        return fac_number*factorial(fac_number-1)
+    return fac_number*factorial(fac_number-1)
 def main():
     '''
     caaling factorial function
