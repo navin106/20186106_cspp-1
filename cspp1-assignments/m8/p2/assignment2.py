@@ -6,19 +6,19 @@ and returns the sum of digits of given number.
 # This function takes in one number and returns one number.
 '''
 
-def sumofdigits(n):
+def sumofdigits(int_num):
     '''
     n is positive Integer
 
     returns: a positive integer, the sum of digits of n.
     '''
-    if n > 0:
-    	return n%10 + sumofdigits(n//10)
+    if int_num > 0:
+    	return int_num%10 + sumofdigits(int_num//10)
     return 0
 
 def main():
-    a = input()
-    print(sumofdigits(int(a)))  
+    numb_a = input()
+    print(sumofdigits(int(numb_a)))  
 
 if __name__ == "__main__":
     main()
