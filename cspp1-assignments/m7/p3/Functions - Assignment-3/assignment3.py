@@ -57,7 +57,7 @@ def payingDebtOffInAYear(balance, annualInterestRate):
             monthly_high =guess
             new_bal = balance
         else:
-            return guess
+            return round(guess)
         guess = (monthly_low + monthly_high)/2
 
 
