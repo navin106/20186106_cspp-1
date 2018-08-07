@@ -44,7 +44,7 @@ def payingDebtOffInAYear(balance, annualInterestRate):
     new_bal =balance
     epsilon =0.0001
     guess = (monthly_low+monthly_high)/2
-    while true:
+    while True:
         month = 1
         while month <=12:
             new_bal = new_bal -guess
