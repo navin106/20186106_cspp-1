@@ -1,4 +1,5 @@
 '''
+@author: navin106
 # Assignment-2 - Paying Debt off in a Year
 # Now write a program that calculates the minimum fixed monthly payment \
 needed in order pay off a credit card balance within 12 months.
