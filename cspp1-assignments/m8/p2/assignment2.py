@@ -15,11 +15,12 @@ def sumofdigits(int_num):
     if int_num > 0:
     	return int_num%10 + sumofdigits(int_num//10)
     return 0
-
 def main():
+	'''
+	calling function
+	'''
     numb_a = input()
     print(sumofdigits(int(numb_a)))  
 
 if __name__ == "__main__":
     main()
-
