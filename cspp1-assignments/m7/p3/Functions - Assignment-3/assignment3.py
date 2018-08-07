@@ -47,7 +47,7 @@ def payingDebtOffInAYear(balance, annualInterestRate):
     while True:
         month = 1
         while month <=12:
-            new_bal = new_bal -guess
+            new_bal = new_bal-guess
             new_bal = new_bal + (m_i_r*new_bal)
             month = month+1
         if new_bal>0 and new_bal>epsilon:
@@ -57,16 +57,14 @@ def payingDebtOffInAYear(balance, annualInterestRate):
             monthly_high =guess
             new_bal = balance
         else:
-            return round(guess,2)
+            return guess
     guess = (monthly_low + monthly_high)/2    
-
-
 def main():
-    data = input()
     # data = "4773 0.2"
+    data = input()
     data = data.split(' ')
     data = list(map(float, data))
-    print('Lowest Payment:',payingDebtOffInAYear(data[0],data[1]))
+    print('Lowest Payment:'+ str(round(payingDebtOffInAYear(data[0],data[1])))
     
 if __name__== "__main__":
     main()
