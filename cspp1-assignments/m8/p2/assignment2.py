@@ -16,11 +16,11 @@ and returns the sum of digits of given number.
 	    	return int_num%10 + sumofdigits(int_num//10)
 	    return 0
 	def main():
-	'''
-	calling function
-	'''
-	numb_a = input()
-	print(sumofdigits(int(numb_a)))  
+		'''
+		calling function
+		'''
+		numb_a = input()
+		print(sumofdigits(int(numb_a)))  
 
 if __name__ == "__main__":
     main()
