@@ -1,20 +1,21 @@
 '''
 @author:navin106
 # Exercise: Assignment-1
-# Write a Python function, factorial(n), that takes in one number and returns the factorial of given number.
+# Write a Python function, factorial(fac_number), that takes \
+in one number and returns the factorial of given number.
 # This function takes in one number and returns one number.
 '''
-def factorial(n):
+def factorial(fac_number):
     '''
-    n is positive Integer
-    returns: a positive integer, the factorial of n.
+    fac_number is positive Integer
+    returns: a positive integer, the factorial of fac_number.
     '''
-    if n == 0:
+    if fac_number == 0:
         return 1
-    elif n == 1:
+    elif fac_number == 1:
         return 1
     else:
-        return n*factorial(n-1)
+        return fac_number*factorial(fac_number-1)
 def main():
     '''
     caaling factorial function
