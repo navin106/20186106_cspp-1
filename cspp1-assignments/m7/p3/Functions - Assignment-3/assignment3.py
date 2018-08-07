@@ -45,7 +45,7 @@ def paydebt_year(blance_inp, annual_intrest_rate):
     mon_low = blance_inp / 12
     mon_high = (blance_inp * (1 + mon_int)**12) / 12.0
     new_bal = blance_inp
-    epsilon = 0.0001
+    epsilon = 0.003
     guess = (mon_low + mon_high)/2
     while True:
         month = 1
