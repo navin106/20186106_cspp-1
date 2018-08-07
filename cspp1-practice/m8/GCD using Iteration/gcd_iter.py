@@ -21,7 +21,7 @@ def gcdIter(a, b):
             break
     return i
 def main():
-    data = '17 12'#input()
+    data = '4 2'#input()
     data = data.split()
     print(gcdIter(int(data[0]),int(data[1]))) 
 
