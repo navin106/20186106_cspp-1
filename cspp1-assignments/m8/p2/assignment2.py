@@ -19,8 +19,8 @@ def main():
 '''
 calling function
 '''
-    numb_a = input()
-    print(sumofdigits(int(numb_a)))  
+numb_a = input()
+print(sumofdigits(int(numb_a)))  
 
 if __name__ == "__main__":
     main()
