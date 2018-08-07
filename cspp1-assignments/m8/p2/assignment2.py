@@ -17,11 +17,10 @@ def sumofdigits(n):
     else:
     	return 0
 
-
 def main():
     a = input()
     print(sumofdigits(int(a)))  
 
-if __name__== "__main__":
+if __name__ == "__main__":
     main()
 
