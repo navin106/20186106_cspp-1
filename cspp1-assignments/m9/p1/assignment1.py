@@ -15,7 +15,7 @@ def is_word_guessed(secret_word, letters_guessed):
       False otherwise
     '''
     k = ''
-    k = join(letters_guessed)
+    k = Join(letters_guessed)
     for i in secret_word:
     	if i in letters_guessed:
     		count = count + 1
