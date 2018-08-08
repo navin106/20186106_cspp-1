@@ -14,9 +14,10 @@ def is_word_guessed(secret_word, letters_guessed):
     returns: boolean, True if all the letters of secret_word are in letters_guessed;
       False otherwise
     '''
-    count = 0
     for i in secret_word:
     	if i in str(letters_guessed):
+    		print(i)
+    		print(letters_guessed)
     		return False
     return True
 
