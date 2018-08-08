@@ -14,10 +14,10 @@ def is_word_guessed(secret_word, letters_guessed):
     returns: boolean, True if all the letters of secret_word are in letters_guessed;
       False otherwise
     '''
-    count = 0 
-    j = 0
+    k = ''
+    k = join(letters_guessed)
     for i in secret_word:
-    	if j in letters_guessed:
+    	if i in letters_guessed:
     		count = count + 1
     return count >= len(letters_guessed) 
 
