@@ -6,10 +6,10 @@
 def apply_to_each(L, f):
     for i in range(len(L)):
         if L[i] < 0:
-            L[i] = abs(L[i])
+            L[i] = f(L[i])
     return L
 def main():
-    data = '1 -4 8 -9'#input()
+    data = '0 -1'#input()
     data = data.split(" ")
     list1 = []
     for j in data:
