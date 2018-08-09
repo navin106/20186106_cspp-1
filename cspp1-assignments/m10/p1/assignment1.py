@@ -14,12 +14,10 @@ def get_available_letters(letters_guessed):
     '''
     a = 'abcdefghijklmnopqrstuvwxyz'
     l = ''
-    k = ''
     for i in a:
     	if i not in letters_guessed:
     		l = l + i
-    k = sorted(l)
-    return k
+	return l
 
 def main():
     '''
