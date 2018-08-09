@@ -15,18 +15,16 @@ def get_available_letters(letters_guessed):
     a = ''
     l = ''
     for i in letters_guessed:
-    	if i>='A' or i<='Z':
-    		a = a + chr(ord(i)+32)
-    	else:
     		a = a + i
     l = sorted(a)
+    print(l)
     return l
 
 def main():
     '''
     Main function for the given program
     '''
-    user_input = input()
+    user_input = 'a q u y r f p j n x d k h z i t g v s e o w m l'#input()
     user_input = user_input.split()
     data = []
     for char in user_input:
