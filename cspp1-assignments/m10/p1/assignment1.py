@@ -20,7 +20,7 @@ def get_available_letters(letters_guessed):
     	else:
     		a = a + i
     l = sorted(a)
-    return list(l)
+    return l
 
 def main():
     '''
