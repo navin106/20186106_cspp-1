@@ -12,12 +12,12 @@ def get_available_letters(letters_guessed):
     returns: string, comprised of letters that represents what letters have not
       yet been guessed.
     '''
-    a = 'abcdefghijklmnopqrstuvwxyz'
-    l = ''
-    for i in a:
+    a_dummy = 'abcdefghijklmnopqrstuvwxyz'
+    l_new = ''
+    for i in a_dummy:
         if i not in letters_guessed:
-            l = l + i
-    return l
+            l_new = l_new + i
+    return l_new
 
 def main():
     '''
