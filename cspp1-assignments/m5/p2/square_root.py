@@ -19,14 +19,14 @@ def main():
     '''
     guess = 0
     epsilon = 0.01
-    step = 0.1
-    squrt = int(input())
+    step = 0.01
+    squrt = 3#int(input())
     while guess <= squrt:
         if abs(guess**2 - squrt) < epsilon:
             break
         else:
             guess = guess + step
-    print(str(guess))
+        print(round(abs(guess**2 - squrt),2))
 
 if __name__ == "__main__":
     main()
