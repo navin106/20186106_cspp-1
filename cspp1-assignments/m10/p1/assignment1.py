@@ -12,13 +12,14 @@ def get_available_letters(letters_guessed):
     returns: string, comprised of letters that represents what letters have not
       yet been guessed.
     '''
-    a = ''
+    a = 'abcdefghijklmnopqrstuvwxyz'
     l = ''
-    for i in letters_guessed:
-    		a = a + i
-    l = sorted(a)
-    print(l)
-    return l
+    k = ''
+    for i in a:
+    	if i not in letters_guessed:
+    		l = l + i
+    k = sorted(l)
+    return k
 
 def main():
     '''
@@ -29,6 +30,7 @@ def main():
     data = []
     for char in user_input:
         data.append(char[0])
+    print(data)
     print(get_available_letters(data))
 
 
