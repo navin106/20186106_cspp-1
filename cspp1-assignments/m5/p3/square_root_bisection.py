@@ -14,12 +14,13 @@ def main():
     # epsilon and step are initialized
     # don't change these values
     '''
-    sint_put = int(input())
+    sint_put = 3#int(input())
     epsilon = 0.01
     lower = 0.0
     high = sint_put
     mid = (lower+high)/2.0
     while abs(mid**2-sint_put) > epsilon:
+    	print(abs(mid**2-sint_put))
         if mid**2 < sint_put:
             lower = mid
         else:
