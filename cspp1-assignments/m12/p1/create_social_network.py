@@ -36,14 +36,18 @@ def create_social_network(data):
     m_final = []
     s_dict = {}
     l_enter = data.split('\n')
-    for i in range(len(l_enter)):
-        k_follows = l_enter[i].split(' follows ')
+    l_revised = []
+    for i in range(len(l_enter)-1):
+        l_revised.append(l_enter[i])
+    for i in range(len(l_revised)):
+        k_follows = l_revised[i].split(' follows ')
         m_final.extend(k_follows)
+    print(m_final)
     for i in range(0,len(m_final),2):
         if m_final[i] not in s_dict:
             s_dict[m_final[i]] = m_final[i+1].split(',')
     return s_dict 
-    
+    print(m_final)
 def main():
     '''
         handling testcase input and printing output
