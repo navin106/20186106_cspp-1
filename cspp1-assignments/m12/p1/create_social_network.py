@@ -55,7 +55,7 @@ def create_social_network(data):
                 s_dict[m_final[i]] = m_final[i+1].split(',')
         return s_dict
     else:
-        return []
+        return {}
 def main():
     '''
         handling testcase input and printing output
