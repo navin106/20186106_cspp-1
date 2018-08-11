@@ -35,7 +35,7 @@ def create_social_network(data):
     for i in range(len(l_enter)-1):
         l_revised.append(l_enter[i])
     temp = len(l_revised)
-    for i in range(len(l_revised)):
+    for i in range(temp):
         k_follows = l_revised[i].split(' follows ')
         m_final.extend(k_follows)
     if len(m_final) > len(k_follows):
