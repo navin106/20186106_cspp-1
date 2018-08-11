@@ -31,6 +31,8 @@ def create_social_network(data):
         Return a empty dictionary if the string format of the data is invalid
         Empty dictionary is not None, it is a dictionary with no keys
     '''
+    '''
+
     l_enter = []
     k_follows = []
     m_final = []
@@ -46,6 +48,8 @@ def create_social_network(data):
         if m_final[i] not in s_dict:
             s_dict[m_final[i]] = m_final[i+1].split(',')
     return s_dict
+    '''
+    print(data)
 def main():
     '''
         handling testcase input and printing output
