@@ -32,7 +32,6 @@ def unfollow(network, arg1, arg2):
     '''
     network[arg1].remove(arg2)
     new_network = network
-    print(new_network)
     return new_network
 def delete_person(network, arg1):
     '''
