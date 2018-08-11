@@ -44,7 +44,7 @@ def delete_person(network, arg1):
     also, before deleting arg1, remove arg1 from the everyone's followers list
     update the network dictionary and return it
     '''
-    del  network[agr1]
+    del  network[arg1]
     new_network = network
     return new_network
 
