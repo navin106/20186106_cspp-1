@@ -25,8 +25,8 @@ def create_social_network(data):
         Error handling case:
         Return a empty dictionary if the string format of the data is invalid
         Empty dictionary is not None, it is a dictionary with no keys
-    '''   
-    l_enter = []     
+    '''
+    l_enter = []
     k_follows = []
     m_final = []
     s_dict = {}
