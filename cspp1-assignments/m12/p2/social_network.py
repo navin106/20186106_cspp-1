@@ -15,7 +15,7 @@ def follow(network, arg1, arg2):
         update the network dictionary and return it
     '''
     if arg1 not in network:
-        network[arg1] = List(arg2)
+        network[arg1] = arg2.split()
     else:
         new_network = network[arg1].append(arg2)
     new_network = network
