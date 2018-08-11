@@ -16,7 +16,7 @@ def follow(network, arg1, arg2):
     '''
     k = len(network)
     if arg1 not in network:
-        network(k+1) = agr1
+        network[k+1] = agr1
     new_network = network[arg1].append(arg2)
     return new_network
 
