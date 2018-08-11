@@ -1,9 +1,10 @@
 '''
+@author:navin106
     This is a continuation of the social network problem
     There are 3 functions below that have to be completed
     Note: PyLint score need not be 10/10 for this assignment. We expect 9.5/10
 '''
-
+new_network = {}
 def follow(network, arg1, arg2):
     '''
         3 arguments are passed to this function
@@ -13,33 +14,35 @@ def follow(network, arg1, arg2):
         so, this should result in adding arg2 to the followers list of arg1
         update the network dictionary and return it
     '''
-    # remove the pass below and start writing your code
-    pass
+    k = len(network)
+    if arg1 not in network:
+        network(k+1) = agr1
+    new_network = network[arg1].append(arg2)
+    return new_network
 
 def unfollow(network, arg1, arg2):
-    '''
-        3 arguments are passed to this function
-        network is a dictionary representing the social network
-        arg1 and arg2 are two people in the network
-        unfollow function is called when arg1 wants to stop following arg2
-        so, this should result in removing arg2 from the followers list of arg1
-        update the network dictionary and return it
-    '''
-    # remove the pass below and start writing your code
-    pass
-
+        '''
+            3 arguments are passed to this function
+            network is a dictionary representing the social network
+            arg1 and arg2 are two people in the network
+            unfollow function is called when arg1 wants to stop following arg2
+            so, this should result in removing arg2 from the followers list of arg1
+            update the network dictionary and return it
+        '''
+        new_network = network[arg1].remove(arg2)
+        return new_network
 def delete_person(network, arg1):
-    '''
-        2 arguments are passed to this function
-        network is a dictionary representing the social network
-        arg1 is a person in the network
-        delete_person function is called when arg1 wants to exit from the network
-        so, this should result in deleting arg1 from network
-        also, before deleting arg1, remove arg1 from the everyone's followers list
-        update the network dictionary and return it
-    '''
-    # remove the pass below and start writing your code
-    pass
+        '''
+            2 arguments are passed to this function
+            network is a dictionary representing the social network
+            arg1 is a person in the network
+            delete_person function is called when arg1 wants to exit from the network
+            so, this should result in deleting arg1 from network
+            also, before deleting arg1, remove arg1 from the everyone's followers list
+            update the network dictionary and return it
+        '''
+        new_network del network[agr1]
+        return new_network
 
 def main():
     '''
