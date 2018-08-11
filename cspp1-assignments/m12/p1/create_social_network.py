@@ -46,8 +46,7 @@ def create_social_network(data):
     for i in range(0,len(m_final),2):
         if m_final[i] not in s_dict:
             s_dict[m_final[i]] = m_final[i+1].split(',')
-    return s_dict 
-    print(m_final)
+    return s_dict
 def main():
     '''
         handling testcase input and printing output
