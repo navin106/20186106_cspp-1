@@ -42,7 +42,6 @@ def create_social_network(data):
     for i in range(len(l_revised)):
         k_follows = l_revised[i].split(' follows ')
         m_final.extend(k_follows)
-    print(m_final)
     for i in range(0,len(m_final),2):
         if m_final[i] not in s_dict:
             s_dict[m_final[i]] = m_final[i+1].split(',')
