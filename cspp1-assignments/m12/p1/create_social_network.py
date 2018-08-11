@@ -34,9 +34,11 @@ def create_social_network(data):
     l_revised = []
     for i in range(len(l_enter)-1):
         l_revised.append(l_enter[i])
-    for i in range(len(l_revised)):
-        k_follows = l_revised[i].split(' follows ')
+    temp = len(l_revised)
+    for i in range(temp):
+        k_follows = l_revised[temp].split(' follows ')
         m_final.extend(k_follows)
+        temp = temp + 1
     if len(m_final) > len(k_follows):
         for i in range(0, len(m_final), 2):
             if m_final[i] not in s_dict:
