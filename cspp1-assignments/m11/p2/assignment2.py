@@ -20,7 +20,7 @@ def updateHand(hand, word):
     """
     for i in word:
         if i in hand:
-            hand[i]-=1
+            hand[i] -= 1
     return hand
 
 def main():
