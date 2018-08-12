@@ -57,3 +57,8 @@ def main():
     print(create_social_network(string))
 if __name__ == "__main__":
     main()
+
+
+k = len(network)
+        if agr1 not in network:
+            network(k+1)
