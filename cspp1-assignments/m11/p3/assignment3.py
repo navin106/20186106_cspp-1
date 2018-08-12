@@ -25,9 +25,8 @@ def isValidWord(word, hand, wordList):
     			flag = 0
     	if flag == 1:
     		return True
-    	return False
-    		#if (i in hand) and (hand[i]>0):
-    		#return True
+    	else:
+    		return False
     else:
     	return False
 
@@ -41,8 +40,5 @@ def main():
 		adict[l[0]]=int(l[1])
 	l2=input().split()
 	print(isValidWord(word,adict,l2))
-		
-
-
 if __name__== "__main__":
 	main()
