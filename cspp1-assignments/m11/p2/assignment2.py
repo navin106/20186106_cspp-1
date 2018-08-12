@@ -27,13 +27,13 @@ def main():
     '''
     calling update function
     '''
-	n_input = input()
-	adict = {}
-	for i in range(int(n_input)):
-		data = input()
-		l_list = data.split()
-		adict[l_list[0]] = int(l_list[1])
-	data1 = input()
-	print(update_hand(adict,data1))
+    n_input = input()
+    adict = {}
+    for i in range(int(n_input)):
+        data = input()
+        l_list = data.split()
+        adict[l_list[0]] = int(l_list[1])
+    data1 = input()
+    print(update_hand(adict,data1))
 if __name__ == "__main__":
-	main()
+    main()
