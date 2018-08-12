@@ -32,7 +32,7 @@ def get_word_score(word, n):
         score = score + SCRABBLE_LETTER_VALUES[i]
         temp += 1
     if len(word) == n:
-        score = score + 50
+        return temp*score + 50
     return temp*score
 def main():
     '''
