@@ -24,7 +24,7 @@ def is_valid_word(word, hand, word_list):
     word_list: list of lowercase strings
     """
     count = 0
-    if word in word_list:
+    if (word in word_list):
         for i in word:
             if (i in hand) and (hand[i] != 0):
                 count += 1
