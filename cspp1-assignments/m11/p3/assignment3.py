@@ -25,10 +25,7 @@ def isValidWord(word, hand, wordList):
     			flag = 0
     	if flag == 1:
     		return True
-    	else:
-    		return False
-    else:
-    	return False
+    return False
 
 def main():
 	word=input()
