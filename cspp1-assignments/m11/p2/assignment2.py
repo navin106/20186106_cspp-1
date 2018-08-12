@@ -25,9 +25,9 @@ def main():
     '''
     calling update function
     '''
-    n_input = input()
+    n_input = int(input())
     adict = {}
-    for i in range(int(n_input)):
+    for i in range(n_input):
         data = input()
         l_list = data.split()
         adict[l_list[0]] = int(l_list[1])
