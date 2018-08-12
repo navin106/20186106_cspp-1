@@ -33,5 +33,6 @@ def main():
         adict[l_list[0]] = int(l_list[1])
     data1 = input()
     print(update_hand(adict, data1))
+    i = 0
 if __name__ == "__main__":
     main()
