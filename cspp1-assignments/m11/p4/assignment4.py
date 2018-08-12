@@ -8,7 +8,7 @@ First, though, you'll need to implement the helper calculate_handlen function, \
 which can be done in under five lines of code.
 '''
 def calculate_handlen(hand):
-    """ 
+    """
     Returns the length (number of letters) in the current hand.
     hand: dictionary (string int)
     returns: integer
