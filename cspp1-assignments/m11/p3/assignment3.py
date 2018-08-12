@@ -29,6 +29,9 @@ def is_valid_word(word, hand, word_list):
                 count += 1
     return count == len(word)
 def main():
+    '''
+    calling function
+    '''
     word = input()
     n_numb = int(input())
     adict = {}
