@@ -13,17 +13,17 @@ implementation by calling it multiple times on the same hand - what should the c
 Fill in the code for isValidWord in ps4a.py and be sure you've passed the appropriate \
 tests in test_ps4a.py before pasting your function definition here.
 '''
-def is_valid_word(word, hand, wordList):
+def is_valid_word(word, hand, word_list):
     """
-    Returns True if word is in the wordList and is entirely
+    Returns True if word is in the word_list and is entirely
     composed of letters in the hand. Otherwise, returns False.
-    Does not mutate hand or wordList.
+    Does not mutate hand or word_list.
     word: string
     hand: dictionary (string -> int)
-    wordList: list of lowercase strings
+    word_list: list of lowercase strings
     """
     count = 0
-    if word in wordList:
+    if word in word_list:
         for i in word:
             if i in hand and hand[i] > 0:
                 count += 1
