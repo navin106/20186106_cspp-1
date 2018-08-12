@@ -36,7 +36,7 @@ def main():
     '''
     Main function for the given problem
     '''
-    data = 'qi 7'#input()
+    data = input()
     data = data.split()
     print(get_word_score(data[0], int(data[1])))
 if __name__ == "__main__":
