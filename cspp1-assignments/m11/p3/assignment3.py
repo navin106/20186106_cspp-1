@@ -1,3 +1,4 @@
+
 # Assignment-3
 '''
 @author:navin106
@@ -27,7 +28,11 @@ def is_valid_word(word, hand, word_list):
         for i in word:
             if i in hand and hand[i] > 0:
                 count += 1
-    return count == len(word)
+            if count == len(word):
+                return True
+            return False
+    else:
+        return False
 def main():
     '''
     calling function
