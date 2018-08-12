@@ -14,7 +14,10 @@ def calculateHandlen(hand):
     hand: dictionary (string int)
     returns: integer
     """
-    return len(hand)
+    k = 0
+    for i in hand:
+    	k = k + hand[i]
+    return k 
 def main():
 	n=input()
 	adict={}
