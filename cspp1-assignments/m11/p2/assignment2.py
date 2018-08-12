@@ -24,12 +24,12 @@ def updateHand(hand, word):
     return hand
 
 def main():
-	n = input()
+	n_input = input()
 	adict = {}
-	for i in range(int(n)):
+	for i in range(int(n_input)):
 		data = input()
-		l = data.split()
-		adict[l[0]] = int(l[1])
+		l_list = data.split()
+		adict[l_list[0]] = int(l_list[1])
 	data1 = input()
 	print(updateHand(adict,data1))
 if __name__ == "__main__":
