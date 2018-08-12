@@ -21,7 +21,7 @@ def isValidWord(word, hand, wordList):
     	k = k + i
     for l in k:
     	if l not in word:
-    	return False
+    		return False
     return True 
 def main():
 	word=input()
