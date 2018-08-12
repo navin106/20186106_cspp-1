@@ -32,11 +32,11 @@ def main():
     word = input()
     n_numb = int(input())
     adict = {}
-    for i in range(n_numb):
+    for data in range(n_numb):
         data = input()
         l_dict = data.split()
         adict[l_dict[0]] = int(l_dict[1])
     l_list = input().split()
-    print(isValidWord(word,adict,l_list))
+    print(isValidWord(word, adict, l_list))
 if __name__ == "__main__":
     main()
