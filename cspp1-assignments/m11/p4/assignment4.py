@@ -21,12 +21,12 @@ def main():
     '''
     calling function
     '''
-    n=input()
-    adict={}
-    for data in range(int(n)):
-        data=input()
-        l=data.split()
-        adict[l[0]]=int(l[1])
-    print(calculateHandlen(adict))
+    n_input = input()
+    a_dict = {}
+    for data in range(int(n_input)):
+        data = input()
+        l_list = data.split()
+        a_dict[l_list[0]] = int(l_list[1])
+    print(calculateHandlen(a_dict))
 if __name__ == "__main__":
     main()
