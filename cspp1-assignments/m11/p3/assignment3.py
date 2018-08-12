@@ -13,7 +13,7 @@ implementation by calling it multiple times on the same hand - what should the c
 Fill in the code for isValidWord in ps4a.py and be sure you've passed the appropriate \
 tests in test_ps4a.py before pasting your function definition here.
 '''
-def isValidWord(word, hand, wordList):
+def is_valid_word(word, hand, wordList):
     """
     Returns True if word is in the wordList and is entirely
     composed of letters in the hand. Otherwise, returns False.
@@ -37,6 +37,6 @@ def main():
         l_dict = data.split()
         adict[l_dict[0]] = int(l_dict[1])
     l_list = input().split()
-    print(isValidWord(word, adict, l_list))
+    print(is_valid_word(word, adict, l_list))
 if __name__ == "__main__":
     main()
