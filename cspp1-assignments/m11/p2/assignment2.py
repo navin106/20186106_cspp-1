@@ -14,7 +14,7 @@ def update_hand(hand, word):
     and returns the new hand, without those letters in it.
     Has no side effects: does not modify hand.
     word: string
-    hand: dictionary (string -> int)    
+    hand: dictionary (string -> int)
     returns: dictionary (string -> int)
     """
     for i in word:
