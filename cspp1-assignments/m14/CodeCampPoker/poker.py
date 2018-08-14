@@ -17,7 +17,6 @@ def is_straight(hand):
     '''
     m=[]
     o=[]
-
     count = 0
     for i in range(len(hand)):
         m.append(hand[i][0])
@@ -26,8 +25,11 @@ def is_straight(hand):
     o.sort()
     for k in range(len(o)-1):
         if o[k+1]-o[k] == 1:
-            return False
+            count += 1
+    if count != len(m):
         return True 
+    return False
+
 def is_flush(hand):
     '''
         How do we find out if the given hand is a flush?
