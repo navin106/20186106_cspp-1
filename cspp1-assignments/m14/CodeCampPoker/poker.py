@@ -22,7 +22,7 @@ def is_straight(hand):
     m.sort()
     flag = 0
     for k in range(len(o)-1):
-        if o[k+1]-o[k] != 1:
+        if m[k+1]-m[k] != 1:
             return False
     return True
 
