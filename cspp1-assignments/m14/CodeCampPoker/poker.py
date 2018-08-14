@@ -26,7 +26,7 @@ def is_straight(hand):
     for k in range(len(o)-1):
         if o[k+1]-o[k] == 1:
             count += 1
-    return count == len(m):
+    return count == len(m)
 
 def is_flush(hand):
     '''
