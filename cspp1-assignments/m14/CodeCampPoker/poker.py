@@ -18,8 +18,8 @@ def is_straight(hand):
     m=[]
     o=[]
     count = 0
-    for i in range(len(hand)):
-        m.append(hand[i][0])
+    for i in hand:
+        m.append(hand[0])
     for j in m:
         o.append(val_dict[j])
     o.sort()
@@ -42,8 +42,8 @@ def is_flush(hand):
     n = []
     k = 0
     count1 = 0
-    for i in range(len(hand)):
-        n.append(hand[i][1])
+    for i in hand:
+        n.append(hand[1])
     for i in n:
         k = k + ord(i)
     if k == 5*ord(i):
