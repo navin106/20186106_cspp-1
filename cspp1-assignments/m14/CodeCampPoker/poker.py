@@ -4,7 +4,6 @@
     Read about poker hands here.
     https://en.wikipedia.org/wiki/List_of_poker_hands
 '''
-val_dict = {'2':2, '3':3, '4':4, '5':5, '6':6, '7':7, '8':8, '9':9, 'T':10, 'J':11, 'Q':12, 'K':13, 'A':14}
 def is_straight(hand):
     '''
         How do we find out if the given hand is a straight?
@@ -15,18 +14,17 @@ def is_straight(hand):
         Think of an algorithm: given the card face value how to check if it a straight
         Write the code for it and return True if it is a straight else return False
     '''
+    val_dict = {'2':2, '3':3, '4':4, '5':5, '6':6, '7':7, '8':8, '9':9, 'T':10, 'J':11, 'Q':12, 'K':13, 'A':14}
     m=[]
-    o=[]
     count = 0
     for i in hand:
-        m.append(i[0])
-    for j in m:
-        o.append(val_dict[j])
-    o.sort()
+        m.append(val_dict[i[0]])
+    m.sort()
+    flag = 0
     for k in range(len(o)-1):
-        if o[k+1]-o[k] == 1:
-            count += 1
-    return count == len(m)
+        if o[k+1]-o[k] != 1:
+            return False
+    return True
 
 def is_flush(hand):
     '''
