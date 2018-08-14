@@ -15,13 +15,13 @@ def is_straight(hand):
         Write the code for it and return True if it is a straight else return False
     '''
     val_dict = {'2':2, '3':3, '4':4, '5':5, '6':6, '7':7, '8':8, '9':9, 'T':10, 'J':11, 'Q':12, 'K':13, 'A':14}
-    m=[]
+    face_values = []
     count = 0
     for i in hand:
-        m.append(val_dict[i[0]])
-    m.sort()
-    for k in range(len(m)-1):
-        if m[k+1]-m[k] != 1:
+        face_values.append(val_dict[i[0]])
+    face_values.sort()
+    for k in range(len(face_values)-1):
+        if face_values[k+1]-face_values[k] != 1:
             return False
     return True
 
@@ -34,14 +34,14 @@ def is_flush(hand):
         Think of an algorithm: given the card suite how to check if it is a flush
         Write the code for it and return True if it is a flush else return False
     '''
-    n = []
-    k = 0
+    suit_list = []
+    sum_ascii = 0
     count1 = 0
     for i in hand:
-        n.append(i[1])
-    for i in n:
-        k = k + ord(i)
-    if k == 5*ord(i):
+        suit_list.append(i[1])
+    for i in suit_list:
+        sum_ascii = sum_ascii + ord(i)
+    if sum_ascii == 5*ord(i):
         return True
     return False
 
