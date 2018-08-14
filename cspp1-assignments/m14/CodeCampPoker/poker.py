@@ -44,7 +44,7 @@ def is_flush(hand):
     count1 = 0
     for i in range(len(hand)):
         n.append(hand[i][1])
-    for i in range(len(n)):
+    for i in range(len(n)-1):
         if n[i] == n[i+1]:
             count1 += 1
     if count1 == len(n):
