@@ -71,7 +71,7 @@ def hand_rank(hand):
     # Instead break it down into two sub functions is_straight and is_flus
 
     # check for straight, flush and straight flush
-    if is_straight(hand) == True and is_flush(hand) == True:
+    if (is_straight(hand) == True) and (is_flush(hand) == True):
         return 3
     # best hand of these 3 would be a straight flush with the return value 3
     elif is_straight(hand) == True:
