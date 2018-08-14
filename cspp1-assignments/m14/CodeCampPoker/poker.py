@@ -26,7 +26,7 @@ def is_straight(hand):
     for k in range(len(o)-1):
         if o[k+1]-o[k] == 1:
             count += 1
-    if count != len(m):
+    if count != len(o):
         return True 
     return False
 
