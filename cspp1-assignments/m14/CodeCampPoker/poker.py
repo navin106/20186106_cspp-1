@@ -48,6 +48,7 @@ def is_flush(hand):
         if n[i] == n[i+1]:
             count1 += 1
         if count1 == len(n):
+            print(count1 == len(n))
             return True
         return False
 
