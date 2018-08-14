@@ -23,7 +23,6 @@ def is_straight(hand):
     for j in m:
         o.append(val_dict[j])
     o.sort()
-    print(o)
     for k in range(len(o)-1):
         if o[k+1]-o[k] == 1:
             count += 1
