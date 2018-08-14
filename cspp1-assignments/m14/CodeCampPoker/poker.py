@@ -26,7 +26,7 @@ def is_straight(hand):
     for k in range(len(o)-1):
         if o[k+1]-o[k] == 1:
             count += 1
-    if count != len(o):
+    if count != len(m):
         return True 
     return False
 
@@ -71,11 +71,11 @@ def hand_rank(hand):
     if (is_straight(hand) == True) and (is_flush(hand) == True):
         return 3
     # best hand of these 3 would be a straight flush with the return value 3
-    if is_straight(hand) == True:
-        return 1
-    # the second best would be a flush with the return value 2
     if is_flush(hand) == True:
         return 2
+    # the second best would be a flush with the return value 2
+    if is_straight(hand) == True:
+        return 1
     else:
         return 0
     # third would be a straight with the return value 1
