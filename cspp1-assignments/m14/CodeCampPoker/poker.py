@@ -51,8 +51,6 @@ def is_flush(hand):
         return True
     return False
 
-
-
 def hand_rank(hand):
     '''
         You will code this function. The goal of the function is to
@@ -74,10 +72,10 @@ def hand_rank(hand):
     if (is_straight(hand) == True) and (is_flush(hand) == True):
         return 3
     # best hand of these 3 would be a straight flush with the return value 3
-    elif is_straight(hand) == True:
+    if is_straight(hand) == True:
         return 2
     # the second best would be a flush with the return value 2
-    elif is_flush(hand) == True:
+    if is_flush(hand) == True:
         return 1
     else:
         return 0
