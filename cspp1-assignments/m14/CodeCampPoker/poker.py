@@ -20,7 +20,6 @@ def is_straight(hand):
     for i in hand:
         m.append(val_dict[i[0]])
     m.sort()
-    flag = 0
     for k in range(len(m)-1):
         if m[k+1]-m[k] != 1:
             return False
