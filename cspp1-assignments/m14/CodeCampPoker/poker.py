@@ -41,13 +41,13 @@ def is_flush(hand):
         Write the code for it and return True if it is a flush else return False
     '''
     n = []
+    k = 0
     count1 = 0
     for i in range(len(hand)):
         n.append(hand[i][1])
-    for i in range(len(n)):
-        if n[i] == n[i+1]:
-            count1 += 1
-    if count1 == len(n):
+    for i in n:
+        k = k + ord(i)
+    if k == 5*ord(i):
         return True
     return False
 
