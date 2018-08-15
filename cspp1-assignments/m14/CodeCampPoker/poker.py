@@ -31,7 +31,7 @@ def is_four(hand):
     face_values1 = []
     for i in hand:
         face_values1.append(val_dict[i[0]])
-    for k in range(len(face_values1)):
+    for k in range(len(face_values1)-1):
         if face_values1[k+1]-face_values1[k] == 0:
             count +=1
     if count == 4:
