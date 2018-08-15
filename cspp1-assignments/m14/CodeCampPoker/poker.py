@@ -35,7 +35,7 @@ def is_four(hand):
     face_values1.sort()
     for k in range(len(face_values1)-1):
         if face_values1[k+1]-face_values1[k] == 0:
-            count +=1
+            count += 1
     return count == 3
 def is_flush(hand):
     '''
@@ -66,7 +66,7 @@ def is_three(hand):
     face_values2.sort()
     for k in range(len(face_values2)-1):
         if face_values2[k+1]-face_values2[k] == 0:
-            count1 +=1
+            count1 += 1
     return count1 == 2
 def is_two(hand):
     '''
@@ -79,7 +79,7 @@ def is_two(hand):
     face_values3.sort()
     for k in range(len(face_values3)-1):
         if face_values3[k+1]-face_values3[k] == 0:
-            count2 +=1
+            count2 += 1
     return count2 == 1
 def hand_rank(hand):
     '''
