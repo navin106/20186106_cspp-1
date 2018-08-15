@@ -4,7 +4,7 @@
     Read about poker hands here.
     https://en.wikipedia.org/wiki/List_of_poker_hands
 '''
-val_dict = {'2':2, '3':3, '4':4, '5':5, '6':6, '7':7, '8':8,\
+VAL_DICT = {'2':2, '3':3, '4':4, '5':5, '6':6, '7':7, '8':8,\
      '9':9, 'T':10, 'J':11, 'Q':12, 'K':13, 'A':14}
 def is_straight(hand):
     '''
@@ -18,7 +18,7 @@ def is_straight(hand):
     '''
     face_values = []
     for i in hand:
-        face_values.append(val_dict[i[0]])
+        face_values.append(VAL_DICT[i[0]])
     face_values.sort()
     for k in range(len(face_values)-1):
         if face_values[k+1]-face_values[k] != 1:
@@ -31,7 +31,7 @@ def is_four(hand):
     face_values1 = []
     count = 0
     for i in hand:
-        face_values1.append(val_dict[i[0]])
+        face_values1.append(VAL_DICT[i[0]])
     face_values1.sort()
     for k in range(len(face_values1)-1):
         if face_values1[k+1]-face_values1[k] == 0:
@@ -62,7 +62,7 @@ def is_three(hand):
     face_values2 = []
     count1 = 0
     for i in hand:
-        face_values2.append(val_dict[i[0]])
+        face_values2.append(VAL_DICT[i[0]])
     face_values2.sort()
     for k in range(len(face_values2)-1):
         if face_values2[k+1]-face_values2[k] == 0:
@@ -75,7 +75,7 @@ def is_two(hand):
     face_values3 = []
     count2 = 0
     for i in hand:
-        face_values3.append(val_dict[i[0]])
+        face_values3.append(VAL_DICT[i[0]])
     face_values3.sort()
     for k in range(len(face_values3)-1):
         if face_values3[k+1]-face_values3[k] == 0:
