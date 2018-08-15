@@ -101,7 +101,7 @@ def hand_rank(hand):
     if is_straight(hand) and is_flush(hand):
         return 6
     if is_four(hand):
-        return 5 
+        return 5
     # best hand of these 3 would be a straight flush with the return value 3
     if is_flush(hand):
         return 4
