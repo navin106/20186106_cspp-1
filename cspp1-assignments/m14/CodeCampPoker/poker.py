@@ -55,6 +55,19 @@ def is_flush(hand):
     if sum_ascii == 5*ord(i):
         return True
     return False
+def is_three(hand):
+    '''
+    check weather the given hand is three of a kind
+    '''
+    face_values2 = []
+    count1 = 0
+    for i in hand:
+        face_values2.append(val_dict[i[0]])
+    face_values2.sort()
+    for k in range(len(face_values2)-1):
+        if face_values2[k+1]-face_values2[k] == 0:
+            count1 +=1
+    return count1 == 2
 
 def hand_rank(hand):
     '''
