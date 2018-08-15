@@ -112,6 +112,8 @@ def hand_rank(hand):
         retur = 2
     if is_two(hand):
         retur = 1
+    else:
+        retur = 0
     return retur
     # third would be a straight with the return value 1
     # any other hand would be the fourth best with the return value 0
