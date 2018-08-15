@@ -29,6 +29,7 @@ def is_four(hand):
     checks weather it is a four of a kind or not and sends the true or false
     '''
     face_values1 = []
+    count = 0
     for i in hand:
         face_values1.append(val_dict[i[0]])
     for k in range(len(face_values1)-1):
