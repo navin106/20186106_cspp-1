@@ -119,11 +119,9 @@ def hand_rank(hand):
 def poker(hands):
     '''
         This function is completed for you. Read it to learn the code.
-
         Input: List of 2 or more poker hands
                Each poker hand is represented as a list
                Print the hands to see the hand representation
-
         Output: Return the winning poker hand
     '''
     # the line below may be new to you
