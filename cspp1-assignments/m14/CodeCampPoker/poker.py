@@ -68,7 +68,6 @@ def is_three(hand):
         if face_values2[k+1]-face_values2[k] == 0:
             count1 +=1
     return count1 == 2
-
 def hand_rank(hand):
     '''
         You will code this function. The goal of the function is to
@@ -88,14 +87,16 @@ def hand_rank(hand):
 
     # check for straight, flush and straight flush
     if is_straight(hand) and is_flush(hand):
-        return 4
+        return 5
     if is_four(hand):
-        return 3
+        return 4  
     # best hand of these 3 would be a straight flush with the return value 3
     if is_flush(hand):
-        return 2
+        return 3
     # the second best would be a flush with the return value 2
     if is_straight(hand):
+        return 2
+    if is_three(hand):
         return 1
     return 0
     # third would be a straight with the return value 1
