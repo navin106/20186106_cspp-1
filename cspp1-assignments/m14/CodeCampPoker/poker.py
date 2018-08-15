@@ -97,7 +97,6 @@ def hand_rank(hand):
     # What would be the logic to determine if a hand is a straight or flush?
     # Let's not think about the logic in the hand_rank function
     # Instead break it down into two sub functions is_straight and is_flus
-
     # check for straight, flush and straight flush
     if is_straight(hand) and is_flush(hand):
         return 6
