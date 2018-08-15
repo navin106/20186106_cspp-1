@@ -36,8 +36,8 @@ def is_four(hand):
     for k in range(len(face_values1)-1):
         if face_values1[k+1]-face_values1[k] == 0:
             count +=1
-    print(count == 4)
-    return count == 4
+    print(count == 3)
+    return count == 3
 def is_flush(hand):
     '''
         How do we find out if the given hand is a flush?
