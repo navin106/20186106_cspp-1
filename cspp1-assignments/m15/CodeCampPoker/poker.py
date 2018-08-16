@@ -76,6 +76,7 @@ def is_two(hand):
     count2 = 0
     a = ()
     k = 0
+    l = []
     for i in hand:
         face_values3.append(VAL_DICT[i[0]])
     face_values3.sort()
