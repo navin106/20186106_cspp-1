@@ -85,6 +85,7 @@ def is_two(hand):
                 temp = face_values3[k]
                 count2 += 1
     return count2 == 1
+    '''
 def high_card(hand):
     face_valuesh = []
     count1 = 0
@@ -93,7 +94,7 @@ def high_card(hand):
     face_valuesh.sort()
     temp = sum(hand)
     if temp <
-
+    '''
 def hand_rank(hand):
     '''
         You will code this function. The goal of the function is to
