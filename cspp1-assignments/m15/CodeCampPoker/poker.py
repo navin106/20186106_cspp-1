@@ -27,7 +27,7 @@ def is_straight(hand):
         Write the code for it and return True if it is a straight else return False
     '''
     list_k = []
-    list_k.extend(face_values(hand).sort())
+    list_k.append(face_values(hand).sort())
     for k in range(len(list_k)-1):
         if list_k[k+1]-list_k[k] != 1:
             return False
@@ -37,7 +37,7 @@ def is_four(hand):
     checks weather it is a four of a kind or not and sends the true or false
     '''
     list_k = []
-    list_k.extend(face_values(hand).sort())
+    list_k.append(face_values(hand).sort())
     for k in range(len(list_k)-1):
         if list_k[k+1]-list_k[k] == 0:
             count += 1
@@ -59,7 +59,7 @@ def is_three(hand):
     check weather the given hand is three of a kind
     '''
     list_k = []
-    list_k.extend(face_values(hand).sort())
+    list_k.append(face_values(hand).sort())
     for k in range(len(list_k)-1):
         if list_k[k+1]-list_k[k] == 0:
             count1 += 1
@@ -69,7 +69,7 @@ def is_two(hand):
     check weather the given hand is a pair
     '''
     list_k = []
-    list_k.extend(face_values(hand).sort())
+    list_k.append(face_values(hand).sort())
     for k in range(len(list_k)-1):
         if list_k[k+1]-list_k[k] == 0:
             count2 += 1
