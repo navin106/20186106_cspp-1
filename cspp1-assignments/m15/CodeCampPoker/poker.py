@@ -6,7 +6,16 @@
 '''
 VAL_DICT = {'2':2, '3':3, '4':4, '5':5, '6':6, '7':7, '8':8,\
      '9':9, 'T':10, 'J':11, 'Q':12, 'K':13, 'A':14}
-
+def face_values(hand):
+	face_values = []
+	for i in hand:
+		face_values.append(VAL_DICT[i[0]])
+	return face_values
+def suit_values(hand):
+	suit_values = []
+	for i in hand:
+		suit_values.append(i[1])
+	return suit_values
 def is_straight(hand):
     '''
         How do we find out if the given hand is a straight?
@@ -17,10 +26,7 @@ def is_straight(hand):
         Think of an algorithm: given the card face value how to check if it a straight
         Write the code for it and return True if it is a straight else return False
     '''
-    face_values = []
-    for i in hand:
-        face_values.append(VAL_DICT[i[0]])
-    face_values.sort()
+    face_values(hand).sort()
     for k in range(len(face_values)-1):
         if face_values[k+1]-face_values[k] != 1:
             return False
@@ -29,13 +35,9 @@ def is_four(hand):
     '''
     checks weather it is a four of a kind or not and sends the true or false
     '''
-    face_values1 = []
-    count = 0
-    for i in hand:
-        face_values1.append(VAL_DICT[i[0]])
-    face_values1.sort()
-    for k in range(len(face_values1)-1):
-        if face_values1[k+1]-face_values1[k] == 0:
+    face_values(hand).sort()
+    for k in range(len(face_values)-1):
+        if face_values[k+1]-face_values[k] == 0:
             count += 1
     return count == 3
 def is_flush(hand):
@@ -47,41 +49,31 @@ def is_flush(hand):
         Think of an algorithm: given the card suite how to check if it is a flush
         Write the code for it and return True if it is a flush else return False
     '''
-    suit_list = []
-    sum_ascii = 0
-    for i in hand:
-        suit_list.append(i[1])
-    for i in suit_list:
-        sum_ascii = sum_ascii + ord(i)
-    if sum_ascii == 5*ord(i):
+    if len(set(suit_values(hand))) == 1:
         return True
     return False
 def is_three(hand):
     '''
     check weather the given hand is three of a kind
     '''
-    face_values2 = []
-    count1 = 0
-    for i in hand:
-        face_values2.append(VAL_DICT[i[0]])
-    face_values2.sort()
-    for k in range(len(face_values2)-1):
-        if face_values2[k+1]-face_values2[k] == 0:
+    face_values.sort()
+    for k in range(len(face_values)-1):
+        if face_values[k+1]-face_values[k] == 0:
             count1 += 1
     return count1 == 2
 def is_two(hand):
     '''
     check weather the given hand is a pair
     '''
-    face_values3 = []
-    count2 = 0
-    for i in hand:
-        face_values3.append(VAL_DICT[i[0]])
-    face_values3.sort()
-    for k in range(len(face_values3)-1):
-        if face_values3[k+1]-face_values3[k] == 0:
+    face_values.sort()
+    for k in range(len(face_values)-1):
+        if face_values[k+1]-face_values[k] == 0:
             count2 += 1
     return count2 == 1
+def high_card(hand):
+    face_values.sort()
+	return len(set(face_values)) == 5
+
 def hand_rank(hand):
     '''
         You will code this function. The goal of the function is to
@@ -99,15 +91,11 @@ def hand_rank(hand):
     # Let's not think about the logic in the hand_rank function
     # Instead break it down into two sub functions is_straight and is_flus
     # check for straight, flush and straight flush
-    card_ranks = set(['--23456789TJQKA'.index(c) for c,s in hand])
-    card_ranks.sort()
-    card_ranks.reverse()
-    print(card_ranks)
     if is_straight(hand) and is_flush(hand):
         retur = 7
     elif is_four(hand):
         retur = 6
-    elif is_four(hand) and is_two(hand):
+    elif is_three(hand) and is_two(hand):
     	retur = 5
     # best hand of these 3 would be a straight flush with the return value 3
     elif is_flush(hand):
@@ -121,7 +109,7 @@ def hand_rank(hand):
         retur = 1
     else:
         retur = 0
-    return (retur, card_ranks)
+    return retur
     # third would be a straight with the return value 1
     # any other hand would be the fourth best with the return value 0
     # max in poker function uses these return values to select the best hand
