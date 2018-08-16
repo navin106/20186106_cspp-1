@@ -52,7 +52,10 @@ def is_flush(hand):
         Think of an algorithm: given the card suite how to check if it is a flush
         Write the code for it and return True if it is a flush else return False
     '''
-    if len(set(suit_values(hand))) == 1:
+    l = 0
+    for i in suit_values:
+        l += ord(i)
+    if l == 5*ord(i):
         return True
     return False
 def is_three(hand):
