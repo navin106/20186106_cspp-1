@@ -99,22 +99,30 @@ def hand_rank(hand):
     # Instead break it down into two sub functions is_straight and is_flus
     # check for straight, flush and straight flush
     if is_straight(hand) and is_flush(hand):
+        print('straight and flush')
         retur = 7
     elif is_four(hand):
+        print('is_four')
         retur = 6
     elif is_four(hand) and is_two(hand):
-    	retur = 5
+        print('full_house')
+        retur = 5
     # best hand of these 3 would be a straight flush with the return value 3
     elif is_flush(hand):
+        print('is_flush')
         retur = 4
     # the second best would be a flush with the return value 2
     elif is_straight(hand):
+        print('is_straight')
         retur = 3
     elif is_three(hand):
+        print('is_three')
         retur = 2
     elif is_two(hand):
+        print('is_two')
         retur = 1
     else:
+        print('highcard')
         retur = 0
     return retur
     # third would be a straight with the return value 1
