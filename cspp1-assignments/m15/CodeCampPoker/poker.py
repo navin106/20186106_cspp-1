@@ -60,6 +60,7 @@ def is_three(hand):
     check weather the given hand is three of a kind
     '''
     list_k = []
+    count1 = 0 
     list_k.append(face_values(hand).sort())
     for k in range(len(list_k)-1):
         if list_k[k+1]-list_k[k] == 0:
