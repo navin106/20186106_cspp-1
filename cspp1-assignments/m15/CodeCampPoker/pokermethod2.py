@@ -129,10 +129,11 @@ def hand_rank(hand):
         retur = 105
     elif is_three(hand):
         retur = 104
-    else temp < is_two(hand):
+    elif temp < is_two(hand):
         temp = is_two(hand)
         retur = temp
-    if temp1 < high_card(hand):
+    else:
+        if temp1 < high_card(hand):
         temp = high_card(hand)
         retur = temp
     return retur
