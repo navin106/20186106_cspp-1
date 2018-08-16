@@ -83,7 +83,6 @@ def is_two(hand):
             temp = face_values3[k]
             count2 += 1
     if count2 == 1:
-        print(2*temp)
         return 2*temp
     return 0
 def hand_rank(hand):
