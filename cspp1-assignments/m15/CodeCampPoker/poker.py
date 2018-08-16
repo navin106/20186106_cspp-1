@@ -74,13 +74,16 @@ def is_two(hand):
     '''
     face_values3 = []
     count2 = 0
+    a = []
     for i in hand:
         face_values3.append(VAL_DICT[i[0]])
     face_values3.sort()
     for k in range(len(face_values3)-1):
         if face_values3[k+1]-face_values3[k] == 0:
             count2 += 1
-    return count2 == 1
+    if count2 == 1:
+    	for i in range(5):
+    		a[i] = hand
 def hand_rank(hand):
     '''
         You will code this function. The goal of the function is to
@@ -99,9 +102,11 @@ def hand_rank(hand):
     # Instead break it down into two sub functions is_straight and is_flus
     # check for straight, flush and straight flush
     if is_straight(hand) and is_flush(hand):
-        retur = 6
+        retur = 7
     elif is_four(hand):
-        retur = 5
+        retur = 6
+    elif is_four(hand) and is_two(hand):
+    	retur = 5
     # best hand of these 3 would be a straight flush with the return value 3
     elif is_flush(hand):
         retur = 4
