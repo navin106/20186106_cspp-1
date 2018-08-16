@@ -26,7 +26,7 @@ def is_straight(hand):
         Think of an algorithm: given the card face value how to check if it a straight
         Write the code for it and return True if it is a straight else return False
     '''
-    list_k = face_values(hand).sort()
+    list_k.extend(face_values(hand).sort())
     for k in range(len(list_k)-1):
         if list_k[k+1]-list_k[k] != 1:
             return False
