@@ -86,7 +86,9 @@ def is_two(hand):
     	while True:
     		a[k] = hand
     		i += 1
-    return max(a) == a[k]
+    	for i in len(a):
+    		l = max(a[k],a[k+1])
+    return l == a[k]
 
 def hand_rank(hand):
     '''
