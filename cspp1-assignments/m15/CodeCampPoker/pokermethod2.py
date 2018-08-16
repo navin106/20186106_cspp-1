@@ -134,8 +134,8 @@ def hand_rank(hand):
         retur = temp
     else:
         if temp1 < high_card(hand):
-        temp = high_card(hand)
-        retur = temp
+            temp = high_card(hand)
+            retur = temp
     return retur
     # third would be a straight with the return value 1
     # any other hand would be the fourth best with the return value 0
