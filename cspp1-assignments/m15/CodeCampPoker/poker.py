@@ -99,6 +99,9 @@ def hand_rank(hand):
     # Let's not think about the logic in the hand_rank function
     # Instead break it down into two sub functions is_straight and is_flus
     # check for straight, flush and straight flush
+    card_ranks = set(['--23456789TJQKA'.index(c) for c,s in hand])
+    card_ranks.sort()
+    card_ranks.reverse()
     if is_straight(hand) and is_flush(hand):
         retur = 7
     elif is_four(hand):
@@ -117,7 +120,7 @@ def hand_rank(hand):
         retur = 1
     else:
         retur = 0
-    return retur
+    return (retur, card_ranks)
     # third would be a straight with the return value 1
     # any other hand would be the fourth best with the return value 0
     # max in poker function uses these return values to select the best hand
