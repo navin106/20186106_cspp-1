@@ -38,24 +38,6 @@ def is_four(hand):
             count += 1
     return count == 3
 
-def full_house(hand):
-    '''
-    checks weather it is a full house or not
-    '''
-    face_values4 = []
-    k = []
-    m = []
-    for i in hand:
-        face_values4.append(VAL_DICT[i[0]])
-    face_values4.sort()
-    temp = face_values4[0]
-    for i in  face_values4:
-        if temp != i:
-            k.append(i)
-        else:
-            m.append(i)
-
-
 def is_flush(hand):
     '''
         How do we find out if the given hand is a flush?
