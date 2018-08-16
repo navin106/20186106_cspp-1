@@ -85,6 +85,17 @@ def is_two(hand):
     if count2 == 1:
         return 2*temp
     return 0
+def high_card(hand):
+    face_values4 = []
+    count3 = 0
+    temp = 0
+    for i in hand:
+        face_values4.append(VAL_DICT[i[0]])
+    face_values4.sort()
+    if temp < max(face_values4):
+        temp = max(face_values4)
+    return temp
+
 def hand_rank(hand):
     '''
         You will code this function. The goal of the function is to
@@ -103,6 +114,7 @@ def hand_rank(hand):
     # Instead break it down into two sub functions is_straight and is_flus
     # check for straight, flush and straight flush
     temp = 0
+    temp1 = 0
     if is_straight(hand) and is_flush(hand):
         retur = 109
     elif is_four(hand):
@@ -117,11 +129,12 @@ def hand_rank(hand):
         retur = 105
     elif is_three(hand):
         retur = 104
-    elif temp < is_two(hand):
+    else temp < is_two(hand):
         temp = is_two(hand)
         retur = temp
-    else:
-        retur = 0
+    if temp1 < high_card(hand):
+        temp = high_card(hand)
+        retur = temp
     return retur
     # third would be a straight with the return value 1
     # any other hand would be the fourth best with the return value 0
