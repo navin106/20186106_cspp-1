@@ -37,11 +37,12 @@ def is_four(hand):
     checks weather it is a four of a kind or not and sends the true or false
     '''
     list_k = []
+    count = 0
     list_k.append(face_values(hand).sort())
     for k in range(len(list_k)-1):
         if list_k[k+1]-list_k[k] == 0:
-            countx += 1
-    return countx == 3
+            count += 1
+    return count == 3
 def is_flush(hand):
     '''
         How do we find out if the given hand is a flush?
