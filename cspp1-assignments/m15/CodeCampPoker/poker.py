@@ -26,18 +26,18 @@ def is_straight(hand):
         Think of an algorithm: given the card face value how to check if it a straight
         Write the code for it and return True if it is a straight else return False
     '''
-    face_values(hand).sort()
-    for k in range(len(face_values)-1):
-        if face_values[k+1]-face_values[k] != 1:
+    list_k = face_values(hand).sort()
+    for k in range(len(list_k)-1):
+        if list_k[k+1]-list_k[k] != 1:
             return False
     return True
 def is_four(hand):
     '''
     checks weather it is a four of a kind or not and sends the true or false
     '''
-    face_values(hand).sort()
-    for k in range(len(face_values)-1):
-        if face_values[k+1]-face_values[k] == 0:
+    list_k = face_values(hand).sort()
+    for k in range(len(list_k)-1):
+        if list_k[k+1]-list_k[k] == 0:
             count += 1
     return count == 3
 def is_flush(hand):
@@ -56,24 +56,20 @@ def is_three(hand):
     '''
     check weather the given hand is three of a kind
     '''
-    face_values.sort()
-    for k in range(len(face_values)-1):
-        if face_values[k+1]-face_values[k] == 0:
+    list_k = face_values.sort()
+    for k in range(len(list_k)-1):
+        if list_k[k+1]-list_k[k] == 0:
             count1 += 1
     return count1 == 2
 def is_two(hand):
     '''
     check weather the given hand is a pair
     '''
-    face_values.sort()
-    for k in range(len(face_values)-1):
-        if face_values[k+1]-face_values[k] == 0:
+    list_k = face_values.sort()
+    for k in range(len(list_k)-1):
+        if list_k[k+1]-list_k[k] == 0:
             count2 += 1
     return count2 == 1
-def high_card(hand):
-    face_values.sort()
-    return len(set(face_values)) == 5
-
 def hand_rank(hand):
     '''
         You will code this function. The goal of the function is to
