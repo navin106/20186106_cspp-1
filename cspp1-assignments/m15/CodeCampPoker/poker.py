@@ -43,20 +43,18 @@ def full_house(hand):
     checks weather it is a full house or not
     '''
     face_values4 = []
-    count1 = 0
-    count2 = 0
-    #temp = 0
+    k = []
+    m = []
     for i in hand:
         face_values4.append(VAL_DICT[i[0]])
     face_values4.sort()
-    for k in range(len(face_values4)-1):
-        if face_values4[k+1]-face_values4[k] == 0:
-            #if temp < face_values4[k]:
-                #temp = face_values4[k]
-            count1 += 1
-        elif face_values4[k+1]-face_values4[k] != 0:
-            count2 +=1 
-    return count1 == 2 and count2 == 1
+    temp = face_values4[0]
+    for i in  face_values4:
+        if temp != i:
+            k.append(i)
+        else:
+            m.append(i)
+
 
 def is_flush(hand):
     '''
@@ -105,6 +103,15 @@ def is_two(hand):
                 temp = face_values3[k]
                 count2 += 1
     return count2 == 1
+def high_card(hand):
+    face_valuesh = []
+    count1 = 0
+    for i in hand:
+        face_valuesh.append(VAL_DICT[i[0]])
+    face_valuesh.sort()
+    temp = sum(hand)
+    if temp <
+
 def hand_rank(hand):
     '''
         You will code this function. The goal of the function is to
@@ -123,10 +130,12 @@ def hand_rank(hand):
     # Instead break it down into two sub functions is_straight and is_flus
     # check for straight, flush and straight flush
     if is_straight(hand) and is_flush(hand):
-        retur = 6
+        retur = 7
     elif is_four(hand):
-        retur = 5
+        retur = 6
     # best hand of these 3 would be a straight flush with the return value 3
+    elif is_three(hand) and is_two(hand):
+        retur = 5
     elif is_flush(hand):
         retur = 4
     # the second best would be a flush with the return value 2
@@ -137,7 +146,8 @@ def hand_rank(hand):
     elif is_two(hand):
         retur = 1
     else:
-        retur = 0
+        if high_card(hand):
+            retur = 0
     return retur
     # third would be a straight with the return value 1
     # any other hand would be the fourth best with the return value 0
