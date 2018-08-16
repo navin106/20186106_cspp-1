@@ -82,6 +82,7 @@ def is_two(hand):
             count2 += 1
     if count2 == 1:
         return sum(face_values3)
+    return 0
 def hand_rank(hand):
     '''
         You will code this function. The goal of the function is to
