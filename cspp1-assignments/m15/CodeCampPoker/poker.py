@@ -80,7 +80,8 @@ def is_two(hand):
     for k in range(len(face_values3)-1):
         if face_values3[k+1]-face_values3[k] == 0:
             count2 += 1
-    return count2 == 1
+    if count2 == 1:
+        return sum(face_values3)
 def hand_rank(hand):
     '''
         You will code this function. The goal of the function is to
@@ -98,6 +99,7 @@ def hand_rank(hand):
     # Let's not think about the logic in the hand_rank function
     # Instead break it down into two sub functions is_straight and is_flus
     # check for straight, flush and straight flush
+    temp = 0
     if is_straight(hand) and is_flush(hand):
         print('straight and flush')
         retur = 7
@@ -118,9 +120,9 @@ def hand_rank(hand):
     elif is_three(hand):
         print('is_three')
         retur = 2
-    elif is_two(hand):
-        print('is_two')
-        retur = 1
+    elif temp < is_two(hand):
+        temp = is_two(hand)
+        retur = temp
     else:
         print('highcard')
         retur = 0
