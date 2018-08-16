@@ -107,17 +107,17 @@ def hand_rank(hand):
     if is_straight(hand) and is_flush(hand):
         retur = 109
     elif is_four(hand):
-                retur = 6
-    elif is_four(hand) and is_two(hand):
         retur = 108
+    elif is_four(hand) and is_two(hand):
+        retur = 107
     # best hand of these 3 would be a straight flush with the return value 3
     elif is_flush(hand):
-        retur = 107
+        retur = 106
     # the second best would be a flush with the return value 2
     elif is_straight(hand):
-        retur = 106
-    elif is_three(hand):
         retur = 105
+    elif is_three(hand):
+        retur = 104
     elif temp < is_two(hand):
         temp = is_two(hand)
         retur = temp
