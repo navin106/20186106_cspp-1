@@ -6,6 +6,16 @@
 '''
 VAL_DICT = {'2':2, '3':3, '4':4, '5':5, '6':6, '7':7, '8':8,\
      '9':9, 'T':10, 'J':11, 'Q':12, 'K':13, 'A':14}
+def face_values(hand):
+    face_values = []
+    for i in hand:
+        face_vales.append(VAL_DICT[i[0]])
+    return face_values
+def suit_values(hand):
+    suit_values = []
+    for i in hand:
+        suit_values.append(i[1])
+    return suit_values
 def is_straight(hand):
     '''
         How do we find out if the given hand is a straight?
@@ -16,17 +26,15 @@ def is_straight(hand):
         Think of an algorithm: given the card face value how to check if it a straight
         Write the code for it and return True if it is a straight else return False
     '''
-    face_values = []
-    for i in hand:
-        face_values.append(VAL_DICT[i[0]])
-    face_values.sort()
-    for k in range(len(face_values)-1):
-        if face_values[k+1]-face_values[k] != 1:
+    new_l = face_values(hand).sort()
+    for k in range(len(new_l)-1):
+        if new_l[k+1]-new_l[k] != 1:
             return False
     return True
 def is_four(hand):
     '''
     checks weather it is a four of a kind or not and sends the true or false
+    '''
     '''
     face_values1 = []
     count = 0
@@ -37,6 +45,8 @@ def is_four(hand):
         if face_values1[k+1]-face_values1[k] == 0:
             count += 1
     return count == 3
+    '''
+
 def is_flush(hand):
     '''
         How do we find out if the given hand is a flush?
@@ -45,6 +55,7 @@ def is_flush(hand):
         The second character is good enough to determine a flush
         Think of an algorithm: given the card suite how to check if it is a flush
         Write the code for it and return True if it is a flush else return False
+    '''
     '''
     suit_list = []
     sum_ascii = 0
@@ -55,6 +66,12 @@ def is_flush(hand):
     if sum_ascii == 5*ord(i):
         return True
     return False
+    '''
+    k = hand[i]
+    for i in suit_values(hand):
+        if k != i:
+            return False
+    return True
 def is_three(hand):
     '''
     check weather the given hand is three of a kind
@@ -77,9 +94,12 @@ def is_two(hand):
     for i in hand:
         face_values3.append(VAL_DICT[i[0]])
     face_values3.sort()
+    temp = face_values3[0]
     for k in range(len(face_values3)-1):
         if face_values3[k+1]-face_values3[k] == 0:
-            count2 += 1
+            if temp < face_values3[k]:
+                temp = face_values3[k]
+                count2 += 1
     return count2 == 1
 def hand_rank(hand):
     '''
