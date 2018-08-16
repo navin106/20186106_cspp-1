@@ -102,6 +102,7 @@ def hand_rank(hand):
     card_ranks = set(['--23456789TJQKA'.index(c) for c,s in hand])
     card_ranks.sort()
     card_ranks.reverse()
+    print(card_ranks)
     if is_straight(hand) and is_flush(hand):
         retur = 7
     elif is_four(hand):
