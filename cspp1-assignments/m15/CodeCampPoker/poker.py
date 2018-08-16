@@ -7,15 +7,15 @@
 VAL_DICT = {'2':2, '3':3, '4':4, '5':5, '6':6, '7':7, '8':8,\
      '9':9, 'T':10, 'J':11, 'Q':12, 'K':13, 'A':14}
 def face_values(hand):
-	face_values = []
-	for i in hand:
-		face_values.append(VAL_DICT[i[0]])
-	return face_values
+    face_values = []
+    for i in hand:
+        face_values.append(VAL_DICT[i[0]])
+    return face_values
 def suit_values(hand):
-	suit_values = []
-	for i in hand:
-		suit_values.append(i[1])
-	return suit_values
+    suit_values = []
+    for i in hand:
+        suit_values.append(i[1])
+    return suit_values
 def is_straight(hand):
     '''
         How do we find out if the given hand is a straight?
@@ -72,7 +72,7 @@ def is_two(hand):
     return count2 == 1
 def high_card(hand):
     face_values.sort()
-	return len(set(face_values)) == 5
+    return len(set(face_values)) == 5
 
 def hand_rank(hand):
     '''
@@ -96,7 +96,7 @@ def hand_rank(hand):
     elif is_four(hand):
         retur = 6
     elif is_three(hand) and is_two(hand):
-    	retur = 5
+        retur = 5
     # best hand of these 3 would be a straight flush with the return value 3
     elif is_flush(hand):
         retur = 4
