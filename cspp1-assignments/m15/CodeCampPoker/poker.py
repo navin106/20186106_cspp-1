@@ -74,22 +74,13 @@ def is_two(hand):
     '''
     face_values3 = []
     count2 = 0
-    a = ()
-    k = 0
-    l = []
     for i in hand:
         face_values3.append(VAL_DICT[i[0]])
     face_values3.sort()
     for k in range(len(face_values3)-1):
         if face_values3[k+1]-face_values3[k] == 0:
             count2 += 1
-    if count2 == 1:
-    	while True:
-    		a[k] = hand
-    		i += 1
-    l = max(a[0],a[1])
-    return l == a[0]
-
+    return count2 == 1
 def hand_rank(hand):
     '''
         You will code this function. The goal of the function is to
