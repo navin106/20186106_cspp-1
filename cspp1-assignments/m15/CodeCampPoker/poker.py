@@ -53,7 +53,7 @@ def is_flush(hand):
         Write the code for it and return True if it is a flush else return False
     '''
     l = 0
-    for i in suit_values:
+    for i in suit_values(hand):
         l += ord(i)
     if l == 5*ord(i):
         return True
