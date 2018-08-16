@@ -86,8 +86,10 @@ def is_two(hand):
         return 2*temp
     return 0
 def high_card(hand):
+    '''
+    function for high card
+    '''
     face_values4 = []
-    count3 = 0
     temp = 0
     for i in hand:
         face_values4.append(VAL_DICT[i[0]])
