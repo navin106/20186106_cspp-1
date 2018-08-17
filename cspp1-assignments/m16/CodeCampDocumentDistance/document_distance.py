@@ -45,7 +45,7 @@ def similarity(dict1, dict2):
     		big_dict[j] = [new_dict1[j], new_dict2[j]] 
     
     for i in big_dict:
-    	print(i)
+    	print(big_dict[0])
     	c = c + big_dict[i][0]*big_dict[i][1]
     
     for i in big_dict:
