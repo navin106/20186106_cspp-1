@@ -9,20 +9,9 @@ def clean_string(string):
     clean_list = ((re.sub(r'[^\w\s]' , '',string)).lower()).split()
     return clean_list
 def vector_dictionary(new_list1,new_list2):
-    pass
-def similarity(string_1, string_2):
-    '''
-        Compute the document distance as given in the PDF
-    '''
     new_dict1 = {}
     new_dict2 = {}
     big_dict = {}
-    c = 0
-    d = 0
-    e = 0
-    res = 0
-    new_list1 = clean_string(string_1)
-    new_list2 = clean_string(string_2)
     stop_words = load_stopwords("stopwords.txt")
     for i in new_list1:
         if i not in stop_words and i not in '1234567890':
@@ -46,9 +35,20 @@ def similarity(string_1, string_2):
             big_dict[j] = [0, new_dict2[j]]
         else:
             big_dict[j] = [new_dict1[j], new_dict2[j]]
-    for i in big_dict:
+    return big_dict
+def similarity(string_1, string_2):
+    '''
+        Compute the document distance as given in the PDF
+    '''
+    c = 0
+    d = 0
+    e = 0
+    res = 0
+    new_list1 = clean_string(string_1)
+    new_list2 = clean_string(string_2)
+    for i in vector_dictionary(new_list1,new_list2):
         c = c + big_dict[i][0]*big_dict[i][1]
-    for i in big_dict:
+    for i in vector_dictionary(new_list1,new_list2):
         d = d + big_dict[i][0]**2
         e = e + big_dict[i][1]**2
     res = c/(math.sqrt(d)*math.sqrt(e)) 
