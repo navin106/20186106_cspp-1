@@ -6,9 +6,15 @@ Document Distance - A detailed description is given in the PDF
 import re
 import math
 def clean_string(string):
+    '''
+    send only alphabetics words without punctuations
+    '''
     clean_list = ((re.sub(r'[^\w\s]' , '',string)).lower()).split()
     return clean_list
 def vector_dictionary(new_list1,new_list2):
+    '''
+    creating the new dictionary
+    '''
     new_dict1 = {}
     new_dict2 = {}
     big_dict = {}
@@ -52,7 +58,7 @@ def similarity(string_1, string_2):
     for i in comb_dict:
         de_nominator1 = de_nominator1 + comb_dict[i][0]**2
         de_nominator2 = de_nominator2 + comb_dict[i][1]**2
-    final_result = num_erator/(math.sqrt(de_nominator1)*math.sqrt(de_nominator2)) 
+    final_result = num_erator/(math.sqrt(de_nominator1)*math.sqrt(de_nominator2))
     return final_result
 def load_stopwords(filename):
     '''
