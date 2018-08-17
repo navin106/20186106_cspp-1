@@ -16,9 +16,9 @@ def similarity(dict1, dict2):
     for i in new_list1:
     	if i not in stop_words:
     		if i not in new_dict1:
-    			new_dict[i] = 1
+    			new_dict1[i] = 1
     		else:
-    			new_dict[i] += 1
+    			new_dict1[i] += 1
     for i in new_list2:
     	if i not in stop_words:
     		if i not in new_dict2:
