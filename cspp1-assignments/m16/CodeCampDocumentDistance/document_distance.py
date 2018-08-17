@@ -16,8 +16,8 @@ def similarity(dict1, dict2):
     d = 0
     e = 0
     res = 0
-    new_list1 = ((re.sub(r'[^\w\s]','',dict1)).lower()).strip().split()
-    new_list2 = ((re.sub(r'[^\w\s]','',dict2)).lower()).strip().split()
+    new_list1 = (((re.sub(r'[^\w\s]','',dict1)).lower()).strip()).split()
+    new_list2 = (((re.sub(r'[^\w\s]','',dict2)).lower()).strip()).split()
     stop_words = load_stopwords("stopwords.txt")
     for i in new_list1:
     	if i not in stop_words:
