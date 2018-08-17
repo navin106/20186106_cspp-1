@@ -20,14 +20,14 @@ def similarity(dict1, dict2):
     new_list2 = (((re.sub(r'[^\w\s]','',dict2)).lower()).replace('\'','')).split()
     stop_words = load_stopwords("stopwords.txt")
     for i in new_list1:
-    	if i not in stop_words and len(i) > 0:
+    	if i not in stop_words and i not in '1234567890':
     		if i not in new_dict1:
     			new_dict1[i] = 1
     		else:
     			new_dict1[i] += 1
     
     for i in new_list2:
-    	if i not in stop_words and len(i) > 0:
+    	if i not in stop_words and i not in '1234567890':
     		if i not in new_dict2:
     			new_dict2[i] = 1
     		else:
