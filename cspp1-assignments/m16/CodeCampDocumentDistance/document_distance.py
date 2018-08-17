@@ -13,6 +13,9 @@ def clean_string(string):
     return clean_list
 
 def list_to_dictionaries(list_words, stop_words):
+    '''
+    returns dictionary from lists
+    '''
     new_dict1 = {}
     for i in list_words:
         if i not in stop_words and i not in '1234567890':
