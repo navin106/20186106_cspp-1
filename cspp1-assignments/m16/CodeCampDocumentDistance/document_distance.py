@@ -31,6 +31,15 @@ def vector_dictionary(new_list1, new_list2):
                 new_dict2[i] = 1
             else:
                 new_dict2[i] += 1
+    for i in new_dict1 and new_dict2:
+        big_dict[i] = [new_dict1[i], new_dict2[i]] 
+    for i in new_dict1:
+        if i not in new_dict2:
+            big_dict[i] = [new_dict1[i], 0]
+    for i in new_dict2:
+        if i not in new_dict1:
+            big_dict[i] = [0, new_dict2[j]]
+    '''
     for i in new_dict1:
         if i not in new_dict2:
             big_dict[i] = [new_dict1[i], 0]
@@ -41,6 +50,7 @@ def vector_dictionary(new_list1, new_list2):
             big_dict[j] = [0, new_dict2[j]]
         else:
             big_dict[j] = [new_dict1[j], new_dict2[j]]
+    '''
     return big_dict
 def similarity(string_1, string_2):
     '''
