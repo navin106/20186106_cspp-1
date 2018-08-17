@@ -19,8 +19,7 @@ def similarity(dict1, dict2):
     for i in new_list2:
     	if i not in stop_words:
     		new_udlist2.append(i)
-    uniqwords = sorted(set(new_udlist1))
-    for word in uniqwords:
+    for word in new_udlist1:
     	print (word.count(word), word)
 
 
