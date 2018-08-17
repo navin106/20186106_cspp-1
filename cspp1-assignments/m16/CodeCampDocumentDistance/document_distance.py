@@ -19,8 +19,9 @@ def similarity(dict1, dict2):
     for i in new_list2:
     	if i not in stop_words:
     		new_udlist2.append(i)
-    print(new_udlist1)
-    print(new_udlist2)
+    new_dict1 = Counter(new_udlist1).most_common(100)
+
+
 def load_stopwords(filename):
     '''
         loads stop words from a file and returns a dictionary
