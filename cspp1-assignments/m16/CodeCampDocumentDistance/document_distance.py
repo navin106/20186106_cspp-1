@@ -21,7 +21,7 @@ def similarity(dict1, dict2):
     		new_udlist2.append(i)
     uniqwords = sorted(set(new_udlist1))
     for word in uniqwords:
-    	print (words.count(word), word)
+    	print (word.count(word), word)
 
 
 def load_stopwords(filename):
