@@ -40,20 +40,20 @@ def similarity(string_1, string_2):
     '''
         Compute the document distance as given in the PDF
     '''
-    c = 0
-    d = 0
-    e = 0
-    res = 0
+    num_erator = 0
+    de_nominator1 = 0
+    de_nominator2 = 0
+    final_result = 0
     new_list1 = clean_string(string_1)
     new_list2 = clean_string(string_2)
     comb_dict = vector_dictionary(new_list1,new_list2)
     for i in comb_dict:
-        c = c + comb_dict[i][0]*comb_dict[i][1]
+        num_erator = num_erator + comb_dict[i][0]*comb_dict[i][1]
     for i in comb_dict:
-        d = d + comb_dict[i][0]**2
-        e = e + comb_dict[i][1]**2
-    res = c/(math.sqrt(d)*math.sqrt(e)) 
-    return res
+        de_nominator1 = de_nominator1 + comb_dict[i][0]**2
+        de_nominator2 = de_nominator2 + comb_dict[i][1]**2
+    final_result = num_erator/(math.sqrt(de_nominator1)*math.sqrt(de_nominator2)) 
+    return final_result
 def load_stopwords(filename):
     '''
         loads stop words from a file and returns a dictionary
