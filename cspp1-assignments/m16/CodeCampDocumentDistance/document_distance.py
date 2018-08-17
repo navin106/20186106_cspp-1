@@ -32,7 +32,7 @@ def similarity(dict1, dict2):
                 new_dict2[i] = 1
             else:
                 new_dict2[i] += 1
-    '''
+    
     for i in new_dict1:
 
         if i not in big_dict:
@@ -44,13 +44,13 @@ def similarity(dict1, dict2):
             big_dict[j] = [0, new_dict2[j]]
         else:
             big_dict[j] = [new_dict1[j], new_dict2[j]] 
-    '''
+    
     for i in big_dict:
         c = c + big_dict[i][0]*big_dict[i][1]
     
     for i in big_dict:
-        d = d + big_dict[i][0]^2
-        e = e + big_dict[i][1]^2
+        d = d + big_dict[i][0]^^2
+        e = e + big_dict[i][1]^^2
     
     res = c/(math.sqrt(d)*math.sqrt(e))
     return res
