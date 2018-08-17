@@ -8,20 +8,24 @@ def similarity(dict1, dict2):
     '''
         Compute the document distance as given in the PDF
     '''
-    new_udlist1 = []
-    new_udlist2 = []
+    new_dict1 = {}
+    new_dict2 = {}
     new_list1 = ((re.sub(r'[^\w\s]','',dict1)).lower()).split()
     new_list2 = ((re.sub(r'[^\w\s]','',dict2)).lower()).split()
     stop_words = load_stopwords("stopwords.txt")
     for i in new_list1:
     	if i not in stop_words:
-    		new_udlist1.append(i)
+    		if i not in new_dict1:
+    			new_dict[i] = 1
+    		else:
+    			new_dict[i] += 1
     for i in new_list2:
     	if i not in stop_words:
-    		new_udlist2.append(i)
-    for word in new_udlist1:
-    	print (word.count(word), word)
-
+    		if i not in new_dict2:
+    			new_dict2[i] = 1
+    		else:
+    			new_dict2[i] +=1
+    print(new_dict2, new_dict1)
 
 def load_stopwords(filename):
     '''
