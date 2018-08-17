@@ -26,8 +26,12 @@ def similarity(dict1, dict2):
     			new_dict2[i] = 1
     		else:
     			new_dict2[i] +=1
-    big_dict = new_dict1.keys() + new_dict2.keys()
-    print(big_dict.keys())
+    for i in new_dict1:
+    	if i not in new_dict2:
+    		big_dict[i] = [new_dict1[i],0]
+    	else:
+    		big_dict[i] = [new_dict1[i], new_dict2[i]]
+    print(big_dict)
 def load_stopwords(filename):
     '''
         loads stop words from a file and returns a dictionary
