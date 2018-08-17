@@ -7,6 +7,7 @@ import re
 import math
 def clean_string(string):
     clean_list = ((re.sub(r'[^\w\s]' , '',string)).lower()).split()
+    return clean_list
 def similarity(string_1, string_2):
     '''
         Compute the document distance as given in the PDF
