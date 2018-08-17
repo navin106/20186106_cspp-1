@@ -48,7 +48,7 @@ def similarity(string_1, string_2):
     new_list2 = clean_string(string_2)
     comb_dict = vector_dictionary(new_list1,new_list2)
     for i in comb_dict:
-        c = c + i[0]*i[1]
+        c = c + comb_dict[i][0]*comb_dict[i][1]
     for i in comb_dict:
         d = d + comb_dict[i][0]**2
         e = e + comb_dict[i][1]**2
