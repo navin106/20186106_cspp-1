@@ -39,7 +39,8 @@ def vector_dictionary(new_list1, new_list2):
     for j in new_dict2:
         if j not in new_dict1:
             big_dict[j] = [0, new_dict2[j]]
-        big_dict[j] = [new_dict1[j], new_dict2[j]]
+        else:
+            big_dict[j] = [new_dict1[j], new_dict2[j]]
     return big_dict
 def similarity(string_1, string_2):
     '''
