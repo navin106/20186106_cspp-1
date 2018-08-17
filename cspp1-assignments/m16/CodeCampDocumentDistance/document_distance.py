@@ -10,6 +10,8 @@ def similarity(dict1, dict2):
     '''
     new_dict1 = ((re.sub(r'[^\w\s]','',dict1)).lower()).split()
     new_dict2 = (re.sub(r'[^\w\s]','',dict2)).lower().split()
+    print(new_dict2)
+    print(new_dict1)
 
 def load_stopwords(filename):
     '''
