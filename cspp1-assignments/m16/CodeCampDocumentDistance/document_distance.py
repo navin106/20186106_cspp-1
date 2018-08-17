@@ -36,7 +36,7 @@ def vector_dictionary(new_list1, new_list2):
 
     for i in new_dict1:
         if i in new_dict2:
-        big_dict[i] = [new_dict1[i], new_dict2[i]] 
+            big_dict[i] = [new_dict1[i], new_dict2[i]] 
     for i in new_dict1:
         if i not in big_dict:
             big_dict[i] = [new_dict1[i], 0]
