@@ -4,6 +4,7 @@ activity 1 module 16
     Document Distance - A detailed description is given in the PDF
 '''
 import re
+import math
 def similarity(dict1, dict2):
     '''
         Compute the document distance as given in the PDF
@@ -29,7 +30,7 @@ def similarity(dict1, dict2):
     		if i not in new_dict2:
     			new_dict2[i] = 1
     		else:
-    			new_dict2[i] +=1
+    			new_dict2[i] += 1
     for i in new_dict1:
     	if i not in new_dict2:
     		big_dict[i] = [new_dict1[i],0]
