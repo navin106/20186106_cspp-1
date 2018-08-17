@@ -19,7 +19,9 @@ def similarity(dict1, dict2):
     for i in new_list2:
     	if i not in stop_words:
     		new_udlist2.append(i)
-    counter(new_udlist1).most_common(100)
+    uniqwords = sorted(set(new_udlist1))
+    for word in uniqwords:
+    	print (words.count(word), word)
 
 
 def load_stopwords(filename):
