@@ -10,6 +10,7 @@ def clean_string(string):
     send only alphabetics words without punctuations
     '''
     string = string.replace('\'','')
+    string =string.strip()
     clean_list = ((re.sub(r'[^\w\s]', '', string)).lower()).split()
     return clean_list
 def vector_dictionary(new_list1, new_list2):
