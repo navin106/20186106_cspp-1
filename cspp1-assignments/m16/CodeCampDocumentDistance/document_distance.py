@@ -16,8 +16,8 @@ def similarity(dict1, dict2):
     d = 0
     e = 0
     res = 0
-    new_list1 = (((re.compile('[^a-z]')).sub(' ',dict1)).lower()).split(' ')
-    new_list2 = (((re.compile('[^a-z]')).sub(' ',dict2)).lower()).split(' ')
+    new_list1 = (((re.compile('[^a-z]')).sub('',dict1)).lower()).split('')
+    new_list2 = (((re.compile('[^a-z]')).sub('',dict2)).lower()).split('')
     stop_words = load_stopwords("stopwords.txt")
     for i in new_list1:
     	if i not in stop_words and len(i) > 0:
@@ -35,12 +35,12 @@ def similarity(dict1, dict2):
     
     for i in new_dict1:
 
-    	if i not in new_dict2:
+    	if i not in big_dict:
     		big_dict[i] = [new_dict1[i], 0]
     	else:
     		big_dict[i] = [new_dict1[i], new_dict2[i]]
     for j in new_dict2:
-    	if j not in new_dict1:
+    	if j not in big_dict:
     		big_dict[j] = [0, new_dict2[j]]
     	else:
     		big_dict[j] = [new_dict1[j], new_dict2[j]] 
