@@ -33,7 +33,7 @@ def similarity(dict1, dict2):
     			new_dict2[i] += 1
     for i in new_dict1:
     	if i not in new_dict2:
-    		big_dict[i] = [new_dict1[i],0]
+    		big_dict[i] = [0,0]
     	else:
     		big_dict[i] = [new_dict1[i], new_dict2[i]]
     for i in big_dict:
