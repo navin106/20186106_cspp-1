@@ -11,7 +11,7 @@ def clean_string(string):
     '''
     clean_list = ((re.sub(r'[^\w\s]', '', string)).lower()).split()
     return clean_list
-def vector_dictionary(new_list1,new_list2):
+def vector_dictionary(new_list1, new_list2):
     '''
     creating the new dictionary
     '''
@@ -52,7 +52,7 @@ def similarity(string_1, string_2):
     final_result = 0
     new_list1 = clean_string(string_1)
     new_list2 = clean_string(string_2)
-    comb_dict = vector_dictionary(new_list1,new_list2)
+    comb_dict = vector_dictionary(new_list1, new_list2)
     for i in comb_dict:
         num_erator = num_erator + comb_dict[i][0]*comb_dict[i][1]
     for i in comb_dict:
