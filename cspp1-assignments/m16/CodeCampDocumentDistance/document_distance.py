@@ -46,11 +46,12 @@ def similarity(string_1, string_2):
     res = 0
     new_list1 = clean_string(string_1)
     new_list2 = clean_string(string_2)
-    for i in vector_dictionary(new_list1,new_list2):
-        c = c + big_dict[i][0]*big_dict[i][1]
-    for i in vector_dictionary(new_list1,new_list2):
-        d = d + big_dict[i][0]**2
-        e = e + big_dict[i][1]**2
+    comb_dict = vector_dictionary(new_list1,new_list2)
+    for i in comb_dict:
+        c = c + i[0]*i[1]
+    for i in comb_dict:
+        d = d + comb_dict[i][0]**2
+        e = e + comb_dict[i][1]**2
     res = c/(math.sqrt(d)*math.sqrt(e)) 
     return res
 def load_stopwords(filename):
