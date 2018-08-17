@@ -15,7 +15,7 @@ def similarity(dict1, dict2):
     stop_words = load_stopwords("stopwords.txt")
     for i in new_list1:
     	for j in stop_words:
-    		if i == j:
+    		if i != j:
     			d += 1
     	new_dict1[i] = d 
     	del i 
