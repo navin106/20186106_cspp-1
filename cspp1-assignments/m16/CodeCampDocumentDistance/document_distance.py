@@ -10,6 +10,7 @@ def similarity(dict1, dict2):
     '''
     new_dict1 = {}
     new_dict2 = {}
+    big_dict = {}
     new_list1 = ((re.sub(r'[^\w\s]','',dict1)).lower()).split()
     new_list2 = ((re.sub(r'[^\w\s]','',dict2)).lower()).split()
     stop_words = load_stopwords("stopwords.txt")
