@@ -11,26 +11,25 @@ def clean_string(string):
     '''
     clean_list = ((re.sub(r'[^\w\s]', '', string)).lower()).split()
     return clean_list
-def vector_dictionary(new_list1, new_list2):
-    '''
-    creating the new dictionary
-    '''
+
+def list_to_dictionaries(list_words, stop_words):
     new_dict1 = {}
-    new_dict2 = {}
-    big_dict = {}
-    stop_words = load_stopwords("stopwords.txt")
-    for i in new_list1:
+    for i in list_words:
         if i not in stop_words and i not in '1234567890':
             if i not in new_dict1:
                 new_dict1[i] = 1
             else:
                 new_dict1[i] += 1
-    for i in new_list2:
-        if i not in stop_words and i not in '1234567890':
-            if i not in new_dict2:
-                new_dict2[i] = 1
-            else:
-                new_dict2[i] += 1
+    return new_dict1
+
+def vector_dictionary(new_list1, new_list2):
+    '''
+    creating the new dictionary
+    '''
+    big_dict = {}
+    stop_words = load_stopwords("stopwords.txt")
+    new_dict1 = list_to_dictionaries(new_list1, stop_words)
+    new_dict2 = list_to_dictionaries(new_list2, stop_words)
     for i in new_dict1:
         if i in new_dict2:
             big_dict[i] = [new_dict1[i], new_dict2[i]]
