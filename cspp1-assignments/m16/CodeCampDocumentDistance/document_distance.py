@@ -9,9 +9,8 @@ def similarity(dict1, dict2):
         Compute the document distance as given in the PDF
     '''
     new_dict1 = ((re.sub(r'[^\w\s]','',dict1)).lower()).split()
-    new_dict2 = (re.sub(r'[^\w\s]','',dict2)).lower().split()
-    print(new_dict2)
-    print(new_dict1)
+    new_dict2 = ((re.sub(r'[^\w\s]','',dict2)).lower()).split()
+
 
 def load_stopwords(filename):
     '''
@@ -21,6 +20,7 @@ def load_stopwords(filename):
     with open(filename, 'r') as filename:
         for line in filename:
             stopwords[line.strip()] = 0
+    print(stopwords)
     return stopwords
 
 def main():
