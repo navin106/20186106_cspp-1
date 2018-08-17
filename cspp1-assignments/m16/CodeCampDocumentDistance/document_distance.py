@@ -41,7 +41,7 @@ def similarity(dict1, dict2):
     for i in big_dict:
     	d = d + big_dict[i][0]^2
     	e = e + big_dict[i][1]^2
-    res = c/(sqrt(d)*sqrt(e))
+    res = c/(math.sqrt(d)*math.sqrt(e))
     return res
 
 def load_stopwords(filename):
