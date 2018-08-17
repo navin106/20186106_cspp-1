@@ -23,12 +23,14 @@ def vector_dictionary(new_list1, new_list2):
         if i not in stop_words and i not in '1234567890':
             if i not in new_dict1:
                 new_dict1[i] = 1
-            new_dict1[i] += 1
+            else:
+                new_dict1[i] += 1
     for i in new_list2:
         if i not in stop_words and i not in '1234567890':
             if i not in new_dict2:
                 new_dict2[i] = 1
-            new_dict2[i] += 1
+            else:
+                new_dict2[i] += 1
     for i in new_dict1:
         if i in new_dict2:
             big_dict[i] = [new_dict1[i], new_dict2[i]] 
