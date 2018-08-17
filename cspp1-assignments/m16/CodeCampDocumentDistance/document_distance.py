@@ -49,8 +49,8 @@ def similarity(dict1, dict2):
         c = c + big_dict[i][0]*big_dict[i][1]
     
     for i in big_dict:
-        d = d + big_dict[i][0]^^2
-        e = e + big_dict[i][1]^^2
+        d = d + big_dict[i][0]**2
+        e = e + big_dict[i][1]**2
     
     res = c/(math.sqrt(d)*math.sqrt(e))
     return res
