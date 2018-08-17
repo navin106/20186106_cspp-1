@@ -11,6 +11,10 @@ def similarity(dict1, dict2):
     new_dict1 = {}
     new_dict2 = {}
     big_dict = {}
+    c = 0
+    d = 0
+    e = 0
+    res = 0
     new_list1 = ((re.sub(r'[^\w\s]','',dict1)).lower()).split()
     new_list2 = ((re.sub(r'[^\w\s]','',dict2)).lower()).split()
     stop_words = load_stopwords("stopwords.txt")
@@ -31,7 +35,14 @@ def similarity(dict1, dict2):
     		big_dict[i] = [new_dict1[i],0]
     	else:
     		big_dict[i] = [new_dict1[i], new_dict2[i]]
-    print(big_dict)
+    for i in big_dict:
+    	c = c + big_dict[i][0]*big_dict[i][1]
+    for i in big_dict:
+    	d = d + big_dict[i][0]^2
+    	e = e + big_dict[i][1]^2
+    res = c/(sqrt(d)*sqrt(e))
+    return res
+
 def load_stopwords(filename):
     '''
         loads stop words from a file and returns a dictionary
