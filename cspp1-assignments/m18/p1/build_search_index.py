@@ -68,7 +68,7 @@ def build_search_index(docs):
                         temp2 += 1
                         search_index[k] = []
                         search_index[k].append([(temp, temp2)])
-        temp += 1
+    temp += 1
         # add or update the words of the doc to the search index
     # return search index
     return search_index
