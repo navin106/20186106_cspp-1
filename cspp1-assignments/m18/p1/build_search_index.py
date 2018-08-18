@@ -58,7 +58,7 @@ def build_search_index(docs):
     # keep track of doc_id which is the list index corresponding the document
     # hint: use enumerate to obtain the list index in the for loop
     	for k in i:
-    		if k not in stopwords: 
+    		if k not in stop_words: 
         # clean up doc and tokenize to words list
     			if len(k) > 1:
     				if k not in search_index:
