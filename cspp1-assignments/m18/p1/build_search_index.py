@@ -53,7 +53,7 @@ def build_search_index(docs):
     '''
         Process the docs step by step as given below
     '''
-    print(join(docs))
+    print(docs.join())
     # initialize a search index (an empty dictionary)
     search_index = {}
     # iterate through all the docs
