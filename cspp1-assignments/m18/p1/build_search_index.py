@@ -41,12 +41,12 @@ def word_list(text):
         return a list of words
     '''
     clean_list = ((re.sub(r'[^\w\s]', '', text)).lower()).split()
-    stop_words = load_stopwords("stopwords.txt")
+    
     new_list= []
     for i in clean_list:
         if i not in stop_words:
             new_list.append(i)
-    return new_list
+    return clean_list
 def build_search_index(docs):
     '''
         Process the docs step by step as given below
@@ -55,21 +55,23 @@ def build_search_index(docs):
     req_list = sorted(word_list(k_string))
     # initialize a search index (an empty dictionary)
     search_index = {}
+    stop_words = load_stopwords("stopwords.txt")
     # iterate through all the docs
     temp = 0 
-    for i in docs:
-    	if i in req_list:
-    		if len(i) > 0:
-    			if i not in search_index:
-    				search_index[i] = [temp, 1]
+    for i in docs.lower():
     # keep track of doc_id which is the list index corresponding the document
-    			else:
-    				temp2 = search_index[i][1]
-    				temp2 += 1 
-    				search_index[i] = [temp, temp2]
-    	temp += 1
     # hint: use enumerate to obtain the list index in the for loop
+    	if i in req_list:
+    		if i not in stop_words:
         # clean up doc and tokenize to words list
+    			if len(i) > 0:
+    				if i not in search_index:
+    					search_index[i] = [temp, 1]
+    				else:
+    					temp2 = search_index[i][1]
+    					temp2 += 1 
+    					search_index[i] = [temp, temp2]
+    	temp += 1
         # add or update the words of the doc to the search index
     # return search index
     print(search_index)
