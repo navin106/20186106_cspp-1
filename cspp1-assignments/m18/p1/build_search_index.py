@@ -46,6 +46,7 @@ def build_search_index(docs):
     '''
         Process the docs step by step as given below
     '''
+    print(docs)
     req_list = []
     for i in range(len(docs)-1):
         req_list.append(sorted(word_list(docs[i])))
