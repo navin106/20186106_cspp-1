@@ -52,8 +52,8 @@ def build_search_index(docs):
         Process the docs step by step as given below
     '''
     k_string = ''.join(docs)
-    req_list = word_list(k_string)
-    print(req_list.sorted())
+    req_list = (word_list(k_string)).sort()
+    print(req_list)
     # initialize a search index (an empty dictionary)
     search_index = {}
     # iterate through all the docs
