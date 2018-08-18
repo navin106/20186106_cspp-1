@@ -52,7 +52,7 @@ def build_search_index(docs):
     '''
     k_string = ''.join(docs)
     req_list = word_list(k_string)
-    print(req_list.sort())
+    print(req_list.sorted())
     # initialize a search index (an empty dictionary)
     search_index = {}
     # iterate through all the docs
