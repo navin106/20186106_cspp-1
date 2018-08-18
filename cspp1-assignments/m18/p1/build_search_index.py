@@ -57,9 +57,18 @@ def build_search_index(docs):
     # initialize a search index (an empty dictionary)
     search_index = {}
     # iterate through all the docs
+    temp = 0 
+    for i in docs:
+    	if i in req_list:
+    		if len(i) > 0:
+    			if i not in search_index{}:
+    				search_index[i] =[temp, 1]
     # keep track of doc_id which is the list index corresponding the document
+    			else:
+    				search_index[i] = [temp, search_index[i][1] += 1]
+    	temp += 1
     # hint: use enumerate to obtain the list index in the for loop
-
+    print(search_index)
         # clean up doc and tokenize to words list
 
         # add or update the words of the doc to the search index
