@@ -65,7 +65,6 @@ def build_search_index(docs):
         # add or update the words of the doc to the search index
 
     # return search index
-    return 0
 # helper function to print the search index
 # use this to verify how the search index looks
 def print_search_index(index):
