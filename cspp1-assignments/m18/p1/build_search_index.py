@@ -39,6 +39,7 @@ def word_list(text):
         Clean up the text by remvoing all the non alphabet characters
         return a list of words
     '''
+    '''
     clean_list = ((re.sub(r'[^\w\s]', '', text)).lower()).split()
     stop_words = load_stopwords("stopwords.txt")
     new_list= []
@@ -46,13 +47,13 @@ def word_list(text):
         if i not in stop_words and i not in '1234567890':
             new_list.append(i)
     return new_list
+    '''
+    pass
 def build_search_index(docs):
     '''
         Process the docs step by step as given below
     '''
     print(docs)
-    req_list = word_list(docs)
-    print(req_list)
     # initialize a search index (an empty dictionary)
     search_index = {}
     # iterate through all the docs
