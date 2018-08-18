@@ -72,6 +72,7 @@ def build_search_index(docs):
         # clean up doc and tokenize to words list
         # add or update the words of the doc to the search index
     # return search index
+    print(search_index)
     return search_index
 # helper function to print the search index
 # use this to verify how the search index looks
