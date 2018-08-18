@@ -32,8 +32,6 @@ def load_stopwords(filename):
         for line in f_stopwords:
             stopwords[line.strip()] = 0
     return stopwords
-
-
 def word_list(text):
     '''
         Change case to lower and split the words using a SPACE
@@ -64,11 +62,11 @@ def build_search_index(docs):
                 if len(k) > 1:
                     if k not in search_index:
                         t_0 = (temp, 1)
-                        search_index[k] =[]
+                        search_index[k] = []
                         search_index[k].append(t_0)
                     else:
                         temp2 = search_index[k][len(search_index[k])-1][1]
-                        temp2 +=1
+                        temp2 += 1
                         t_1 = (temp, temp2)
                         search_index[k].append(t_1)    
         temp += 1
@@ -84,7 +82,6 @@ def print_search_index(index):
     keys = sorted(index.keys())
     for key in keys:
         print(key, " - ", index[key])
-
 # main function that loads the docs from files
 def main():
     '''
@@ -98,9 +95,7 @@ def main():
     for i in range(lines):
         documents.append(input())
         i += 1
-
     # call print to display the search index
     print_search_index(build_search_index(documents))
-
 if __name__ == '__main__':
     main()
