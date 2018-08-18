@@ -41,11 +41,6 @@ def word_list(text):
         return a list of words
     '''
     clean_list = ((re.sub(r'[^\w\s]', '', text)).lower()).split()
-    
-    new_list= []
-    for i in clean_list:
-        if i not in stop_words:
-            new_list.append(i)
     return clean_list
 def build_search_index(docs):
     '''
