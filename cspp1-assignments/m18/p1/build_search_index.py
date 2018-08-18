@@ -72,7 +72,7 @@ def build_search_index(docs):
                         t_1 = (temp, temp2)
                         search_index[k].append(t_1)    
         if temp == search_index[k][len(search_index[k])-1][0]:
-            search_index[k][len(search_index[k])-1].pop()
+            search_index[k].pop()
         temp += 1
         # add or update the words of the doc to the search index
     # return search index
