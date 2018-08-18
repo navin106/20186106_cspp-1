@@ -62,10 +62,12 @@ def build_search_index(docs):
     	if i in req_list:
     		if len(i) > 0:
     			if i not in search_index:
-    				search_index[i] =[temp, 1]
+    				search_index[i] = [temp, 1]
     # keep track of doc_id which is the list index corresponding the document
     			else:
-    				search_index[i] = [temp, search_index[i] += 1]
+    				temp2 = search_index[i][1]
+    				temp2 += 1 
+    				search_index[i] = [temp, temp2]
     	temp += 1
     # hint: use enumerate to obtain the list index in the for loop
     print(search_index)
