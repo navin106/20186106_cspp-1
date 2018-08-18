@@ -53,9 +53,6 @@ def build_search_index(docs):
     # initialize a search index (an empty dictionary)
     search_index = {}
     stop_words = load_stopwords("stopwords.txt")
-    print(req_list)
-    print('----------------------------------------------------------------------------------------------')
-    print(docs)
     # iterate through all the docs
     temp = 0
     for i in req_list:
@@ -69,7 +66,8 @@ def build_search_index(docs):
                         t_0 = (temp, 1)
                         search_index[k] =[]
                         search_index[k].append(t_0)
-                    else: 
+                    else:
+                        del search_index[k][len(search_index[k])-1]
                         temp2 = search_index[k][len(search_index[k])-1][1]
                         temp2 +=1
                         t_1 = (temp, temp2)
