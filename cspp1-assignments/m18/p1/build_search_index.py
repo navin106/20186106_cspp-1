@@ -67,8 +67,8 @@ def build_search_index(docs):
                         search_index[k] =[]
                         search_index[k].append(t_0)
                     else:
-                        del search_index[k][len(search_index[k])-1]
                         temp2 = search_index[k][len(search_index[k])-1][1]
+                        del search_index[k][len(search_index[k])-1]
                         temp2 +=1
                         t_1 = (temp, temp2)
                         search_index[k].append(t_1)
