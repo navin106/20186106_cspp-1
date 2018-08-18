@@ -64,7 +64,7 @@ def build_search_index(docs):
                     if k not in search_index:
                         search_index[k] = (temp, 1)
                     else:
-                        temp2 = search_index[k][len(search_index[k])][1]
+                        temp2 = search_index[k][len(search_index[k])-1][1]
                         search_index[k] = []
                         temp2 += 1
                         search_index[k].append((temp, temp2))
