@@ -59,7 +59,7 @@ def build_search_index(docs):
     	if i in req_list:
     		if i not in stop_words:
         # clean up doc and tokenize to words list
-    			if len(i) > 0:
+    			if len(i) > 1:
     				if i not in search_index:
     					search_index[i] = [temp, 1]
     				else:
