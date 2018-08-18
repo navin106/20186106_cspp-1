@@ -44,7 +44,7 @@ def word_list(text):
     new_list= []
     for i in clean_list:
         if i not in stop_words and i not in '1234567890':
-            new_list.append[i]
+            new_list.append(i)
     return new_list
 def build_search_index(docs):
     '''
