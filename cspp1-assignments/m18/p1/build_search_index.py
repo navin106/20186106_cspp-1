@@ -47,7 +47,6 @@ def build_search_index(docs):
         Process the docs step by step as given below
     '''
     for i in (len(docs)):
-		print(k_string)
     	req_list[i] = sorted(word_list(docs[i]))
     # initialize a search index (an empty dictionary)
     print(req_list)
