@@ -48,8 +48,9 @@ def build_search_index(docs):
     '''
     for i in (len(docs)):
 		print(k_string)
-    	req_list = sorted(word_list(docs[i]))
+    	req_list[i] = sorted(word_list(docs[i]))
     # initialize a search index (an empty dictionary)
+    print(req_list)
     search_index = {}
     stop_words = load_stopwords("stopwords.txt")
     # iterate through all the docs
