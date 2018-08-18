@@ -46,10 +46,9 @@ def build_search_index(docs):
     '''
         Process the docs step by step as given below
     '''
-    print(docs)
-    k_string = ''.join(docs)
-    print(k_string)
-    req_list = sorted(word_list(k_string))
+    for i in (len(docs)):
+		print(k_string)
+    	req_list = sorted(word_list(docs[i]))
     # initialize a search index (an empty dictionary)
     search_index = {}
     stop_words = load_stopwords("stopwords.txt")
