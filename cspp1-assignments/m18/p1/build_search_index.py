@@ -65,8 +65,7 @@ def build_search_index(docs):
     				search_index[i] =[temp, 1]
     # keep track of doc_id which is the list index corresponding the document
     			else:
-    				print(search_index[i][1])
-    				#search_index[i] = [temp, search_index[i][1] += 1]
+    				search_index[i] = [temp, search_index[i] += 1]
     	temp += 1
     # hint: use enumerate to obtain the list index in the for loop
     print(search_index)
