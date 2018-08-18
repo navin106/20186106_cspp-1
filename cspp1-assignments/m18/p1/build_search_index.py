@@ -70,13 +70,12 @@ def build_search_index(docs):
     				search_index[i] = [temp, temp2]
     	temp += 1
     # hint: use enumerate to obtain the list index in the for loop
-    print(search_index)
         # clean up doc and tokenize to words list
 
         # add or update the words of the doc to the search index
 
     # return search index
-    return 0
+    return search_index
 # helper function to print the search index
 # use this to verify how the search index looks
 def print_search_index(index):
