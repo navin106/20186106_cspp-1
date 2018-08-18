@@ -62,11 +62,12 @@ def build_search_index(docs):
         # clean up doc and tokenize to words list
     			if len(k) > 1:
     				if k not in search_index:
-    					search_index[k] = [temp, 1]
+    					search_index[k] = [(temp, 1)]
     				else:
-    					temp2 = search_index[k][1]
-    					temp2 += 1 
-    					search_index[k] = [temp, temp2]
+                        temp2 = search_index[k][1]
+                        temp2 += 1
+                        search_index[k] = []
+    					search_index[k].append([(temp, temp2)])
     	temp += 1
         # add or update the words of the doc to the search index
     # return search index
