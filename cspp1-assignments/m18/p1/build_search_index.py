@@ -48,7 +48,7 @@ def build_search_index(docs):
     '''
     req_list = []
     for i in range(len(docs)-1):
-    	req_list.append(sorted(word_list(docs[i])))
+        req_list.append(sorted(word_list(docs[i])))
     # initialize a search index (an empty dictionary)
     search_index = {}
     stop_words = load_stopwords("stopwords.txt")
@@ -57,19 +57,19 @@ def build_search_index(docs):
     for i in req_list:
     # keep track of doc_id which is the list index corresponding the document
     # hint: use enumerate to obtain the list index in the for loop
-    	for k in i:
-    		if k not in stop_words: 
+        for k in i:
+            if k not in stop_words: 
         # clean up doc and tokenize to words list
-    			if len(k) > 1:
-    				if k not in search_index:
+                if len(k) > 1:
+                    if k not in search_index:
                         t_0 = (temp, 1)
                         search_index[k] =[]
-    					search_index[k].append(t)
-    				else: 
+                        search_index[k].append(t)
+                    else: 
                         temp2 = search_index[k][len(search_index[k])-1][1]
                         temp2 +=1
                         t_1 = (temp, temp2)
-    					search_index[k].append(t_1)
+                        search_index[k].append(t_1)
     temp += 1
         # add or update the words of the doc to the search index
     # return search index
