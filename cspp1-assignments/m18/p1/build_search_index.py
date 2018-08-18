@@ -53,7 +53,7 @@ def build_search_index(docs):
     search_index = {}
     stop_words = load_stopwords("stopwords.txt")
     # iterate through all the docs
-    temp = 0
+    temp = 1
     for i in req_list:
     # keep track of doc_id which is the list index corresponding the document
     # hint: use enumerate to obtain the list index in the for loop
@@ -64,8 +64,10 @@ def build_search_index(docs):
                     if k not in search_index:
                         search_index[k] = (temp, 1)
                     else:
+                        temp2 = search_index[1]
                         search_index[k] = []
-                        search_index[k].extend((temp, 1))
+                        temp2 += 1
+                        search_index[k].append(temp, temp2)
     temp += 1
         # add or update the words of the doc to the search index
     # return search index
