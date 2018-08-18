@@ -53,7 +53,7 @@ def build_search_index(docs):
     stop_words = load_stopwords("stopwords.txt")
     # iterate through all the docs
     temp = 0 
-    for i in docs.lower():
+    for i in k_string.lower():
     # keep track of doc_id which is the list index corresponding the document
     # hint: use enumerate to obtain the list index in the for loop
     	if i in req_list:
