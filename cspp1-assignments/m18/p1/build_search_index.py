@@ -53,7 +53,6 @@ def build_search_index(docs):
     '''
     k_string = ''.join(docs)
     req_list = sorted(word_list(k_string))
-    print(req_list)
     # initialize a search index (an empty dictionary)
     search_index = {}
     # iterate through all the docs
@@ -71,9 +70,7 @@ def build_search_index(docs):
     	temp += 1
     # hint: use enumerate to obtain the list index in the for loop
         # clean up doc and tokenize to words list
-
         # add or update the words of the doc to the search index
-
     # return search index
     return search_index
 # helper function to print the search index
