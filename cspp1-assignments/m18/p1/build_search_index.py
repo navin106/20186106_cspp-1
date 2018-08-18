@@ -53,7 +53,7 @@ def build_search_index(docs):
     '''
     k_string = ''.join(docs)
     req_list = (word_list(k_string)).sort()
-    print(req_list)
+    print(sorted(req_list))
     # initialize a search index (an empty dictionary)
     search_index = {}
     # iterate through all the docs
@@ -64,10 +64,10 @@ def build_search_index(docs):
 
         # add or update the words of the doc to the search index
 
-    # return search search_index
+    # return search index
+    return 0
 # helper function to print the search index
 # use this to verify how the search index looks
-'''
 def print_search_index(index):
     '''
         print the search index
@@ -75,7 +75,7 @@ def print_search_index(index):
     keys = sorted(index.keys())
     for key in keys:
         print(key, " - ", index[key])
-'''
+
 # main function that loads the docs from files
 def main():
     '''
@@ -91,7 +91,7 @@ def main():
         i += 1
 
     # call print to display the search index
-    build_search_index(documents)
+    print_search_index(build_search_index(documents))
 
 if __name__ == '__main__':
     main()
