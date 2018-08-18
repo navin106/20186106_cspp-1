@@ -53,7 +53,6 @@ def build_search_index(docs):
     # initialize a search index (an empty dictionary)
     search_index = {}
     # iterate through all the docs
-    for i in 
     # keep track of doc_id which is the list index corresponding the document
     # hint: use enumerate to obtain the list index in the for loop
 
