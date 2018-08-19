@@ -4,12 +4,12 @@
     Complete the program below to build a search index. Don't worry, it is explained below.
     A search index is a python dictionary.
     The keys of this dictionary are words contained in ALL the input text documents.
-    The values are a list of documents such that the key/word appears in each document atleast once.
+    The values are a list of documents such that the key/k appears in each document atleast once.
     The document in the list is represented as a tuple.
     The tuple has 2 items. The first item is the document ID.
     Document ID is represented by the list index.
     For example: the document ID of the third document in the list is 2
-    The second item of the tuple is the frequency of the word occuring in the document.
+    The second item of the tuple is the frequency of the k occuring in the document.
     Here is the sample format of the dictionary.
     {
         word1: [(doc_id, frequency),(doc_id, frequency),...],
@@ -41,12 +41,12 @@ def build_search_index(docs):
     '''
         Process the docs step by step as given below
     '''
-    docs = [w.replace('\"', '\'') for w in docs]
     req_list = []
     for i in range(len(docs)):
         req_list.append((word_list(docs[i])))
     # initialize a search index (an empty dictionary)
     search_index = {}
+    count = 1
     stop_words = load_stopwords("stopwords.txt")
     # iterate through all the docs
     temp = 0
@@ -54,23 +54,41 @@ def build_search_index(docs):
     # keep track of doc_id which is the list index corresponding the document
     # hint: use enumerate to obtain the list index in the for loop
         for k in i:
+            temp2 = 0
             if k not in stop_words:
         # clean up doc and tokenize to words list
                 if len(k) > 1:
                     if k not in search_index:
-                        t_0 = (temp, 1)
-                        m = []
-                        m.append(t_0)
-                        search_index[k] = m
+                        search_index[k] = [(temp, i.count(k))]
                     else:
-                        temp2 = search_index[k][len(search_index[k])-1][1]
+                        # add or update the words of the doc to the search index
+                        if (temp, i.count(k)) not in search_index[k]:
+                            search_index[k].append((temp, i.count(k)))
+                            '''
+                    if k not in search_index:
+                        #if temp != search_index[k][len(search_index[k])][0]:
+                            t_0 = (temp, 1)
+                            m = []
+                            m.append(t_0)
+                            search_index[k] = m
+                    else:
+                        #temp2 = search_index[k][len(search_index[k])-1][1]
                         temp2 += 1
                         t_1 = (temp, temp2)
                         search_index[k].append(t_1)
-            
+                    '''   
         temp += 1
         # add or update the words of the doc to the search index
     # return search index
+    '''
+    for i in search_index:
+        count = 1
+        if len(search_index[i]) > 1:
+            for j in range(len(search_index[i])-1):
+                if search_index[i][j] == search_index[i][j+1]:
+                    count += 1
+        print(count)
+    '''
     return search_index
 # helper function to print the search index
 # use this to verify how the search index looks
