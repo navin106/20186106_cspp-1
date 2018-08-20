@@ -25,10 +25,8 @@
     Collect the values from the search index for all the words in the search query.
     Make a set using the doc_id present as the first item in the values tuple.
     Return the search results.
-
     Note: PyLint score need not be 10/10. Anything above 9.5 is good.
 '''
-
 def search(search_index, query):
     '''
         function to search through the search index and return the results
@@ -54,25 +52,20 @@ def process_queries(search_index, queries):
     '''
     for word in queries:
         print(search(search_index, word))
-
 def main():
     '''
         main function
     '''
     # This line loads the search index
     search_index = eval(input())
-
     # read the number of search queries
     lines = int(input())
-    
     # read the search queries into a list
     queries = []
     for i in range(lines):
         queries.append(input())
         i += 1
-
     # call process queries
     process_queries(search_index, queries)
-
 if __name__ == '__main__':
     main()
