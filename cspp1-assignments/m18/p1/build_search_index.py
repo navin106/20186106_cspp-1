@@ -55,7 +55,7 @@ def build_search_index(docs):
         for k in i:
             if k not in stop_words:
         # clean up doc and tokenize to words list
-                if len(k) > 1
+                if len(k) > 1:
                     if k not in search_index:
                         search_index[k] = [(temp, i.count(k))]
                     else:
