@@ -131,7 +131,7 @@ class Message():
 
 
 ### Paste your implementation of the `PlaintextMessage` class here
-lass PlaintextMessage(Message):
+class PlaintextMessage(Message):
     ''' PlaintextMessage class '''
     ### DO NOT MODIFY THIS METHOD ###
     def __init__(self, text, shift):
