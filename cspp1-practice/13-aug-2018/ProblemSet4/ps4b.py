@@ -112,7 +112,7 @@ def playGame(word_list):
             break
         elif usr_inp1 == 'c' and usr_inp == 'r':
             play_hand = dealHand(HAND_SIZE)
-            playHand(play_hand, word_list, HAND_SIZE)
+            compPlayHand(play_hand, word_list, HAND_SIZE)
         elif usr_inp1 == 'c' and usr_inp == 'n':
             play_hand = dealHand(HAND_SIZE)
             compPlayHand(play_hand, word_list, HAND_SIZE)
