@@ -39,11 +39,11 @@ def read_matrix(n):
     for i in matrix:
         if len(i) != int(n[0]):
             stri = 'Invalid input for the matrix'
-            return str
+            return stri
             break
         elif n[0] != n[1]:
             stri = 'Matrix shapes invalid for addition'
-            return str
+            return stri
             break
         else:
             return matrix
