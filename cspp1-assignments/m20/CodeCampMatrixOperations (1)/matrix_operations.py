@@ -46,10 +46,10 @@ def read_matrix():
         if len(l) == rows:
             matrix.append([int(i) for i in l])
         else:
-            print("Error: Invalid input for the matrix")
             matrix.append([int(i) for i in l])
             flag = 1
     if flag == 1:
+        print("Error: Invalid input for the matrix")
         return (matrix,True)
     return matrix
 
