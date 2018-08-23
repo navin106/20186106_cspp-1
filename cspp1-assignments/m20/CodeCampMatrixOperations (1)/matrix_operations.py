@@ -49,7 +49,7 @@ def read_matrix():
             matrix.append([int(i) for i in l])
             flag = 1
     if flag == 1:
-        print("Error: Invalid input for the matrix")
+        # print("Error: Invalid input for the matrix")
         return (matrix,True)
     return matrix
 
@@ -69,7 +69,6 @@ def main():
         m2 = m2[0]
         # print(add_matrix(m1, m2[0]))
         # print(mult_matrix(m1, m2[0]))
-    print(m1,m2)
     print(add_matrix(m1, m2))
     print(mult_matrix(m1, m2))
     # multiply matrix 1 and matrix 2
