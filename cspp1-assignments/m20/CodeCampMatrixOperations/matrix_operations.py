@@ -38,8 +38,10 @@ def read_matrix(n):
     for i in matrix:
         if len(i) != len(int(n[0])):
             return 'Invalid input for the matrix'
+            break
         elif n[0] != n[1]:
             return 'Matrix shapes invalid for addition'
+            break
         else:
             return matrix
 def main():
