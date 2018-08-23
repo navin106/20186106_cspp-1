@@ -16,10 +16,11 @@ def add_matrix(m1, m2):
         and return None
         error message should be "Error: Matrix shapes invalid for addition"
     '''
-    for i in range(len(m1)):
-        for j in range(len(m2)):
-            print([i + j for x, y in zip(first, second)])
-            print([j + i for x, y in zip(first, second)])
+    # for i in m1:
+    #     for j in m2:
+    sum = [i + j for x, y in zip(m1, m2) for i,j in zip(x, y)]
+    return [sum[x:x+3] for x in range(0,len(sum),len(m1[0]))]
+        #print([j + i for x, y in zip(first, second)])
 
 def read_matrix(n):
     '''
