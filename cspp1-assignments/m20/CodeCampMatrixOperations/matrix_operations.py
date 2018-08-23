@@ -21,7 +21,6 @@ def mult_matrix(A, B):
     for i in result:
         print(i)
         k.append(i)
-    print(k)
 def add_matrix(m1, m2):
     '''
         check if the matrix shapes are similar
