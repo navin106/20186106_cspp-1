@@ -63,6 +63,6 @@ def main():
         print(add_matrix(mat_1[0], mat_2[0]))
         print(mult_matrix(mat_1[0], mat_2[0]))
     else:
-        pass
+        exit()
 if __name__ == '__main__':
     main()
