@@ -32,16 +32,17 @@ def read_matrix(n):
         error message should be "Error: Invalid input for the matrix"
     '''
     matrix = []
+    stri = ''
     for row in range(int(n[0])):
         l = input().split(' ')
         matrix.append([int(l[i]) for i in range(len(l))])
     for i in matrix:
         if len(i) != int(n[0]):
-            str = 'Invalid input for the matrix'
+            stri = 'Invalid input for the matrix'
             return str
             break
         elif n[0] != n[1]:
-            str = 'Matrix shapes invalid for addition'
+            stri = 'Matrix shapes invalid for addition'
             return str
             break
         else:
