@@ -16,8 +16,8 @@ def mult_matrix(m1, m2):
             for k in range(len(m2)):
                 result[i][j] += m1[i][k] * m2[k][j]
     for i in result:
-        k.append(i)
-    return k
+        print(i)
+    return None
 def add_matrix(m1, m2):
     '''
         check if the matrix shapes are similar
