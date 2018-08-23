@@ -50,7 +50,7 @@ def read_matrix():
     if flag == 1:
         print("Error: Invalid input for the matrix")
         # return (matrix, 0)
-        break
+        # break
     return (matrix, 0)
 def main():
     '''
