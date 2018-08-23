@@ -7,14 +7,17 @@ def mult_matrix(m1, m2):
         and return None
         error message should be "Error: Matrix shapes invalid for mult"
     '''
-   #  k = []
-   #  result = []
-   #  for i in range(len(m1)):
-   # # iterate through columns
-   #      for j in range(len(m1[0])):
-   #          result[i][j] = m1[i][j] + m2[i][j]
-   #  for i in result:
-   #      k.appen
+    result = []
+    k = []
+   for i in range(len(m1)):
+   # iterate through columns of Y
+        for j in range(len(m2[0])):
+       # iterate through rows of Y
+            for k in range(len(m2)):
+                result[i][j] += m1[i][k] * m2[k][j]
+    for i in result:
+        k.append(i)
+    return k
 def add_matrix(m1, m2):
     '''
         check if the matrix shapes are similar
@@ -39,8 +42,8 @@ def read_matrix(n):
     for row in range(int(n[0])):
         l = input().split(' ')
         if (len(l) != len(n[0])):
-            return 0
-            break
+            print("Error: Invalid input for the matrix")
+            return None
         else:
             matrix.append([int(l[i]) for i in range(len(l))])
     return matrix
@@ -53,11 +56,9 @@ def main():
     # add matrix 1 and matrix 2
     if ((len(m1) == len(m2))) and (len(m1[0]) == len(m2[0])):
         print(add_matrix(m1, m2))
-    elif (m1 == 0) or (m2 == 0):
-        print("Error: Invalid input for the matrix")
     else:
         print('Error: Matrix shapes invalid for addition')
-    #print(mult_matrix(m1, m2))
+    print(mult_matrix(m1, m2))
     # multiply matrix 1 and matrix 2
 
 if __name__ == '__main__':
