@@ -41,7 +41,7 @@ def read_matrix(n):
         if (len(l) == len(n[0])):
             matrix.append([int(l[i]) for i in range(len(l))])
         else:
-            return None
+            return 0
     return matrix
 
 def main():
@@ -52,7 +52,7 @@ def main():
     # add matrix 1 and matrix 2
     if ((len(m1) == len(m2))) and (len(m1[0]) == len(m2[0])):
         print(add_matrix(m1, m2))
-    elif (m1 == None) or (m2 == None):
+    elif (m1 == 0) or (m2 == 0):
         print("Error: Invalid input for the matrix")
     else:
         print('Error: Matrix shapes invalid for addition')
