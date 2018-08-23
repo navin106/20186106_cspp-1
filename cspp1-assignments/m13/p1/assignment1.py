@@ -52,7 +52,6 @@ def load_words(file_name):
     return word_list
 WORDLIST_FILENAME = 'words.txt'
 # Helper code End
-### Paste your implementation of the Message class here
 class Message():
     ''' Grader's Implementation of Message Object '''
     ### DO NOT MODIFY THIS METHOD ###
