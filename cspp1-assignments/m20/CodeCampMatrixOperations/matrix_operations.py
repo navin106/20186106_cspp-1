@@ -42,6 +42,7 @@ def read_matrix():
         error message should be "Error: Invalid input for the matrix"
     '''
     n = input().split(',')
+    print(n)
     rows = int(n[0])
     columns = int(n[1])
     matrix = []
@@ -49,9 +50,6 @@ def read_matrix():
         l = input().split(' ')
         if len(l) == rows:
             matrix.append([int(i) for i in l])
-        else:
-            print("Error: Invalid input for the matrix")
-            return None
     return matrix
 
 def main():
