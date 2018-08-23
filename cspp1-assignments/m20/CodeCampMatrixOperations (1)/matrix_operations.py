@@ -47,7 +47,7 @@ def read_matrix():
             print("Error: Invalid input for the matrix")
             matrix.append([int(i) for i in l])
             flag = 1
-    if flag == 0:
+    if flag == 1:
     	return (matrix,True)
     return matrix
 
