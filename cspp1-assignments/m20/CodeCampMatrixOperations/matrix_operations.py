@@ -8,6 +8,7 @@ def mult_matrix(A, B):
         error message should be "Error: Matrix shapes invalid for mult"
     '''
     result = [[0]*len(B[0])]*len(A)
+    print(result)
     k = []
     # iterating by row of A
     for i in range(len(A)):
