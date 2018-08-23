@@ -52,7 +52,7 @@ def read_matrix():
             # matrix.append([int(i) for i in temp_l])
             print("Error: Invalid input for the matrix")
             # flag = 1
-            return = 0
+            return 0
     return matrix
 def main():
     '''
