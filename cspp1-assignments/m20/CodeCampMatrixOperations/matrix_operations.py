@@ -36,12 +36,10 @@ def read_matrix(n):
         l = input().split(' ')
         matrix.append([int(l[i]) for i in range(len(l))])
     for i in matrix:
-        if len(i) != int(n[0]):
+        if ' ' in i:
             return 'Error: Invalid input for the matrix'
-            break
         elif n[0] != n[1]:
             return 'Error: Matrix shapes invalid for addition'
-            break
         else:
             return matrix
 def main():
