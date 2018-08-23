@@ -70,7 +70,7 @@ def main():
     if m2 is None:
         exit()
     print(add_matrix(m1, m2))
-    #print(mult_matrix(m1, m2))
+    print(mult_matrix(m1, m2))
     # multiply matrix 1 and matrix 2
 
 if __name__ == '__main__':
