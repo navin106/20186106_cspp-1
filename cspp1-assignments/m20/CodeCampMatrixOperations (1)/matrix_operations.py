@@ -26,7 +26,7 @@ def add_matrix(mat_1, mat_2):
     k = [i + j for x, y in zip(mat_1, mat_2) for i, j in zip(x, y)]
     if len(mat_1[0]) == len(mat_2[0]):
         return [k[x:x+len(mat_1[1])] for x in range(0, len(k), len(mat_1[1]))]
-    print('Error: Matrix shapes invalid for addition')
+    return None
 def read_matrix():
     '''
         read the matrix dimensions from input
@@ -38,14 +38,14 @@ def read_matrix():
     flag = 0
     inp_list = input().split(',')
     rows = int(inp_list[0])
-    columns = int(inp_list[1])
+    #columns = int(inp_list[1])
     matrix = []
-    for row in range(rows):
-        l = input().split(' ')
-        if len(l) == rows:
-            matrix.append([int(i) for i in l])
+    for _ in range(int(rows)):
+        temp_l = input().split(' ')
+        if len(temp_l) == rows:
+            matrix.append([int(i) for i in temp_l])
         else:
-            matrix.append([int(i) for i in l])
+            matrix.append([int(i) for i in temp_l])
             flag = 1
     if flag == 1:
         # print("Error: Invalid input for the matrix")
@@ -61,7 +61,10 @@ def main():
         mat_1 = mat_1[0]
     if isinstance(mat_2, tuple):
         mat_2 = mat_2[0]
-    print(add_matrix(mat_1, mat_2))
+    if add_matrix(mat_1, mat_2) is None:
+        print('Error: Matrix shapes invalid for addition')
+    else:
+        print(add_matrix(mat_1, mat_2))
     if mult_matrix(mat_1, mat_2) is None:
         print('Error: Matrix shapes invalid for mult')
         print(None)
