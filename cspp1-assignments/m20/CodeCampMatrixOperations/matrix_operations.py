@@ -1,3 +1,7 @@
+import numpy as np
+# a = [1,2,3,4]
+# b = [2,3,4,5]
+# np.multiply(a,b)
 def mult_matrix(m1, m2):
     '''
         check if the matrix1 columns = matrix2 rows
@@ -6,7 +10,10 @@ def mult_matrix(m1, m2):
         and return None
         error message should be "Error: Matrix shapes invalid for mult"
     '''
-    k = [(i*j) for x, y in zip(m1, m2) for i,j in zip(x, y)]
+    for x, y in zip(m1, m2):
+        for i,j in zip(x, y):
+            l = np.multiply(i,j)
+        k.append(l)
     return [k[x:x+len(m1)] for x in range(0,len(k),len(m1))]
 def add_matrix(m1, m2):
     '''
