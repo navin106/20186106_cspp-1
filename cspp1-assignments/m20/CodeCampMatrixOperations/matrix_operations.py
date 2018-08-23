@@ -48,13 +48,11 @@ def read_matrix():
 def main():
     # read matrix 1
     m1 = read_matrix()
-    print(m1)
     # add matrix 1 and matrix 2
     if m1 is None:
         exit()
     # read matrix 2
     m2 = read_matrix()
-    print(m2)
     if m2 is None:
         exit()
     print(add_matrix(m1, m2))
