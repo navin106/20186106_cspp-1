@@ -1,5 +1,5 @@
 import numpy as np
-def mult_matrix(A, B):
+def mult_matrix(m1, m2):
     '''
         check if the matrix1 columns = matrix2 rows
         mult the matrices and return the result matrix
@@ -7,22 +7,17 @@ def mult_matrix(A, B):
         and return None
         error message should be "Error: Matrix shapes invalid for mult"
     '''
-    result = [[0, 0, 0, 0],
-        [0, 0, 0, 0],
-        [0, 0, 0, 0]]
+    result = []
     k = []
-    # iterating by row of A
-    for i in range(len(A)):
-     
-        # iterating by coloum by B 
-        for j in range(len(B[0])):
-     
-            # iterating by rows of B
-            for k in range(len(B)):
-                result[i][j] += A[i][k] * B[k][j]
+    for i in range(len(m1)):
+   # iterate through columns of Y
+        for j in range(len(m2[0])):
+       # iterate through rows of Y
+            for k in range(len(m2)):
+                result[i][j] += m1[i][k] * m2[k][j]
     for i in result:
-        k.append(i)
-    print(k)
+        k.appen(i)
+    return k
 def add_matrix(m1, m2):
     '''
         check if the matrix shapes are similar
