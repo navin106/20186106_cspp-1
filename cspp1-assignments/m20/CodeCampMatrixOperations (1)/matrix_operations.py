@@ -61,7 +61,5 @@ def main():
     if mat_1 != 0 and mat_2 != 0:
         print(add_matrix(mat_1, mat_2))
         print(mult_matrix(mat_1, mat_2))
-    else:
-        None
 if __name__ == '__main__':
     main()
