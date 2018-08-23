@@ -33,7 +33,7 @@ def add_matrix(m1, m2):
         return [k[x:x+len(m1[1])] for x in range(0,len(k),len(m1[1]))]
     print('Error: Matrix shapes invalid for addition'                   )
     return None
-def read_matrix(n):
+def read_matrix():
     '''
         read the matrix dimensions from input
         create a list of lists and read the numbers into it
@@ -42,11 +42,13 @@ def read_matrix(n):
         error message should be "Error: Invalid input for the matrix"
     '''
     n = input().split(',')
+    rows = int(n[0])
+    columns = int(n[1])
     matrix = []
-    for row in range(int(n[0])):
+    for row in range(rows):
         l = input().split(' ')
-        if (len(l) == int(n[0])):
-            matrix.append([int(l[i]) for i in range(len(l))])
+        if len(l) == rows:
+            matrix.append([int(i) for i in l])
         else:
             print("Error: Invalid input for the matrix")
             return None
@@ -56,11 +58,13 @@ def main():
     # read matrix 1
     m1 = read_matrix()
     # read matrix 2
+    print(m1)
     m2 = read_matrix()
+    print(m2)
     # add matrix 1 and matrix 2
-    if m1 is None or m2 is None:
-        exit()
-    print(add_matrix(m1, m2))
+    # if m1 is None or m2 is None:
+    #     exit()
+    # print(add_matrix(m1, m2))
     #print(mult_matrix(m1, m2))
     # multiply matrix 1 and matrix 2
 
