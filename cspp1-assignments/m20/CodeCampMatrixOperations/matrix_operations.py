@@ -6,7 +6,7 @@ def mult_matrix(m1, m2):
         and return None
         error message should be "Error: Matrix shapes invalid for mult"
     '''
-    pass
+    
 
 def add_matrix(m1, m2):
     '''
@@ -18,10 +18,8 @@ def add_matrix(m1, m2):
     '''
     # for i in m1:
     #     for j in m2:
-    sum = [i + j for x, y in zip(m1, m2) for i,j in zip(x, y)]
-    return [sum[x:x+len(m1)] for x in range(0,len(sum),len(m1))]
-        #print([j + i for x, y in zip(first, second)])
-
+    k = [i + j for x, y in zip(m1, m2) for i,j in zip(x, y)]
+    return [k[x:x+len(m1)] for x in range(0,len(k),len(m1))]
 def read_matrix(n):
     '''
         read the matrix dimensions from input
