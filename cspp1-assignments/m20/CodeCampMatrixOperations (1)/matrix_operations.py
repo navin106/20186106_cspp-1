@@ -48,7 +48,7 @@ def read_matrix():
             matrix.append([int(i) for i in l])
             flag = 1
     if flag == 1:
-    	return (matrix,True)
+        return (matrix,True)
     return matrix
 
 def main():
@@ -58,19 +58,19 @@ def main():
     # add matrix 1 and matrix 2
     # read matrix 2
     if type(m1) == tuple :
-    	print('None')
-    	m1 = m1[0]
-    	exit()
-    	# print(add_matrix(m1[0], m2))
-    	# print(mult_matrix(m1[0], m2))
+        print('None')
+        m1 = m1[0]
+        exit()
+        # print(add_matrix(m1[0], m2))
+        # print(mult_matrix(m1[0], m2))
     if type(m2) == tuple:
-    	print('None')
-    	m2 = m2[0]
-    	exit()
-    	# print(add_matrix(m1, m2[0]))
-    	# print(mult_matrix(m1, m2[0]))
+        print('None')
+        m2 = m2[0]
+        exit()
+        # print(add_matrix(m1, m2[0]))
+        # print(mult_matrix(m1, m2[0]))
     print(add_matrix(m1, m2))
-   	print(mult_matrix(m1, m2[0]))
+    print(mult_matrix(m1, m2[0]))
     # multiply matrix 1 and matrix 2
 
 if __name__ == '__main__':
