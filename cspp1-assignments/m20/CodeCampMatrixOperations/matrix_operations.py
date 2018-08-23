@@ -10,6 +10,7 @@ def mult_matrix(m1, m2):
         and return None
         error message should be "Error: Matrix shapes invalid for mult"
     '''
+    k = []
     for x, y in zip(m1, m2):
         for i,j in zip(x, y):
             l = np.multiply(i,j)
