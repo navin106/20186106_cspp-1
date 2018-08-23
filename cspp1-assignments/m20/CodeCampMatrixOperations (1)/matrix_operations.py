@@ -51,7 +51,7 @@ def read_matrix():
         else:
             matrix.append([int(i) for i in temp_l])
             flag = 1
-    return (matrix, flag)
+    return matrix
 def main():
     '''
     calling functions
