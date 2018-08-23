@@ -54,7 +54,7 @@ def main():
     m2 = read_matrix(input().split(','))
     # add matrix 1 and matrix 2
     print(add_matrix(m1, m2))
-    print(mult_matrix(m1, m2))
+    #print(mult_matrix(m1, m2))
     # multiply matrix 1 and matrix 2
 
 if __name__ == '__main__':
