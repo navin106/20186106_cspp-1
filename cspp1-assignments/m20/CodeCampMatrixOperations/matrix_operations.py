@@ -36,7 +36,7 @@ def read_matrix(n):
         l = input().split(' ')
         matrix.append([int(l[i]) for i in range(len(l))])
     for i in matrix:
-        if len(i) != len(int(n[0])):
+        if len(i) != int(n[0]):
             return 'Invalid input for the matrix'
             break
         elif n[0] != n[1]:
