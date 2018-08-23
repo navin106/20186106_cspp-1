@@ -26,7 +26,7 @@ def add_matrix(m1, m2):
     # for i in m1:
     #     for j in m2:
     k = [i + j for x, y in zip(m1, m2) for i,j in zip(x, y)]
-    return [k[x:x+len(m2)] for x in range(0,len(k),len(m2))]
+    return [k[x:x+len(m1[1])] for x in range(0,len(k),len(m1[1]))]
 def read_matrix(n):
     '''
         read the matrix dimensions from input
