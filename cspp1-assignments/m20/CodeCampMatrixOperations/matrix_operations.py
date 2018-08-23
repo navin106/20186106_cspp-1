@@ -9,7 +9,7 @@ def mult_matrix(m1, m2):
     '''
     result = []
     k = []
-   for i in range(len(m1)):
+    for i in range(len(m1)):
    # iterate through columns of Y
         for j in range(len(m2[0])):
        # iterate through rows of Y
