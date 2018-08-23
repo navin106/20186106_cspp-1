@@ -64,6 +64,7 @@ def main():
     # mat_2 = mat_2[0]
     if (mat_1[1] or mat_2[1]) == 1:
         print("Error: Invalid input for the matrix")
+        break
     if add_matrix(mat_1, mat_2) is None:
         print('Error: Matrix shapes invalid for addition')
         print(None)
