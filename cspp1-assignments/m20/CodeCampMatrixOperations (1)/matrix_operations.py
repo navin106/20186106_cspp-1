@@ -35,6 +35,7 @@ def read_matrix():
         print an error message and return None
         error message should be "Error: Invalid input for the matrix"
     '''
+    flag = 0
     n = input().split(',')
     rows = int(n[0])
     columns = int(n[1])
@@ -45,7 +46,10 @@ def read_matrix():
             matrix.append([int(i) for i in l])
         else:
             print("Error: Invalid input for the matrix")
-            return None
+            matrix.append([int(i) for i in l])
+            flag = 1
+    if flag == 1:
+    	return None
     return matrix
 
 def main():
