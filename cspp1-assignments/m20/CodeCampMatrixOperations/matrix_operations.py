@@ -29,11 +29,10 @@ def add_matrix(m1, m2):
     # for i in m1:
     #     for j in m2:
     k = [i + j for x, y in zip(m1, m2) for i,j in zip(x, y)]
-    if ((len(m1) == len(m2))) and (len(m1[0]) == len(m2[0])):
+    if (len(m1[0]) == len(m2[0])):
         return [k[x:x+len(m1[1])] for x in range(0,len(k),len(m1[1]))]
-    else:
-        print('Error: Matrix shapes invalid for addition'                   )
-        return None
+    print('Error: Matrix shapes invalid for addition'                   )
+    return None
 def read_matrix(n):
     '''
         read the matrix dimensions from input
