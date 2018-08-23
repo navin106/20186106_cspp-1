@@ -32,7 +32,7 @@ def add_matrix(m1, m2):
     if ((len(m1) == len(m2))) and (len(m1[0]) == len(m2[0])):
         return [k[x:x+len(m1[1])] for x in range(0,len(k),len(m1[1]))]
     else:
-        print('Error: Matrix shapes invalid for addition')
+        print('Error: Matrix shapes invalid for addition'                   )
         return None
 def read_matrix(n):
     '''
