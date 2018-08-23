@@ -21,8 +21,6 @@ def add_matrix(m1, m2):
         and return None
         error message should be "Error: Matrix shapes invalid for addition"
     '''
-    # for i in m1:
-    #     for j in m2:
     k = [i + j for x, y in zip(m1, m2) for i,j in zip(x, y)]
     return [k[x:x+len(m1)] for x in range(0,len(k),len(m1))]
 def read_matrix(n):
@@ -37,7 +35,11 @@ def read_matrix(n):
     for row in range(int(n[0])):
         l = input().split(' ')
         matrix.append([int(l[i]) for i in range(len(l))])
-    return matrix
+    try:
+        if [bool for i in matrix if ' ' in matrix[i]]  == True:
+            return 'Invalid input for the matrix' 
+    except:
+        return matrix
 
 def main():
     # read matrix 1
