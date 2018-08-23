@@ -47,21 +47,23 @@ def read_matrix():
         else:
             matrix.append([int(i) for i in temp_l])
             flag = 1
-    if flag == 1:
-        print("Error: Invalid input for the matrix")
-        # return (matrix, 0)
+    # if flag == 1:
+    # 
+    #     # return (matrix, 0)
         # break
-    return (matrix, 0)
+    return (matrix, flag)
 def main():
     '''
     calling functions
     '''
     mat_1 = read_matrix()
     mat_2 = read_matrix()
-    if isinstance(mat_1, tuple):
-        mat_1 = mat_1[0]
-    if isinstance(mat_2, tuple):
-        mat_2 = mat_2[0]
+    # if isinstance(mat_1, tuple):
+    #     mat_1 = mat_1[0]
+    # if isinstance(mat_2, tuple):
+    # mat_2 = mat_2[0]
+    if (mat_1[1] or mat_2[1]) == 1:
+        print("Error: Invalid input for the matrix")
     if add_matrix(mat_1, mat_2) is None:
         print('Error: Matrix shapes invalid for addition')
         print(None)
