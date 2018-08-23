@@ -7,21 +7,8 @@ def mult_matrix(A, B):
         and return None
         error message should be "Error: Matrix shapes invalid for mult"
     '''
-    result = [[0]*len(B[0])]*len(A)
+    result = [[sum(a * b for a, b in zip(A_row, B_col))for B_col in zip(*B)]for A_row in A]
     print(result)
-    k = []
-    # iterating by row of A
-    for i in range(len(A)):
-     
-        # iterating by coloum by B 
-        for j in range(len(B[0])):
-     
-            # iterating by rows of B
-            for k in range(len(B)):
-                result[i][j] += A[i][k] * B[k][j]
-    for i in result:
-        print(i)
-        k.append(i)
 def add_matrix(m1, m2):
     '''
         check if the matrix shapes are similar
