@@ -1,4 +1,3 @@
-import numpy as np
 def mult_matrix(m1, m2):
     '''
         check if the matrix1 columns = matrix2 rows
@@ -11,7 +10,7 @@ def mult_matrix(m1, m2):
         result = [[sum(x * y for x, y in zip(m1_row, m2_col)) for m2_col in zip(*m2)] for m1_row in m1]
         return result
     else:
-        print('Error: Matrix shapes invalid for mult')
+        return 'Error: Matrix shapes invalid for mult'
 def add_matrix(m1, m2):
     '''
         check if the matrix shapes are similar
@@ -58,7 +57,7 @@ def main():
     m2 = read_matrix()
     # add matrix 1 and matrix 2
     # read matrix 2
-    if type(m1) == tuple:
+    if type(m1) == tuple :
     	print('None')
     	print(add_matrix(m1[0], m2))
     	print(mult_matrix(m1[0], m2))
@@ -68,6 +67,7 @@ def main():
     	print(mult_matrix(m1, m2[0]))
     else:
     	print(add_matrix(m1, m2))
+    	print(mult_matrix(m1, m2[0]))
     # multiply matrix 1 and matrix 2
 
 if __name__ == '__main__':
