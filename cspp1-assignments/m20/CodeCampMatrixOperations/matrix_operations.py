@@ -10,10 +10,15 @@ def mult_matrix(m1, m2):
         and return None
         error message should be "Error: Matrix shapes invalid for mult"
     '''
-    result = [[sum(a*b for a,b in zip(X_row,Y_col)) for Y_col in zip(*Y)] for X_row in X]
-
-    for r in result:
-        print(r)
+    k = []
+    result = []
+    for i in range(len(m1)):
+   # iterate through columns
+        for j in range(len(m1[0])):
+            result[i][j] = m1[i][j] + m2[i][j]
+    for i in result:
+        k.append(i)
+    return k
 def add_matrix(m1, m2):
     '''
         check if the matrix shapes are similar
