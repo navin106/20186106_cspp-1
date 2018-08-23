@@ -40,6 +40,7 @@ def read_matrix(n):
         l = input().split(' ')
         if (len(l) != len(n[0])):
             return 0
+            break
         else:
             matrix.append([int(l[i]) for i in range(len(l))])
     return matrix
