@@ -19,6 +19,7 @@ def mult_matrix(A, B):
             for k in range(len(B)):
                 result[i][j] += A[i][k] * B[k][j]
     for i in result:
+        print(i)
         k.append(i)
     print(k)
 def add_matrix(m1, m2):
