@@ -62,13 +62,11 @@ def main():
     if type(m1) == tuple :
         # print('None')
         m1 = m1[0]
-        exit()
         # print(add_matrix(m1[0], m2))
         # print(mult_matrix(m1[0], m2))
     if type(m2) == tuple:
         # print('None')
         m2 = m2[0]
-        exit()
         # print(add_matrix(m1, m2[0]))
         # print(mult_matrix(m1, m2[0]))
     print(m1,m2)
