@@ -38,10 +38,10 @@ def read_matrix(n):
     matrix = []
     for row in range(int(n[0])):
         l = input().split(' ')
-        if (len(l) == len(n[0])):
-            matrix.append([int(l[i]) for i in range(len(l))])
-        else:
+        if (len(l) != len(n[0])):
             return 0
+        else:
+            matrix.append([int(l[i]) for i in range(len(l))])
     return matrix
 
 def main():
