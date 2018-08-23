@@ -11,7 +11,7 @@ def mult_matrix(m1, m2):
         if len(m1) == len(m2[0]):
             pass
     except:
-        print('invalid matrix')
+        return 'invalid matrix'
 
 def add_matrix(m1, m2):
     '''
