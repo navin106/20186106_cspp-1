@@ -41,6 +41,7 @@ def read_matrix(n):
         print an error message and return None
         error message should be "Error: Invalid input for the matrix"
     '''
+    n = input().split(',')
     matrix = []
     for row in range(int(n[0])):
         l = input().split(' ')
@@ -53,9 +54,9 @@ def read_matrix(n):
 
 def main():
     # read matrix 1
-    m1 = read_matrix(input().split(','))
+    m1 = read_matrix()
     # read matrix 2
-    m2 = read_matrix(input().split(','))
+    m2 = read_matrix()
     # add matrix 1 and matrix 2
     if m1 is None or m2 is None:
         exit()
