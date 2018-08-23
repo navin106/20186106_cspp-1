@@ -71,6 +71,7 @@ def main():
         exit()
         # print(add_matrix(m1, m2[0]))
         # print(mult_matrix(m1, m2[0]))
+    print(m1,m2)
     print(add_matrix(m1, m2))
     print(mult_matrix(m1, m2))
     # multiply matrix 1 and matrix 2
