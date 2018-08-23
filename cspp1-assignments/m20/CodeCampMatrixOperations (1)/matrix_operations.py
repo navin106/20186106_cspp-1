@@ -57,9 +57,9 @@ def main():
     '''
     mat_1 = read_matrix()
     mat_2 = read_matrix()
-    if isinstance(mat_1) == tuple:
+    if isinstance(mat_1, tuple):
         mat_1 = mat_1[0]
-    if isinstance(mat_2) == tuple:
+    if isinstance(mat_2, tuple):
         mat_2 = mat_2[0]
     print(add_matrix(mat_1, mat_2))
     if mult_matrix(mat_1, mat_2) is None:
