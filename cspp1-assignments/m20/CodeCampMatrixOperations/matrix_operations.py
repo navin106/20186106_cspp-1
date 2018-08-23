@@ -54,21 +54,13 @@ def main():
     # add matrix 1 and matrix 2
     if m1 is None:
         exit()
+    print(add_matrix(m1, m2))
     # read matrix 2
     m2 = read_matrix()
     if m2 is None:
         exit()
-    print(add_matrix(m1, m2))
     print(mult_matrix(m1, m2))
     # multiply matrix 1 and matrix 2
 
 if __name__ == '__main__':
     main()
-
-# from numpy import * 
-
-# x = int(input())
-
-# y = reshape(x,(2,2)) 
-
-# print(y)
