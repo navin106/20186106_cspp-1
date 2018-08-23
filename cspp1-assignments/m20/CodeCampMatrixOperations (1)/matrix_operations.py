@@ -45,6 +45,7 @@ def read_matrix():
             matrix.append([int(i) for i in l])
         else:
             print("Error: Invalid input for the matrix")
+            return None
     return matrix
 
 def main():
