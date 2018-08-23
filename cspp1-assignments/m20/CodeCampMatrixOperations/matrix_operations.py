@@ -19,7 +19,7 @@ def add_matrix(m1, m2):
     # for i in m1:
     #     for j in m2:
     sum = [i + j for x, y in zip(m1, m2) for i,j in zip(x, y)]
-    return [sum[x:x+3] for x in range(0,len(sum),len(m1[0]))]
+    return [sum[x:x+3] for x in range(0,len(sum))]
         #print([j + i for x, y in zip(first, second)])
 
 def read_matrix(n):
