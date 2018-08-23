@@ -35,11 +35,11 @@ def read_matrix(n):
         print an error message and return None
         error message should be "Error: Invalid input for the matrix"
     '''
-        matrix = []
-        for row in range(int(n[0])):
-            l = input().split(' ')
-            matrix.append([int(l[i]) for i in range(len(l))])
-        return matrix
+    matrix = []
+    for row in range(int(n[0])):
+        l = input().split(' ')
+        matrix.append([int(l[i]) for i in range(len(l))])
+    return matrix
 
 def main():
     # read matrix 1
