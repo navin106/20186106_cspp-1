@@ -12,7 +12,7 @@ def mult_matrix(m1, m2):
         result = [[sum(x * y for x, y in zip(m1_row, m2_col)) for m2_col in zip(*m2)] for m1_row in m1]
         return result
     else:
-        return 'Error: Matrix shapes invalid for mult'
+        return None
 def add_matrix(m1, m2):
     '''
         check if the matrix shapes are similar
@@ -70,7 +70,10 @@ def main():
         # print(add_matrix(m1, m2[0]))
         # print(mult_matrix(m1, m2[0]))
     print(add_matrix(m1, m2))
-    print(mult_matrix(m1, m2))
+    if mult_matrix(m1,m2) == None:
+        print('Error: Matrix shapes invalid for mult')
+    else:
+        print(mult_matrix(m1, m2))
     # multiply matrix 1 and matrix 2
 
 if __name__ == '__main__':
