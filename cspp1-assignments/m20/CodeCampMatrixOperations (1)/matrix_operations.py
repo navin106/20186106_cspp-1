@@ -49,6 +49,7 @@ def read_matrix():
             matrix.append([int(i) for i in l])
             flag = 1
     if flag == 1:
+        # print("Error: Invalid input for the matrix")
         return (matrix,True)
     return matrix
 
@@ -60,13 +61,11 @@ def main():
     # read matrix 2
     if type(m1) == tuple :
         # print('None')
-        print("Error: Invalid input for the matrix")
         m1 = m1[0]
         # print(add_matrix(m1[0], m2))
         # print(mult_matrix(m1[0], m2))
     if type(m2) == tuple:
         # print('None')
-        print("Error: Invalid input for the matrix")
         m2 = m2[0]
         # print(add_matrix(m1, m2[0]))
         # print(mult_matrix(m1, m2[0]))
