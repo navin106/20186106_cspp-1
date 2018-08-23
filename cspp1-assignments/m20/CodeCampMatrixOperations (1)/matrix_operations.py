@@ -63,6 +63,7 @@ def main():
         mat_2 = mat_2[0]
     if add_matrix(mat_1, mat_2) is None:
         print('Error: Matrix shapes invalid for addition')
+        print(None)
     else:
         print(add_matrix(mat_1, mat_2))
     if mult_matrix(mat_1, mat_2) is None:
