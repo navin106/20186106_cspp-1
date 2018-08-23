@@ -35,23 +35,21 @@ def read_matrix(n):
     for row in range(int(n[0])):
         l = input().split(' ')
         matrix.append([int(l[i]) for i in range(len(l))])
-    for i in matrix:
-        if ' ' in i:
-            return 'Error: Invalid input for the matrix'
-        elif n[0] != n[1]:
-            return 'Error: Matrix shapes invalid for addition'
-        else:
-            return matrix
 def main():
     # read matrix 1
     m1 = read_matrix(input().split(','))
     # read matrix 2
     m2 = read_matrix(input().split(','))
     # add matrix 1 and matrix 2
-    if type(m1) == list:
-        print(add_matrix(m1, m2))
-    else:
-        print(m1)
+    for i,j in m1,m2:
+        if ' ' in (i or j):
+            print('Error: Invalid input for the matrix')
+            break
+        elif len(i) != len(j):
+            print('Error: Matrix shapes invalid for addition')
+            break
+        else:
+            print(add_matrix(m1, m2))
     #print(mult_matrix(m1, m2))
     # multiply matrix 1 and matrix 2
 
