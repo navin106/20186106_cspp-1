@@ -35,6 +35,7 @@ def read_matrix(n):
     for row in range(int(n[0])):
         l = input().split(' ')
         matrix.append([int(l[i]) for i in range(len(l))])
+    return matrix
 def main():
     # read matrix 1
     m1 = read_matrix(input().split(','))
