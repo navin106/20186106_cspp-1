@@ -37,10 +37,12 @@ def read_matrix(n):
         matrix.append([int(l[i]) for i in range(len(l))])
     for i in matrix:
         if len(i) != int(n[0]):
-            return 'Invalid input for the matrix'
+            str = 'Invalid input for the matrix'
+            return str
             break
         elif n[0] != n[1]:
-            return 'Matrix shapes invalid for addition'
+            str = 'Matrix shapes invalid for addition'
+            return str
             break
         else:
             return matrix
