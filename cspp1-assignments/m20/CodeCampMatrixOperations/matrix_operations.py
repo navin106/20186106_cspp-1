@@ -35,12 +35,8 @@ def read_matrix(n):
     for row in range(int(n[0])):
         l = input().split(' ')
         matrix.append([int(l[i]) for i in range(len(l))])
-    try:
-        if [bool for i in matrix if ' ' in matrix[i]]  == True:
-            return 'Invalid input for the matrix' 
-    except:
-        return matrix
-
+    print(matrix)
+    return matrix
 def main():
     # read matrix 1
     m1 = read_matrix(input().split(','))
