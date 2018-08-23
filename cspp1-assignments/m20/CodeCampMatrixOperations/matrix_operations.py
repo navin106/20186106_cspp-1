@@ -51,6 +51,7 @@ def main():
             break
         else:
             print(add_matrix(m1, m2))
+            break
     #print(mult_matrix(m1, m2))
     # multiply matrix 1 and matrix 2
 
