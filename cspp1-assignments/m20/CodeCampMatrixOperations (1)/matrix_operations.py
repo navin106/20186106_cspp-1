@@ -36,9 +36,9 @@ def read_matrix():
         error message should be "Error: Invalid input for the matrix"
     '''
     flag = 0
-    n = input().split(',')
-    rows = int(n[0])
-    columns = int(n[1])
+    inp_list = input().split(',')
+    rows = int(inp_list[0])
+    columns = int(inp_list[1])
     matrix = []
     for row in range(rows):
         l = input().split(' ')
