@@ -48,9 +48,10 @@ def read_matrix():
             matrix.append([int(i) for i in temp_l])
             flag = 1
     if flag == 1:
-        # print("Error: Invalid input for the matrix")
-        return (matrix, 0)
-    return matrix
+        print("Error: Invalid input for the matrix")
+        # return (matrix, 0)
+        break
+    return (matrix, 0)
 def main():
     '''
     calling functions
