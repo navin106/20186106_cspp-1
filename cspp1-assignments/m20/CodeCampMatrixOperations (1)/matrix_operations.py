@@ -72,6 +72,7 @@ def main():
     print(add_matrix(m1, m2))
     if mult_matrix(m1,m2) == None:
         print('Error: Matrix shapes invalid for mult')
+        print(None)
     else:
         print(mult_matrix(m1, m2))
     # multiply matrix 1 and matrix 2
