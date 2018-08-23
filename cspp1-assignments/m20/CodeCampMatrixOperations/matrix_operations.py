@@ -41,11 +41,11 @@ def read_matrix(n):
     matrix = []
     for row in range(int(n[0])):
         l = input().split(' ')
-        if (len(l) != len(n[0])):
+        if (len(l) == len(n[0])):
+            matrix.append([int(l[i]) for i in range(len(l))])
+        else:
             print("Error: Invalid input for the matrix")
             return None
-        else:
-            matrix.append([int(l[i]) for i in range(len(l))])
     return matrix
 
 def main():
