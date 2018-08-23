@@ -1,4 +1,8 @@
-def mult_matrix(m1, m2):
+'''
+@author:navin106
+matrix operations
+'''
+def mult_matrix(mat_1, mat_2):
     '''
         check if the matrix1 columns = matrix2 rows
         mult the matrices and return the result matrix
@@ -6,12 +10,12 @@ def mult_matrix(m1, m2):
         and return None
         error message should be "Error: Matrix shapes invalid for mult"
     '''
-    if len(m1[1]) == len(m2):
-        result = [[sum(x * y for x, y in zip(m1_row, m2_col)) for m2_col in zip(*m2)] for m1_row in m1]
+    if len(mat_1[1]) == len(mat_2):
+        result = [[sum(x * y for x, y in zip(m1_row, m2_col)) for m2_col in zip(*mat_2)] \
+        for m1_row in mat_1]
         return result
-    else:
-        return None
-def add_matrix(m1, m2):
+    return None
+def add_matrix(mat_1, mat_2):
     '''
         check if the matrix shapes are similar
         add the matrices and return the result matrix
@@ -19,11 +23,10 @@ def add_matrix(m1, m2):
         and return None
         error message should be "Error: Matrix shapes invalid for addition"
     '''
-    k = [i + j for x, y in zip(m1, m2) for i,j in zip(x, y)]
-    if (len(m1[0]) == len(m2[0])):
-        return [k[x:x+len(m1[1])] for x in range(0,len(k),len(m1[1]))]
-    else:
-        print('Error: Matrix shapes invalid for addition')
+    k = [i + j for x, y in zip(mat_1, mat_2) for i, j in zip(x, y)]
+    if len(mat_1[0]) == len(mat_2[0]):
+        return [k[x:x+len(mat_1[1])] for x in range(0, len(k), len(mat_1[1]))]
+    print('Error: Matrix shapes invalid for addition')
 def read_matrix():
     '''
         read the matrix dimensions from input
@@ -46,22 +49,23 @@ def read_matrix():
             flag = 1
     if flag == 1:
         # print("Error: Invalid input for the matrix")
-        return (matrix,True)
+        return (matrix, 0)
     return matrix
-
 def main():
-    # read matrix 1
-    m1 = read_matrix()
-    m2 = read_matrix()
-    if type(m1) == tuple :
-        m1 = m1[0]
-    if type(m2) == tuple:
-        m2 = m2[0]
-    print(add_matrix(m1, m2))
-    if mult_matrix(m1,m2) == None:
+    '''
+    calling functions
+    '''
+    mat_1 = read_matrix()
+    mat_2 = read_matrix()
+    if isinstance(mat_1) == tuple:
+        mat_1 = mat_1[0]
+    if isinstance(mat_2) == tuple:
+        mat_2 = mat_2[0]
+    print(add_matrix(mat_1, mat_2))
+    if mult_matrix(mat_1, mat_2) is None:
         print('Error: Matrix shapes invalid for mult')
         print(None)
     else:
-        print(mult_matrix(m1, m2))
+        print(mult_matrix(mat_1, mat_2))
 if __name__ == '__main__':
     main()
