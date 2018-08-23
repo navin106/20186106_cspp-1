@@ -48,7 +48,7 @@ def read_matrix():
         if len(temp_l) == rows:
             matrix.append([int(i) for i in temp_l])
         else:
-            # matrix.append([int(i) for i in temp_l])
+            matrix.append([int(i) for i in temp_l])
             print("Error: Invalid input for the matrix")
             return 0
     return matrix
