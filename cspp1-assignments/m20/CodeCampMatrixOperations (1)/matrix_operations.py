@@ -60,9 +60,11 @@ def main():
     # read matrix 2
     if type(m1) == tuple:
     	print('None')
+    	print(add_matrix(m1, m2))
     	print(mult_matrix(m1[0], m2))
     elif type(m2) == tuple:
     	print('None')
+    	print(add_matrix(m1, m2))
     	print(mult_matrix(m1, m2[0]))
     else:
     	print(add_matrix(m1, m2))
