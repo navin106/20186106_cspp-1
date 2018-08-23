@@ -35,11 +35,14 @@ def read_matrix(n):
         print an error message and return None
         error message should be "Error: Invalid input for the matrix"
     '''
-    matrix = []
-    for row in range(int(n[0])):
-        l = input().split(' ')
-        matrix.append([int(l[i]) for i in range(len(l))])
-    return matrix
+    if n[0] != n[1]:
+        return 'Error: Matrix shapes invalid for addition'
+    else:
+        matrix = []
+        for row in range(int(n[0])):
+            l = input().split(' ')
+            matrix.append([int(l[i]) for i in range(len(l))])
+        return matrix
 
 def main():
     # read matrix 1
@@ -47,7 +50,10 @@ def main():
     # read matrix 2
     m2 = read_matrix(input().split(','))
     # add matrix 1 and matrix 2
-    print(add_matrix(m1, m2))
+    if type(m1) == list: 
+        print(add_matrix(m1, m2))
+    else:
+        print(m1)
     #print(mult_matrix(m1, m2))
     # multiply matrix 1 and matrix 2
 
