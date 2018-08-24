@@ -35,10 +35,10 @@ def isinvalid(matrix):
 			if j not in 'xo.':
 				print('invalid input')
 				return False
-			else:
-				if iscount(matrix,'x') > 5 or iscount(matrix,'o') > 5:
-					print('invalid game')
-					return False
+			# else:
+	if iscount(matrix,'x') > 5 or iscount(matrix,'o') > 5:
+		print('invalid game')
+		return False
 	return True
 def main():
 	'''
