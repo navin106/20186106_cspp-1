@@ -8,19 +8,12 @@ def iswinnerdiagonal(matrix):
     temp = len(matrix)
     r_d = [matrix[i][i] for i in range(temp)]
     l_d = [matrix[i][temp-i-1] for i in range(temp)]
-    if r_d.count('x') == 3:
+    if r_d.count('x') == 3 or l_d.count('x') == 3:
         print('x')
         return False
-    elif r_d.count('o') == 3:
+    if r_d.count('o') == 3 or l_d.count('o') == 3:
         print('o')
         return False
-    elif l_d.count('x') == 3:
-        print('x')
-        return False
-    else:
-        if l_d.count('x') == 3:
-            print('x')
-            return False
     return True
 def iswinnerhorizontal(matrix):
     '''
