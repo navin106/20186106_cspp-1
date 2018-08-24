@@ -1,3 +1,17 @@
+def iswinnerdiagonal(matrix):
+	r_d = []
+	l_d = []
+	for i in range(len(matrix)):
+		r_d.append(matrix[i][i])
+		l_d.append(matrix[i][len(matrix)-i-1])
+	if r_d.count('x') == 3:
+		print('x')
+		return False
+	else:
+		if l_d.count('o') == 3:
+		print('o')
+		return False
+	return True
 def iswinnerhorizontal(matrix):
 	for i in matrix:
 		if i.count('x') == 3:
@@ -17,7 +31,7 @@ def iswinnervertical(matrix):
 			if list(i).count('o') == 3:
 				print('o')
 				return False
-	return True
+	return iswinnerdiagonal(matrix):
 def iscount(matrix, chk_chr):
 	'''
 	returns sum of count of the char
@@ -35,8 +49,6 @@ def isinvalid(matrix):
 			if j not in 'xo.':
 				print('invalid input')
 				return False
-	print(iscount(matrix,'x'))
-	print(iscount(matrix,'o'))
 	if iscount(matrix,'x') > 5 or iscount(matrix,'o') > 5:
 		print('invalid game')
 		return False
