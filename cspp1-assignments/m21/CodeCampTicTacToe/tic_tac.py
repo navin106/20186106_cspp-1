@@ -45,7 +45,6 @@ def iscount(matrix, chk_chr):
     for i in matrix:
         k.append(i.count(chk_chr))
     return sum(k)
-
 def is_verified(matrix):
     '''
     Checking if the matrix contains 'x' or 'o' or '.'
@@ -55,8 +54,6 @@ def is_verified(matrix):
             if j not in 'xo.':
                 return False
     return True
-
-
 def isinvalid(matrix):
     '''
     return bool for input is valid or not
@@ -65,7 +62,7 @@ def isinvalid(matrix):
         print('invalid input')
         return False
     if iscount(matrix, 'x') > 5 or iscount(matrix, 'o') > 5 or \
-    (iscount(matrix, 'x') == 3 and iscount(matrix, 'o') == 3):
+    (iscount(matrix, 'x') == iscount(matrix, 'o')):
         print('invalid game')
         return False
     return True
