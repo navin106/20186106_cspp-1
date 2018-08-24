@@ -49,7 +49,7 @@ def iswinnervertical(matrix):
     if a[0] == 'x':
         print('x')
         return False
-    if a[0] == 'o':
+    if b[0] == 'o':
         print('o')
         return False
     return iswinnerdiagonal(matrix)
