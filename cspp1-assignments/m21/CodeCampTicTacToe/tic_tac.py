@@ -24,5 +24,5 @@ def main():
 	matrix = []
 	for i in range(3):
 		matrix.append(input().split())
-		print(isinvalid(matrix))
+	print(isinvalid(matrix))
 main()
