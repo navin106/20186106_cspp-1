@@ -5,12 +5,9 @@ def iswinnerdiagonal(matrix):
     '''
     check diagonal
     '''
-    r_d = []
-    l_d = []
     temp = len(matrix)
-    for i in range(temp):
-        r_d.append(matrix[i][i])
-        l_d.append(matrix[i][len(matrix)-i-1])
+    r_d = [matrix[i][i] for i in range(temp)]
+    l_d = [matrix[i][temp-i-1] for i in range(temp)]
     if r_d.count('x') == 3:
         print('x')
         return False
