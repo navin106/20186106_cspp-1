@@ -4,13 +4,21 @@ def iswinnerdiagonal(matrix):
 	for i in range(len(matrix)):
 		r_d.append(matrix[i][i])
 		l_d.append(matrix[i][len(matrix)-i-1])
+	# print(r_d.count('x'))
+	# print(l_d.count('x'))
 	if r_d.count('x') == 3:
 		print('x')
 		return False
+	elif r_d.count('o') == 3:
+		print('o')
+		return False
+	elif l_d.count('x') == 3:
+		print('x')
+		return False
 	else:
-		if l_d.count('o') == 3:
-			print('o')
-			return False
+		if l_d.count('x') == 3:
+		print('x')
+		return False	
 	return True
 def iswinnerhorizontal(matrix):
 	for i in matrix:
