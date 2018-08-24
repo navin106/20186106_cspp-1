@@ -44,8 +44,8 @@ def iswinnervertical(matrix):
     '''
     a = [0]
     b = [0]
-    a = [ 'x' for i in zip(*matrix) if list(i).count('x') == 3]
-    b = [ 'o' for i in zip(*matrix) if list(i).count('o') == 3]
+    a = ['x' for i in zip(*matrix) if list(i).count('x') == 3]
+    b = ['o' for i in zip(*matrix) if list(i).count('o') == 3]
     if a[0] == 'x':
         # print('a comp')
         print('x')
