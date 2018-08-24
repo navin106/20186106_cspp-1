@@ -42,14 +42,15 @@ def iswinnervertical(matrix):
     '''
     check vertical
     '''
-    for i in zip(*matrix):
-        if list(i).count('x') == 3:
-            print('x')
-            return False
-        else:
-            if list(i).count('o') == 3:
-                print('o')
-                return False
+    a = [0]
+    a[0] = [ 'x' for i in zip(*matrix) if list(i).count('x') == 3]
+    a[0] = [ 'o' for i in zip(*matrix) if list(i).count('o') == 3]
+    if a[0] == 'x':
+    	print('x')
+        return False
+    if a[0] == 'o':
+    	print('o')
+        return False
     return iswinnerdiagonal(matrix)
 def iscount(matrix, chk_chr):
     '''
