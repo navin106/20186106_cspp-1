@@ -2,21 +2,17 @@ def iswinnerhorizontal(matrix):
 	for i in matrix:
 		if i.count('x') == 3:
 			print('x')
-			return False
 		else:
 			if i.count('o') == 3:
 				print('o')
-				return False
-	return True
+	return iswinnervertical(matrix)
 def iswinnervertical(matrix):
 	for i in zip(*matrix):
 		if list(i).count('x') == 3:
 			print('x')
-			return False
 		else:
 			if list(i).count('o') == 3:
 				print('o')
-				return False
 	return True
 def iscount(matrix, chk_chr):
 	'''
@@ -49,6 +45,11 @@ def main():
 		matrix.append(input().split())
 	if isinvalid(matrix):
 		if iswinnerhorizontal(matrix):
-			if iswinnervertical(matrix):
-				print(iswinnerhorizontal(matrix))
+			print('draw')
+			# if iswinnervertical(matrix):
+			# 	print(iswinnerhorizontal(matrix))
+	# elif iswinnerhorizontal(matrix) == true:
+	# 	print('draw')
+	# else:
+	# 	print(iswinnervertical(matrix))
 main()
