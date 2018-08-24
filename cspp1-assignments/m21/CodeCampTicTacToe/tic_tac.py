@@ -23,8 +23,8 @@ def main():
 	'''
 	calling function
 	'''
-	a = []
+	matrix = []
 	for i in range(3):
-		a.append(input().split())
+		matrix.append(input().split())
 	print(isinvalid(matrix))
 main()
