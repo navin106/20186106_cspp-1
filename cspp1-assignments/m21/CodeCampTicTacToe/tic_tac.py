@@ -9,8 +9,8 @@ def iswinnerdiagonal(matrix):
 		return False
 	else:
 		if l_d.count('o') == 3:
-		print('o')
-		return False
+			print('o')
+			return False
 	return True
 def iswinnerhorizontal(matrix):
 	for i in matrix:
