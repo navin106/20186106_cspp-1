@@ -44,9 +44,7 @@ def main():
 	matrix = []
 	for i in range(3):
 		matrix.append(input().split())
-	if not isinvalid(matrix):
-		print(isinvalid(matrix))
-	else:
+	if isinvalid(matrix):
 		print(iswinnerhorizontal(matrix))
 	# elif iswinnerhorizontal(matrix) == true:
 	# 	print('draw')
