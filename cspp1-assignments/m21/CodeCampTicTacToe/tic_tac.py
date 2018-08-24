@@ -42,8 +42,6 @@ def main():
 	matrix = []
 	for i in range(3):
 		matrix.append(input().split())
-	if isinvalid(matrix) != True:
-		print(isinvalid(matrix))
-	else:
+	if isinvalid(matrix) == True:
 		print(iswinnervertical(matrix))
 main()
