@@ -57,8 +57,9 @@ def is_verified(matrix):
 def isinvalid(matrix):
     '''
     return bool for input is valid or not
-    '''
     if not is_verified(matrix):
+    '''
+    if 'f' in ['f' for i in matrix for j in i if j not in 'xo.']:
         print('invalid input')
         return False
     if iscount(matrix, 'x') > 5 or iscount(matrix, 'o') > 5 or \
