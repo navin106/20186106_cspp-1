@@ -2,17 +2,21 @@ def iswinnerhorizontal(matrix):
 	for i in matrix:
 		if i.count('x') == 3:
 			print('x')
+			return False
 		else:
 			if i.count('o') == 3:
 				print('o')
+				return False
 	return iswinnervertical(matrix)
 def iswinnervertical(matrix):
 	for i in zip(*matrix):
 		if list(i).count('x') == 3:
 			print('x')
+			return False
 		else:
 			if list(i).count('o') == 3:
 				print('o')
+				return False
 	return True
 def iscount(matrix, chk_chr):
 	'''
