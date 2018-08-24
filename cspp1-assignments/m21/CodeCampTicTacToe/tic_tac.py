@@ -29,14 +29,12 @@ def iswinnerhorizontal(matrix):
     '''
     check horizontal
     '''
-    for i in matrix:
-        if i.count('x') == 3:
-            print('x')
-            return False
-        else:
-            if i.count('o') == 3:
-                print('o')
-                return False
+    if ['x' for i in matrix if i.count('x') == 3] == ['x']:
+        print('x')
+        return False
+    if ['o' for i in matrix if i.count('o') == 3] == ['o']:
+        print('o')
+        return False
     return iswinnervertical(matrix)
 def iswinnervertical(matrix):
     '''
