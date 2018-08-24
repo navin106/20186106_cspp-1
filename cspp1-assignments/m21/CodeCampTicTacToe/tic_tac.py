@@ -32,7 +32,7 @@ def isinvalid(matrix):
 				print('invalid input')
 				return False
 			else:
-				if iscount(matrix,'x') or iscount(matrix,'o') > 5:
+				if iscount(matrix,'x') > 5 or iscount(matrix,'o') > 5:
 					print('invalid game')
 					return False
 	return True
