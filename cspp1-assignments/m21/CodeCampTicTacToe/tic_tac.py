@@ -1,11 +1,19 @@
-def iswinner(matrix):
-	for i in zip(*matrix):
+def iswinnerhorizontal(matrix):
+	for i in matrix:
 		if i.count('x') == 3:
 			return 'x'
 		else:
 			if i.count('o') == 3:
 				return 'o'
 	return 'draw'
+def iswinnervertical(matrix):
+	for i in zip(*matrix):
+		if i.count('x') == 3:
+			return 'x'
+		else:
+			if i.count('o') == 3:
+				return 'o'
+	return print(iswinnerhorizontal(matrix))
 def iscount(matrix, chk_chr):
 	'''
 	returns sum of count of the char
