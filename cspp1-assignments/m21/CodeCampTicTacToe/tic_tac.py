@@ -59,8 +59,8 @@ def isinvalid(matrix):
     '''
     return bool for input is valid or not
     '''
-    for i in matrix:
-        for j in i:
+    for _ in matrix:
+        for j in _:
             if j not in 'xo.':
                 print('invalid input')
                 return False
