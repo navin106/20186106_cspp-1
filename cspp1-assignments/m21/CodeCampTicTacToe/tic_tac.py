@@ -24,6 +24,5 @@ def main():
 	matrix = []
 	for i in range(3):
 		matrix.append(input().split())
-	if isinvalid == True:
 		print(isinvalid(matrix))
 main()
