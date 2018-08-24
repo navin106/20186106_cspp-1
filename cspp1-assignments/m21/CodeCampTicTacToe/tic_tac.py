@@ -70,9 +70,7 @@ def main():
     '''
     calling function
     '''
-    matrix = []
-    for _ in range(3):
-        matrix.append(input().split())
+    matrix = [input().split() for _ in range(3)]
     if isinvalid(matrix):
         if iswinnerhorizontal(matrix):
             print('draw')
