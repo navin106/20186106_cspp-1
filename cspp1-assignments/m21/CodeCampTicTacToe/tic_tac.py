@@ -1,10 +1,14 @@
+'''
+@author: navin106
+'''
 def iswinnerdiagonal(matrix):
     '''
     check diagonal
     '''
     r_d = []
     l_d = []
-    for i in range(len(matrix)):
+    temp = len(matrix)
+    for i in range(temp):
         r_d.append(matrix[i][i])
         l_d.append(matrix[i][len(matrix)-i-1])
     if r_d.count('x') == 3:
@@ -19,7 +23,7 @@ def iswinnerdiagonal(matrix):
     else:
         if l_d.count('x') == 3:
             print('x')
-            return False    
+            return False
     return True
 def iswinnerhorizontal(matrix):
     '''
@@ -64,8 +68,8 @@ def isinvalid(matrix):
             if j not in 'xo.':
                 print('invalid input')
                 return False
-    if iscount(matrix,'x') > 5 or iscount(matrix,'o') > 5 or \
-    (iscount(matrix,'x') == 3 and iscount(matrix,'o') == 3):
+    if iscount(matrix, 'x') > 5 or iscount(matrix, 'o') > 5 or \
+    (iscount(matrix, 'x') == 3 and iscount(matrix, 'o') == 3):
         print('invalid game')
         return False
     return True
@@ -74,7 +78,7 @@ def main():
     calling function
     '''
     matrix = []
-    for i in range(3):
+    for _ in range(3):
         matrix.append(input().split())
     if isinvalid(matrix):
         if iswinnerhorizontal(matrix):
