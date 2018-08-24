@@ -47,6 +47,9 @@ def iscount(matrix, chk_chr):
     return sum(k)
 
 def is_verified(matrix):
+    '''
+    Checking if the matrix contains 'x' or 'o' or '.'
+    '''
     for i in matrix:
         for j in i:
             if j not in 'xo.':
