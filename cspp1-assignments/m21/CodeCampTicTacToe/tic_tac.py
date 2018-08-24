@@ -2,10 +2,10 @@ def iswinner(matrix):
 	for i in zip(*matrix):
 		if i.count('x') == 3:
 			return 'x'
-		elif i.count('o') == 3:
-			return 'o'
 		else:
-			return 'draw'
+			if i.count('o') == 3:
+				return 'o'
+	return 'draw'
 def iscount(matrix, chk_chr):
 	'''
 	returns sum of count of the char
