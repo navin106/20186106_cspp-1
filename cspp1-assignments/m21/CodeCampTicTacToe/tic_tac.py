@@ -47,9 +47,11 @@ def iswinnervertical(matrix):
     a[0] = [ 'x' for i in zip(*matrix) if list(i).count('x') == 3]
     b[0] = [ 'o' for i in zip(*matrix) if list(i).count('o') == 3]
     if a[0] == 'x':
+        print('a comp')
         print('x')
         return False
     if b[0] == 'o':
+        print('b comp')
         print('o')
         return False
     return iswinnerdiagonal(matrix)
