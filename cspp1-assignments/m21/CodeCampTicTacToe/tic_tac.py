@@ -43,8 +43,9 @@ def iswinnervertical(matrix):
     check vertical
     '''
     a = [0]
+    b = [0]
     a[0] = [ 'x' for i in zip(*matrix) if list(i).count('x') == 3]
-    a[0] = [ 'o' for i in zip(*matrix) if list(i).count('o') == 3]
+    b[0] = [ 'o' for i in zip(*matrix) if list(i).count('o') == 3]
     if a[0] == 'x':
         print('x')
         return False
