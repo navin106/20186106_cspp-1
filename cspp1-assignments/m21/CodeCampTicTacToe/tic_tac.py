@@ -31,7 +31,7 @@ def iswinnervertical(matrix):
 			if list(i).count('o') == 3:
 				print('o')
 				return False
-	return iswinnerdiagonal(matrix):
+	return iswinnerdiagonal(matrix)
 def iscount(matrix, chk_chr):
 	'''
 	returns sum of count of the char
