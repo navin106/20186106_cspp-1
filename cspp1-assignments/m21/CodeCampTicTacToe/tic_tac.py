@@ -16,9 +16,7 @@ def isinvalid(matrix):
 				return 'invalid input'
 	if iscount(matrix,'x') or iscount(matrix,'o') or iscount(matrix,'.') > 5:
 		return 'invalid game'
-
-
-
+	return True
 def main():
 	'''
 	calling function
@@ -26,5 +24,6 @@ def main():
 	matrix = []
 	for i in range(3):
 		matrix.append(input().split())
-	print(isinvalid(matrix))
+	if isinvalid == True:
+		print(isinvalid(matrix))
 main()
