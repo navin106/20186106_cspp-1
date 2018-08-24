@@ -13,7 +13,7 @@ def iswinnervertical(matrix):
 		else:
 			if list(i).count('o') == 3:
 				return 'o'
-	return print(iswinnerhorizontal(matrix))
+	return 'draw'
 def iscount(matrix, chk_chr):
 	'''
 	returns sum of count of the char
@@ -44,6 +44,8 @@ def main():
 		matrix.append(input().split())
 	if not isinvalid(matrix):
 		print(isinvalid(matrix))
-	else:
-		print(iswinnervertical(matrix))
+	# elif iswinnerhorizontal(matrix) == true:
+	# 	print('draw')
+	# else:
+	# 	print(iswinnervertical(matrix))
 main()
