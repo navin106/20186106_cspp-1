@@ -49,7 +49,7 @@ def isinvalid(matrix):
     '''
     return bool for input is valid or not
     '''
-    if not [False for _ in matrix for j in _ if j not in 'xo.']:
+    if [False for _ in matrix for j in _ if j not in 'xo.'] != [False]:
         print('invalid input')
         return False
     if iscount(matrix, 'x') > 5 or iscount(matrix, 'o') > 5 or \
