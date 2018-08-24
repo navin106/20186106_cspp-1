@@ -42,7 +42,7 @@ def main():
 	matrix = []
 	for i in range(3):
 		matrix.append(input().split())
-	if isinvalid != True:
+	if not isinvalid(matrix):
 		print(isinvalid(matrix))
 	else:
 		print(iswinnervertical(matrix))
