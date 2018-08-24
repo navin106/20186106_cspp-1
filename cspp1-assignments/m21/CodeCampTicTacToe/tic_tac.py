@@ -8,10 +8,10 @@ def iswinnerhorizontal(matrix):
 	return 'draw'
 def iswinnervertical(matrix):
 	for i in zip(*matrix):
-		if i.count('x') == 3:
+		if list(i).count('x') == 3:
 			return 'x'
 		else:
-			if i.count('o') == 3:
+			if list(i).count('o') == 3:
 				return 'o'
 	return print(iswinnerhorizontal(matrix))
 def iscount(matrix, chk_chr):
@@ -30,7 +30,7 @@ def isinvalid(matrix):
 		for j in i:
 			if j not in 'xo.':
 				return 'invalid input'
-	if iscount(matrix,'x') or iscount(matrix,'o') or iscount(matrix,'.') > 5:
+	if iscount(matrix,'x') or iscount(matrix,'o') > 5:
 		return 'invalid game'
 	return True
 def main():
