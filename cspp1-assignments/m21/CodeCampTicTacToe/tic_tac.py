@@ -1,3 +1,11 @@
+def iswinner(matrix):
+	for i in zip(*matrix):
+		if i.count('x') == 3:
+			return 'x'
+		elif i.count('o') == 3:
+			return 'o'
+		else:
+			return 'draw'
 def iscount(matrix, chk_chr):
 	'''
 	returns sum of count of the char
@@ -24,5 +32,8 @@ def main():
 	matrix = []
 	for i in range(3):
 		matrix.append(input().split())
-	print(isinvalid(matrix))
+	if isinvalid != True:
+		print(isinvalid(matrix))
+	else:
+		print(iswinner(matrix))
 main()
