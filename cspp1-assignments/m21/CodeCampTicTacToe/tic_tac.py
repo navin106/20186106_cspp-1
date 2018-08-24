@@ -1,19 +1,23 @@
 def iswinnerhorizontal(matrix):
 	for i in matrix:
 		if i.count('x') == 3:
-			return 'x'
+			print('x')
+			return False
 		else:
 			if i.count('o') == 3:
-				return 'o'
-	return 'draw'
+				print('o')
+				return False
+	return True
 def iswinnervertical(matrix):
 	for i in zip(*matrix):
 		if list(i).count('x') == 3:
-			return 'x'
+			print('x')
+			return False
 		else:
 			if list(i).count('o') == 3:
-				return 'o'
-	return 'draw'
+				print('o')
+				return False
+	return True
 def iscount(matrix, chk_chr):
 	'''
 	returns sum of count of the char
@@ -35,8 +39,6 @@ def isinvalid(matrix):
 				if iscount(matrix,'x') or iscount(matrix,'o') > 5:
 					print('invalid game')
 					return False
-	# print(iscount(matrix,'x'))
-	# print(iscount(matrix,'o'))
 	return True
 def main():
 	'''
@@ -46,9 +48,7 @@ def main():
 	for i in range(3):
 		matrix.append(input().split())
 	if isinvalid(matrix):
-		print(iswinnerhorizontal(matrix))
-	# elif iswinnerhorizontal(matrix) == true:
-	# 	print('draw')
-	# else:
-	# 	print(iswinnervertical(matrix))
+		if iswinnerhorizontal(matrix):
+			if iswinnervertical(matrix):
+				print(iswinnerhorizontal(matrix))
 main()
