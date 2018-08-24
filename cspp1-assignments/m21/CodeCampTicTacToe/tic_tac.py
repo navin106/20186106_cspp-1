@@ -43,5 +43,5 @@ def main():
 	if isinvalid != True:
 		print(isinvalid(matrix))
 	else:
-		print(iswinner(matrix))
+		print(iswinnervertical(matrix))
 main()
