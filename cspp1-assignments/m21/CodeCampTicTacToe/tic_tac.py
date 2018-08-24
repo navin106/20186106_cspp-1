@@ -45,11 +45,20 @@ def iscount(matrix, chk_chr):
     for i in matrix:
         k.append(i.count(chk_chr))
     return sum(k)
+
+def is_verified(matrix):
+    for i in matrix:
+        for j in i:
+            if j not in 'xo.':
+                return False
+    return True
+
+
 def isinvalid(matrix):
     '''
     return bool for input is valid or not
     '''
-    if set(['f' for i in matrix for j in i if j not in 'xo.']) == {'f'}:
+    if is_verified(matrix):
         print('invalid input')
         return False
     if iscount(matrix, 'x') > 5 or iscount(matrix, 'o') > 5 or \
