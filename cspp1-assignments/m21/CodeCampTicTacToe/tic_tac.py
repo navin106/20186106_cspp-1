@@ -58,7 +58,7 @@ def isinvalid(matrix):
     '''
     return bool for input is valid or not
     '''
-    if is_verified(matrix):
+    if not is_verified(matrix):
         print('invalid input')
         return False
     if iscount(matrix, 'x') > 5 or iscount(matrix, 'o') > 5 or \
