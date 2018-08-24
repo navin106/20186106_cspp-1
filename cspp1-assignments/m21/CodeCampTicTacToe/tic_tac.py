@@ -29,11 +29,13 @@ def isinvalid(matrix):
 	for i in matrix:
 		for j in i:
 			if j not in 'xo.':
-				return 'invalid input'
+				print('invalid input')
+				return False
 	# print(iscount(matrix,'x'))
 	# print(iscount(matrix,'o'))
 	if iscount(matrix,'x') or iscount(matrix,'o') > 5:
-		return 'invalid game'
+		print('invalid game')
+		return False
 	return True
 def main():
 	'''
@@ -42,7 +44,7 @@ def main():
 	matrix = []
 	for i in range(3):
 		matrix.append(input().split())
-	if isinvalid(matrix) != True:
+	if not isinvalid(matrix):
 		print(isinvalid(matrix))
 	else:
 		print(iswinnerhorizontal(matrix))
