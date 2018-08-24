@@ -49,7 +49,7 @@ def isinvalid(matrix):
     '''
     return bool for input is valid or not
     '''
-    print(['f' for i in matrix for j in i if j not in 'xo.'])
+    print(set(['f' for i in matrix for j in i if j not in 'xo.'])
     if ['f' for i in matrix for j in i if j not in 'xo.'] == ['f']:
         print('invalid input')
         return False
