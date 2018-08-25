@@ -25,7 +25,7 @@ def main():
     for _ in range(no_of_lines):
         temp_list.append(input())
     for i in range(no_of_lines):
-        tokenize(clean_string(temp_list[i]))
+        print(tokenize(clean_string(temp_list[i])))
 
 if __name__ == '__main__':
     main()
