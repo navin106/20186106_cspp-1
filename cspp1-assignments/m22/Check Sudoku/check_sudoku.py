@@ -18,9 +18,10 @@ def check_vertical(veri_list):
             if len(set(i)) != 9:
                 return False
     return True
-def check_horizontal(hori_list):
+def check_sudoku(sudoku):
     '''
-    takes the input list and returns bool.
+        Your solution goes here. You may add other helper functions as needed.
+        The function has to return True for a valid sudoku grid and false otherwise
     '''
     for i  in hori_list:
         for j in i:
@@ -29,16 +30,6 @@ def check_horizontal(hori_list):
             if len(set(i)) != 9:
                 return False
     return check_vertical(hori_list)
-
-
-def check_sudoku(sudoku):
-    '''
-        Your solution goes here. You may add other helper functions as needed.
-        The function has to return True for a valid sudoku grid and false otherwise
-    '''
-    return check_horizontal(sudoku)
-
-
 def main():
     '''
         main function to read input sudoku from console
