@@ -14,7 +14,6 @@ def tokenize(string):
     '''
     freq_dict = {}
     for i in string:
-        print(i)
         freq_dict[i] = string.count(i)
     return freq_dict            
 def main():
