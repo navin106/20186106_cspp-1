@@ -7,13 +7,37 @@
     Complete the check_sudoku function to check if the given grid
     satisfies all the sudoku rules given in the statement above.
 '''
+def check_vertical(veri_list):
+    '''
+    takes the input list and returns bool
+    '''
+    for i in zip(*veri_list):
+        for j in list(i):
+            if j not in '123456789':
+                return False
+            if len(set(i)) != 9:
+                return False
+    return True
+def check_horizontal(hori_list):
+    '''
+    takes the input list and returns bool.
+    '''
+    for i  in hori_list:
+        for j in i:
+            if j not in '123456789':
+                return False
+            if len(set(i)) != 9:
+                return False
+    return check_vertical(hori_list)
+
 
 def check_sudoku(sudoku):
     '''
         Your solution goes here. You may add other helper functions as needed.
         The function has to return True for a valid sudoku grid and false otherwise
     '''
-    pass
+    return check_horizontal(sudoku)
+
 
 def main():
     '''
