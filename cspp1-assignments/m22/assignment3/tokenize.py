@@ -7,7 +7,7 @@ def clean_string(string):
     '''
     removing special characters for string
     '''
-    return (((re.sub(r'[^\w\s]', '', string)).lower()).split())
+    return (((re.sub(r'[^\w\s]', '', string))).split())
 def tokenize(string):
     '''
     takes list and returns dictionary
