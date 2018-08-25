@@ -7,9 +7,10 @@ def tokenize(string):
     '''
     takes list and returns dictionary
     '''
-    for i in set(string):
-        print(i)
-            
+    freq_dict = {}
+    for i in string:
+        freq_dict[i] = string.count(i)
+    return freq_dict            
 def main():
     '''
     main function to print dictonary
