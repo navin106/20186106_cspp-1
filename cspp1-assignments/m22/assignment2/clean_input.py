@@ -9,10 +9,10 @@ def clean_string(string):
     removing special characters for string
     '''
     clean_string = ((re.sub(r'[^\w\s]', '', string)).lower()).split()
-    return clean_string
+    return (''.join(clean_string))
 def main():
     string = input()
-    print(''.join(clean_string(string)))
+    print(clean_string(string))
 
 if __name__ == '__main__':
     main()
