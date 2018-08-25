@@ -5,9 +5,9 @@ alphabets in both upper and lower case and numbers.
 '''
 import re 
 def clean_string(string):
-	'''
-	removing special characters for string
-	'''
+    '''
+    removing special characters for string
+    '''
     clean_string = ((re.sub(r'[^\w\s]', '', string)).lower()).split()
     return clean_string
 def main():
