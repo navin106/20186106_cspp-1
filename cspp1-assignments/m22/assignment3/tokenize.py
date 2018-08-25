@@ -8,12 +8,12 @@ def tokenize(string):
     takes list and returns dictionary
     '''
     for i in set(string):
-    	print(i)
+        print(i)
             
 def main():
-	'''
-	main function to print dictonary
-	'''
+    '''
+    main function to print dictonary
+    '''
     inp_word_list = input().split()
     print(tokenize(inp_word_list))
 
