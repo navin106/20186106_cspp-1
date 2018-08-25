@@ -16,7 +16,7 @@ def main():
     '''
     main function
     '''
-    dictionary = eval(input())
+    dictionary = input()
     print_dictionary(dictionary)
 
 if __name__ == '__main__':
