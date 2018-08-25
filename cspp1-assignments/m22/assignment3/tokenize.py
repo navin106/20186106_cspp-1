@@ -7,7 +7,7 @@ def clean_string(string):
     '''
     removing special characters for string
     '''
-    return (((re.sub(r'[^\w\s]', '', string))).split())
+    return ((re.sub(r'[^\w\s]', '', string))).split()
 def tokenize(string):
     '''
     takes list and returns dictionary
@@ -15,7 +15,7 @@ def tokenize(string):
     freq_dict = {}
     for i in string:
         freq_dict[i] = string.count(i)
-    return freq_dict            
+    return freq_dict
 def main():
     '''
     main function to print dictonary
