@@ -4,10 +4,18 @@ each word
 '''
 
 def tokenize(string):
-    pass
+    '''
+    takes list and returns dictionary
+    '''
+    for i in set(string):
+    	print(i)
             
 def main():
-    pass
+	'''
+	main function to print dictonary
+	'''
+    inp_word_list = input().split()
+    print(tokenize(inp_word_list))
 
 if __name__ == '__main__':
     main()
