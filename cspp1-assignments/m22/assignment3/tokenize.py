@@ -7,13 +7,14 @@ def clean_string(string):
     '''
     removing special characters for string
     '''
-    return ''.join(((re.sub(r'[^\w\s]', '', string)).lower()).split())
+    return (((re.sub(r'[^\w\s]', '', string)).lower()).split())
 def tokenize(string):
     '''
     takes list and returns dictionary
     '''
     freq_dict = {}
     for i in string:
+        print(i)
         freq_dict[i] = string.count(i)
     return freq_dict            
 def main():
