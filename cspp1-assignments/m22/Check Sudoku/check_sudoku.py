@@ -23,22 +23,20 @@ def check_sudoku(sudoku):
         Your solution goes here. You may add other helper functions as needed.
         The function has to return True for a valid sudoku grid and false otherwise
     '''
-    for i  in hori_list:
+    for i  in sudoku:
         for j in i:
             if j not in '123456789':
                 return False
             if len(set(i)) != 9:
                 return False
-    return check_vertical(hori_list)
+    return check_vertical(sudoku)
 def main():
     '''
         main function to read input sudoku from console
         call check_sudoku function and print the result to console
     '''
-    
     # initialize empty list
     sudoku = []
-
     # loop to read 9 lines of input from console
     for i in range(9):
         # read a line, split it on SPACE and append row to list
@@ -46,6 +44,5 @@ def main():
         sudoku.append(row)
     # call solution function and print result to console
     print(check_sudoku(sudoku))
-
 if __name__ == '__main__':
     main()
