@@ -9,8 +9,8 @@ def main():
     no_of_lines = int(input())
     for _ in range(no_of_lines):
         temp_list.append(input())
-    for _ in range(no_of_lines-1):
-        print(temp_list[no_of_lines])
+    for i in range(no_of_lines-1):
+        print(temp_list[i])
 
 if __name__ == '__main__':
     main()
