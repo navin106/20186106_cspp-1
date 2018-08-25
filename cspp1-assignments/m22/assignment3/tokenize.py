@@ -7,7 +7,7 @@ def clean_string(string):
     '''
     removing special characters for string
     '''
-    return (((re.sub(r'[^\w\s]', '', string))).split())
+    return (((re.sub(r'[^\w\s]', '', string)).lower()).split())
 def tokenize(string):
     '''
     takes list and returns dictionary
@@ -24,8 +24,6 @@ def main():
     no_of_lines = int(input())
     for _ in range(no_of_lines):
         temp_list.append(input())
-    #for i in range(no_of_lines):
-    print(tokenize(clean_string(temp_list)))
-
+    print(tokenize(clean_string(''.join(temp_list))))
 if __name__ == '__main__':
     main()
