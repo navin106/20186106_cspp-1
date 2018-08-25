@@ -4,7 +4,7 @@ alphabets in both upper and lower case and numbers.
 '''
 import re
 def clean_string(string):
-    clean_string = ((re.sub(r'[^\w\s]', '', string)).lower())
+    clean_string = ((re.sub(r'[^\w\s]', '', string)).lower()).split()
     return clean_string
 def main():
     string = input()
