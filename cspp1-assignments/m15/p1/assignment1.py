@@ -251,7 +251,10 @@ class CiphertextMessage(Message):
         for shift in range(27):
             message = PlaintextMessage(self.message_text, shift)
             decrypted = message.get_message_text_encrypted()
-            valid_words_count = 0
+            valid_count = 0
+            for word in decrypted.split(' '):
+                if is_word(self.valid_words, word):
+                    valid_count += 1
         print(decrypted)
 
 
