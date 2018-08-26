@@ -230,7 +230,7 @@ class CiphertextMessage(Message):
         '''
         self.msg_txt = text
         self.valid_words = load_words("words.txt")[:]
-        self.max_valid_words = 0
+        self.max_words = 0
 
     def decrypt_message(self):
         '''
@@ -255,6 +255,9 @@ class CiphertextMessage(Message):
             for word in decrypted.split(' '):
                 if is_word(self.valid_words, word):
                     valid_count += 1
+            if self.max_words < valid_count:
+                self.max_words = valid_count
+                self.decrypted_message = (26 - shift, decrypted)
         print(decrypted)
 
 
